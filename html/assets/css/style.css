@@ -58,7 +58,6 @@
 
 .contain{
     width: 100vw;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap :7rem;
@@ -135,4 +134,8 @@
 .navbar-brand > span {
   color: #0d6efd;
   display:inline-block;
+}
+
+.vh-30 {
+  height: 30vh
 }
