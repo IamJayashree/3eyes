@@ -10,6 +10,12 @@
 .wave-lg {
   height: 200vh;
 }
+@media screen and (max-width: 900px){
+	.wave{
+		display: none;
+	}
+}
+
 
 
 
