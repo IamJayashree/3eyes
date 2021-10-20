@@ -17,6 +17,10 @@
   height: 100%;
   position: fixed;
 }
+.wave-lg {
+  height: 200vh;
+}
+
 .wave-l {
   left: 0;
 }
@@ -39,9 +43,6 @@
 .forms-contain .form-floating,
 .forms-contain .btn {
   min-width: 380px;
-}
-.i1 {
-  color: #0d6efd;
 }
 
 .h-span {
@@ -129,4 +130,9 @@
 
 .navbar.position-fixed {
   z-index: 1;
+}
+
+.navbar-brand > span {
+  color: #0d6efd;
+  display:inline-block;
 }
