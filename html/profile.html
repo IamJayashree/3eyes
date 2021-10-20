@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <img class="wave wave-t" src="assets/images/wave-right.svg">
+  <nav class="bg-light navbar navbar-expand-lg navbar-light px-4 py-3 shadow mb-5 w-100" aria-label="">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-5" href="index.html">
+        <b><span class="i1">i</span>nclude <span class="i1">i</span>nvolve <span class="i1">i</span>nspire</b>
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarsExample09">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container pb-5">
+    <h1>
+      Welcome {{name@email.com}},
+    </h1>
+    <p class="lead mb-5">Please provide some more information about yourself to quickly and easily get started.</p>
+    <form class="needs-validation" novalidate="">
+      <div class="card shadow bg-opacity-75 bg-white">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card-body p-5">
+              <h4 class="mb-5">Basic Info</h4>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="firstName" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com" required="">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="d-flex">
+                    <label class="form-label mr-auto" for="address">Address</label>
+                    <a class="label-link" href="#">Locate my location</a>
+                  </div>
+                  <input type="pastextsword" class="form-control" id="address" placeholder="1234 Main St" required="">
+                  <div class="invalid-feedback">
+                    Please enter your address.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                  <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                </div>
+
+                <div class="col-md-5">
+                  <label for="country" class="form-label">Country</label>
+                  <select class="form-select" id="country" required="">
+                    <option value="">Choose...</option>
+                    <option>United States</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="state" class="form-label">State</label>
+                  <select class="form-select" id="state" required="">
+                    <option value="">Choose...</option>
+                    <option>California</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="zip" class="form-label">Zip</label>
+                  <input type="text" class="form-control" id="zip" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Zip code required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-5"></div>
+
+              <h4 class="my-5">Personal Info</h4>
+              <div class="row mb-5 gy-3">
+                <div class="col-md-12">
+                  <label for="dob" class="form-label">DOB</label>
+                  <input type="date" class="form-control" id="dob" placeholder="MM/DD/YYY" required="">
+                  <div class="invalid-feedback">
+                    Please input a valid DOB.
+                  </div>
+
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label mb-0">Gender</label><br>
+                  <div class="my-3">
+                    <div class="form-check-inline">
+                      <input id="male" name="disability" type="radio" class="form-check-input" checked required="">
+                      <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input id="female" name="disability" type="radio" class="form-check-input" required="">
+                      <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input id="other" name="disability" type="radio" class="form-check-input" required="">
+                      <label class="form-check-label" for="other">Other</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="dob" class="form-label col-12">Do you have any specific accessibility
+                    requirements?</label>
+                  <div class="form-check">
+                    <input id="blind" name="disability" type="check" class="form-check-input">
+                    <label class="form-check-label" for="blind">Visually impaired</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="deaf" name="disability" type="check" class="form-check-input">
+                    <label class="form-check-label" for="deaf">Hearing-impaired</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="mobility-aid" name="disability" type="check" class="form-check-input">
+                    <label class="form-check-label" for="mobility-aid">Mobility/Walking</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="assisted-aid" name="disability" type="check" class="form-check-input">
+                    <label class="form-check-label" for="assisted-aid">Assisted living</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="prosthetic-implant" name="disability" type="check" class="form-check-input">
+                    <label class="form-check-label" for="prosthetic-implant">Prosthetic Implant</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="paralysis-orthoses" name="disability" type="check" class="form-check-input">
+                    <label class="form-check-label" for="paralysis-orthoses">Paralysis orthoses</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="mental-helth" name="disability" type="check" class="form-check-input">
+                    <label class="form-check-label" for="mental-helth">Mental helth</label>
+                  </div>
+                </div>
+                <label class="form-label mt-5 mb-0 col-12"><b>Family/Additional Contact Information</b></label>
+                <div class="col col-lg-5">
+                  <label for="a-name" class="form-label">Full Name <span class="text-muted">(Optional)</span></label>
+                  <input type="text" class="form-control" id="a-name" placeholder="">
+                </div>
+
+                <div class="col col-lg-4">
+                  <label for="a-email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                  <input type="text" class="form-control" id="a-email" placeholder="">
+                </div>
+
+                <div class="col col-lg-3">
+                  <label for="a-phone" class="form-label">Phone <span class="text-muted">(Optional)</span></label>
+                  <input type="text" class="form-control" id="a-phone" placeholder="">
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col">
+            &nbsp;
+          </div>
+        </div>
+        <div class="card-footer py-4 px-5">
+          <a class="px-5 btn btn-primary btn-lg" href="dashboard.html">Update Profile Info</a>
+        </div>
+    </form>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/js/form-validation.js"></script>
+</body>
+
+</html>

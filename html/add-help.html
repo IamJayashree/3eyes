@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="bg-light navbar navbar-expand-lg navbar-light px-4 py-3 shadow mb-5 w-100" aria-label="">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-5" href="dashboard.html">
+        <b><span class="i1">i</span>nclude <span class="i1">i</span>nvolve <span class="i1">i</span>nspire</b>
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarsExample09">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container pb-5">
+    <h1>
+      Add Help
+    </h1>
+    <p class="lead mb-5">Please provide some more information about yourself need of help.</p>
+    <form class="needs-validation" novalidate="">
+      <div class="card shadow">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card-body p-5">
+              <div class="row g-3">
+                <div class="col-md-12">
+                  <label for="firstName" class="form-label">Help Title</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid help type is required.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="dob" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="dob" placeholder="MM/DD/YYY" required="">
+                  <div class="invalid-feedback">
+                    Please input a valid Date.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="dob" class="form-label">Time</label>
+                  <input type="time" class="form-control" id="dob" placeholder="00:00 am - 00:00 am" required="">
+                  <div class="invalid-feedback">
+                    Please input a valid Time.
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <label for="lastName" class="form-label">Pickup location</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid pickup location is required.
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <label for="lastName" class="form-label">Destination</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                  <div class="invalid-feedback">
+                    Valid destination location is required.
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label mb-0">Volunteer gender</label><br>
+                  <div class="my-3">
+                    <div class="form-check-inline">
+                      <input id="male" name="disability" type="radio" class="form-check-input" checked required="">
+                      <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input id="female" name="disability" type="radio" class="form-check-input" required="">
+                      <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input id="other" name="disability" type="radio" class="form-check-input" required="">
+                      <label class="form-check-label" for="other">Other</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="email" class="form-label">Information about help</label>
+                  <textarea class="form-control" name="" id="" cols="30" rows="5" required=""></textarea>
+                  <div class="invalid-feedback">
+                    Please enter a valid info
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            &nbsp;
+          </div>
+        </div>
+        <div class="card-footer py-4 px-5">
+          <a class="px-5 btn btn-primary btn-lg" href="dashboard.html">Add</a>
+        </div>
+    </form>
+  </div>
+
+  <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="assets/js/form-validation.js"></script>
+</body>
+
+</html>

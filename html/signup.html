@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sign in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <img class="wave wave-r" src="assets/images/wave-right.svg">
+  <nav class="bg-light navbar navbar-expand-lg navbar-light position-fixed px-4 py-3 shadow w-100" aria-label="">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-5" href="index.html">
+        <b><span class="i1">i</span>nclude <span class="i1">i</span>nvolve <span class="i1">i</span>nspire</b>
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse" id="navbarsExample09">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="signin.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="signup.html">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="contain">
+    <div class="form-content">
+      <form class="sign-in-form" action="index.html">
+        <h1 class="text-center mb-4">Sign up</h1>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control px-4 rounded-pill" id="email" placeholder="name@example.com">
+          <label class="px-4" for="email">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control px-4 rounded-pill" id="password" placeholder="Password">
+          <label class="px-4" for="password">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control px-4 rounded-pill" id="confirmPassword" placeholder="Confirm password">
+          <label class="px-4" for="confirmPassword">Confirm password</label>
+        </div>
+        <a class="btn btn-lg btn-primary rounded-pill py-3 w-100" href="profile.html">SIGN UP</a>
+      </form>
+    </div>
+    <div class="img">
+      <img src="assets/images/signup.svg">
+    </div>
+  </div>
+  <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
