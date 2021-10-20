@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <img class="wave wave-l" src="assets/images/wave-left.svg">
+  <img class="wave wave-r" src="assets/images/wave-right.svg">
   <nav class="navbar navbar-expand-lg navbar-light px-lg-4 py-3 shadow sticky-top bg-light" aria-label="">
     <div class="container-fluid">
       <a class="navbar-brand p-0 me-2 fw-bold lh-lg" href="index.html" aria-label="iii">
@@ -30,7 +30,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse" id="navbar-3E">
-        <ul class="navbar-nav mb-2 mb-lg-0 ms-5 mt-3 mt-lg-0">
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-5 ms-lg-auto mt-3 mt-lg-0">
           <li class="nav-item">
             <a class="nav-link active" href="signin.html">Login</a>
           </li>
@@ -41,25 +41,29 @@
       </div>
     </div>
   </nav>
-  <div class="contain">
-    <div class="img">
-      <img src="assets/images/signin.svg">
-    </div>
-    <div class="form-content justify-content-lg-start">
-      <form class="sign-in-form" action="index.html">
-        <h1 class="text-center mb-4">Sign in</h1>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control px-4 rounded-pill" id="email" placeholder="name@example.com">
-          <label class="px-4" for="email">Email address</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="password" class="form-control px-4 rounded-pill" id="password" placeholder="Password">
-          <label class="px-4" for="password">Password</label>
-        </div>
-        <a class="btn btn-lg btn-primary rounded-pill py-3 w-100" href="dashboard.html">SIGN IN</a>
-      </form>
+
+  <div class="container px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6 d-none d-md-block">
+        <img src="assets/images/signin.svg" class="d-block mx-lg-auto img-fluid" alt="3I image" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <form class="p-md-4 p-md-5">
+          <h1 class="text-center mb-4">Sign in</h1>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control px-4 rounded-pill" id="email" placeholder="name@example.com">
+            <label class="px-4" for="email">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control px-4 rounded-pill" id="password" placeholder="Password">
+            <label class="px-4" for="password">Password</label>
+          </div>
+          <a class="btn btn-lg btn-primary rounded-pill py-3 w-100" href="dashboard.html">SIGN IN</a>
+        </form>
+      </div>
     </div>
   </div>
+
   <script src="assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
