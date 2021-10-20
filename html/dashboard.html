@@ -13,14 +13,15 @@
   <nav class="navbar navbar-expand-lg navbar-light px-lg-4 py-lg-3 shadow mb-5" aria-label="">
     <div class="container-fluid">
       <a class="navbar-brand p-0 me-2" href="dashboard.html" aria-label="iii">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-inline-block my-1 me-2" viewBox="0 0 40 32" role="img">
-          <path d="M40 16C40 16 31 28 20 28C9 28 0 16 0 16C0 16 9 4 20 4C31 4 40 16 40 16Z" fill="black"/>
-          <circle cx="20" cy="10" r="2" fill="white"/>
-          <circle cx="13" cy="14" r="2" fill="white"/>
-          <circle cx="27" cy="14" r="2" fill="white"/>
-          <rect x="11" y="18" width="4" height="12" rx="2" fill="white"/>
-          <rect x="18" y="14" width="4" height="17" rx="2" fill="white"/>
-          <rect x="25" y="18" width="4" height="12" rx="2" fill="white"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-inline-block my-1 me-2"
+          viewBox="0 0 40 32" role="img">
+          <path d="M40 16C40 16 31 28 20 28C9 28 0 16 0 16C0 16 9 4 20 4C31 4 40 16 40 16Z" fill="black" />
+          <circle cx="20" cy="10" r="2" fill="white" />
+          <circle cx="13" cy="14" r="2" fill="white" />
+          <circle cx="27" cy="14" r="2" fill="white" />
+          <rect x="11" y="18" width="4" height="12" rx="2" fill="white" />
+          <rect x="18" y="14" width="4" height="17" rx="2" fill="white" />
+          <rect x="25" y="18" width="4" height="12" rx="2" fill="white" />
         </svg>
         <span>i</span>nclude <span>i</span>nvolve <span>i</span>nspire
       </a>
@@ -40,92 +41,56 @@
   </nav>
 
   <div class="container pb-5">
-    <div class="row">
+    <div class="row mb-5">
       <div class="col">
-        <h1 class="mb-5">
-          Dashboard
+        <h1>
+          Events
         </h1>
       </div>
       <div class="col-auto">
-        <a class="btn btn-primary btn-lg rounded-pill px-5" href="add-help.html">Add Help</a>
+        <a class="btn btn-primary btn-lg rounded-pill px-5" href="add-help.html">Need Help</a>
       </div>
     </div>
     <div class="row mb-2">
       <div class="col-md-12">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
-              <div class="row">
-              <div class="col"><h3 class="mb-0">Hospital Visit</h3></div>
-              <div class="col-auto"><span class="badge bg-warning align-self-baseline">Pending</span></div>
+            <div class="row">
+              <div class="col">
+                <h5 class="mb-0">Hospital Visit</h5>
+              </div>
+              <div class="col-auto"><span class="badge bg-warning align-self-baseline w-badge">Pending</span></div>
             </div>
             <div class="mb-3 text-muted">on Nov 12, 2021 between 10:30 am - 12:00 pm</div>
             <p class="card-text">
-              <b>Pickup location:</b> 1600 Pennsylvania Ave NW, Washington, DC 20500<br>
-              <b>Destination:</b> East Capitol St NE, Washington, DC 20004<br>
-              <b>Gender preference:</b> Female
+              <b>Pickup location:</b><br>1600 Pennsylvania Ave NW, Washington, DC 20500<br>
+              <b>Destination:</b><br>XYZ Hospital, East Capitol St NE, Washington, DC 20004<br>
             </p>
-            <p class="lead">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">know more</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="assets/images/wheelchaired.jpg" width="250" height="250" alt="">
           </div>
         </div>
       </div>
       <div class="col-md-12">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-5 shadow h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0">Event Title</h3>
-            <span class="badge bg-info align-self-baseline">Available</span>
-            <div class="mb-1 text-muted">Nov 11</div>
-            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional
-              content.</p>
+            <div class="row">
+              <div class="col">
+                <h5 class="mb-0">Church Visit</h5>
+              </div>
+              <div class="col-auto"><span class="badge bg-success align-self-baseline w-badge">Open</span></div>
+            </div>
+            <div class="mb-3 text-muted">on Nov 12, 2021 between 4:00 pm - 5:00 pm</div>
+            <p class="card-text">
+              <b>Pickup location:</b><br>1600 Pennsylvania Ave NW, Washington, DC 20500<br>
+              <b>Destination:</b><br>ABC Church, East Capitol St NE, Washington, DC 20004<br>
+            </p>
             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">know more</a>
           </div>
           <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#999"></rect><text x="50%" y="50%" fill="#eceeef"
-                dy=".3em">Thumbnail</text>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-          <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0">Event Title</h3>
-            <span class="badge bg-info align-self-baseline">Available</span>
-            <div class="mb-1 text-muted">Nov 12</div>
-            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
-              additional content.</p>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">know more</a>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#999"></rect><text x="50%" y="50%" fill="#eceeef"
-                dy=".3em">Thumbnail</text>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-          <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0">Event Title</h3>
-            <span class="badge bg-info align-self-baseline">Available</span>
-            <div class="mb-1 text-muted">Nov 11</div>
-            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional
-              content.</p>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">know more</a>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
-              aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#999"></rect><text x="50%" y="50%" fill="#eceeef"
-                dy=".3em">Thumbnail</text>
-            </svg>
+            <img src="assets/images/blind.jpg" width="250" height="250" alt="">
           </div>
         </div>
       </div>
@@ -139,18 +104,24 @@
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-body">
-          <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close" style="right: 20px;top: 20px;"></button>
+          <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"
+            style="right: 20px;top: 20px;"></button>
           <svg class="bd-placeholder-img mb-3" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
             aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#999"></rect><text x="50%" y="50%" fill="#eceeef"
               dy=".3em">Thumbnail</text>
           </svg>
-          <h3 class="mb-0">Event Title</h3><span class="badge bg-info align-self-baseline">Available</span>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="mb-auto">
-            This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content.This is a wider card with supporting text below as a natural lead-in to additional content.
-          </p>
+          <h5 class="mb-0">Event Title</h3><span class="badge bg-info align-self-baseline">Available</spa5>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural lead-in to additional content.This is a
+                wider card with supporting text below as a natural lead-in to additional content.This is a wider card
+                with supporting text below as a natural lead-in to additional content.This is a wider card with
+                supporting text below as a natural lead-in to additional content.This is a wider card with supporting
+                text below as a natural lead-in to additional content.This is a wider card with supporting text below as
+                a natural lead-in to additional content.
+              </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -160,4 +131,5 @@
     </div>
   </div>
 </body>
+
 </html>
