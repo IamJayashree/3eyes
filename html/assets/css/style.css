@@ -7,24 +7,23 @@
   height: 100%;
   position: absolute;
 }
+
 .wave-lg {
   height: 200vh;
 }
+
 @media screen and (max-width: 900px){
 	.wave{
 		display: none;
 	}
 }
 
-
-
-
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .navbar-brand > span {
@@ -37,27 +36,19 @@
 }
 
 .bi {
-  vertical-align: -.125em;
   fill: currentColor;
+  vertical-align: -.125em;
 }
 
 .card-cover {
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
 }
-.card-cover .d-flex {
-background: rgba(0,0,0,.25);
-}
-
-.text-shadow-1 {
-  text-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 25%);
+.card-cover > .d-flex {
+  background: rgba(0,0,0,.3);
 }
 
-.bg-light-gray {
-  background-color: #f0f0f0!important
-}
-
-.border-left {
-  border-left: 1px solid #dee2e6!important;
+.form-label {
+  font-weight: 500;
 }
