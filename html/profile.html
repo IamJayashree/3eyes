@@ -10,24 +10,23 @@
 </head>
 
 <body>
-  <img class="wave wave-t" src="assets/images/wave-right.svg">
   <nav class="navbar navbar-expand-lg navbar-light px-lg-4 py-3 shadow sticky-top bg-light" aria-label="">
-    <div class="container-fluid">
+    <div class="container px-4">
       <a class="navbar-brand p-0 me-2 fw-bold lh-lg" href="dashboard.html" aria-label="iii">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-inline-block my-1 me-2" viewBox="0 0 40 32" role="img">
-          <path d="M40 16C40 16 31 28 20 28C9 28 0 16 0 16C0 16 9 4 20 4C31 4 40 16 40 16Z" fill="black"/>
-          <circle cx="20" cy="10" r="2" fill="white"/>
-          <circle cx="13" cy="14" r="2" fill="white"/>
-          <circle cx="27" cy="14" r="2" fill="white"/>
-          <rect x="11" y="18" width="4" height="12" rx="2" fill="white"/>
-          <rect x="18" y="14" width="4" height="17" rx="2" fill="white"/>
-          <rect x="25" y="18" width="4" height="12" rx="2" fill="white"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-inline-block my-1 me-2"
+          viewBox="0 0 40 32" role="img">
+          <path d="M40 16C40 16 31 28 20 28C9 28 0 16 0 16C0 16 9 4 20 4C31 4 40 16 40 16Z" fill="black" />
+          <circle cx="20" cy="10" r="2" fill="white" />
+          <circle cx="13" cy="14" r="2" fill="white" />
+          <circle cx="27" cy="14" r="2" fill="white" />
+          <rect x="11" y="18" width="4" height="12" rx="2" fill="white" />
+          <rect x="18" y="14" width="4" height="17" rx="2" fill="white" />
+          <rect x="25" y="18" width="4" height="12" rx="2" fill="white" />
         </svg>
         <span>i</span>nclude <span>i</span>nvolve <span>i</span>nspire
       </a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbar-3E" aria-controls="navbar-3E" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-3E"
+        aria-controls="navbar-3E" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse" id="navbar-3E">
@@ -40,17 +39,15 @@
     </div>
   </nav>
 
-  <div class="container pb-5">
-    <h1>
-      Welcome {{name@email.com}},
-    </h1>
-    <p class="lead mb-5">Please provide some more information about yourself to quickly and easily get started.</p>
+  <div class="container px-4 py-5">
+    <h1 class="display-5 fw-bold lh-1 mb-3">Welcome {{name@email.com}},</h1>
+    <p class="lead mb-5">Please provide some more information about yourself to quickly get started.</p>
     <form class="needs-validation" novalidate="">
-      <div class="card shadow bg-opacity-75 bg-white">
+      <div class="card shadow">
         <div class="row">
           <div class="col-lg-8">
-            <div class="card-body p-5">
-              <h4 class="mb-5">Basic Info</h4>
+            <div class="card-body p-4 p-md-5">
+              <h4 class="mb-3 pb-3 border-bottom border-1">Basic Info</h4>
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label for="firstName" class="form-label">First name</label>
@@ -121,13 +118,11 @@
                     Zip code required.
                   </div>
                 </div>
-              </div>
-
-              <div class="pt-5"></div>
-
-              <h4 class="my-5">Personal Info</h4>
-              <div class="row mb-5 gy-3">
                 <div class="col-md-12">
+                  <div class="pt-4 mt-4 pt-md-5 mt-md-5"></div>
+                  <h4 class="mb-3 pb-3 border-bottom border-1">Personal Info</h4>
+                </div>
+                <div class="col-md-6">
                   <label for="dob" class="form-label">DOB</label>
                   <input type="date" class="form-control" id="dob" placeholder="MM/DD/YYY" required="">
                   <div class="invalid-feedback">
@@ -135,7 +130,7 @@
                   </div>
 
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <label class="form-label mb-0">Gender</label><br>
                   <div class="my-3">
                     <div class="form-check-inline">
@@ -185,18 +180,18 @@
                     <label class="form-check-label" for="mental-helth">Mental helth</label>
                   </div>
                 </div>
-                <label class="form-label mt-5 mb-0 col-12"><b>Family/Additional Contact Information</b></label>
-                <div class="col col-lg-5">
+                <label class="form-label mt-3 mt-md-5 mb-0 col-12"><b>Family/Additional Contact Information</b></label>
+                <div class="col-md-5">
                   <label for="a-name" class="form-label">Full Name <span class="text-muted">(Optional)</span></label>
                   <input type="text" class="form-control" id="a-name" placeholder="">
                 </div>
 
-                <div class="col col-lg-4">
+                <div class="col-md-4">
                   <label for="a-email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
                   <input type="text" class="form-control" id="a-email" placeholder="">
                 </div>
 
-                <div class="col col-lg-3">
+                <div class="col-md-3">
                   <label for="a-phone" class="form-label">Phone <span class="text-muted">(Optional)</span></label>
                   <input type="text" class="form-control" id="a-phone" placeholder="">
                 </div>
@@ -204,12 +199,12 @@
 
             </div>
           </div>
-          <div class="col">
+          <div class="col border-left d-none d-md-block ">
             &nbsp;
           </div>
         </div>
-        <div class="card-footer py-4 px-5">
-          <a class="px-5 btn btn-primary btn-lg" href="dashboard.html">Update Profile Info</a>
+        <div class="card-footer p-4 px-md-5">
+          <a class="px-5 btn btn-primary btn-lg d-block d-md-inline-block" href="dashboard.html">Update Profile Info</a>
         </div>
     </form>
   </div>
