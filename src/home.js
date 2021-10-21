@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 
 export default function Home(props) {
     return (
-        <body>
+        <>
             <div className="contain">
                 <div className="landing-content">
                     <div>
@@ -106,6 +106,6 @@ export default function Home(props) {
                 </div>
                 <div className="vh-30"></div>
             </div>
-        </body >
+        </>
     );
 }
