@@ -18,15 +18,11 @@ export default function Home(props) {
           </div>
           <div className="col-lg-6 text-center text-lg-start">
             <h1 className="display-5 fw-bold lh-1 mb-3">
-              Include Involve Inspire
+              Everything for everyone by everyone
             </h1>
             <p className="lead mb-4">
-              Our mission is to provide local help for via tech for free. Seek help or volunteer to give for a good cause
+              Include everyone, Involve in community &amp; Inspire every one
             </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-center justify-content-lg-start">
-              <Link to="/SignUp" className="btn btn-lg btn-primary rounded-pill py-3 px-5 me-md-2">Register</Link>
-              <Link to="/SignIn" className="btn btn-outline-secondary btn-lg rounded-pill py-3 px-5">Login</Link>
-            </div>
           </div>
         </div>
       </div>
