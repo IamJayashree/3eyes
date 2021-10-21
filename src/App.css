@@ -2,13 +2,14 @@
   top: 0;
   right: 0;
   z-index: -1;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
 }
 .wave-lg {
   height: 200vh;
+  position: absolute;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 992px){
 	.wave{
 		display: none;
 	}

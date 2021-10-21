@@ -1,29 +1,29 @@
 import React from "react";
-import AppSvg from './assets/images/app.svg';
 import { Link } from "react-router-dom";
 
+import AppSvg from './assets/images/app.svg';
 import Grabber from './assets/images/grabber.jpg';
 import Physical from './assets/images/physical.jpg';
 import Innovation from './assets/images/innovation.jpg';
-import WaveLg from './assets/images/wave-lg.svg';
+import WaveLgSVG from './assets/images/wave-lg.svg';
 
 export default function Home(props) {
   return (
     <>
-      <img className="wave wave-lg" src={WaveLg} alt="3I" />
+      <img className="wave wave-lg" src={WaveLgSVG} alt="3I" />
       <div className="container px-4 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div className="col-10 col-sm-8 col-lg-6">
+          <div className="col-10 col-sm-8 col-lg-6 m-auto">
             <img src={AppSvg} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy" />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 text-center text-lg-start">
             <h1 className="display-5 fw-bold lh-1 mb-3">
               Include Involve Inspire
             </h1>
             <p className="lead mb-4">
               Our mission is to provide local help for via tech for free. Seek help or volunteer to give for a good cause
             </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+            <div className="d-grid gap-2 d-md-flex justify-content-md-center justify-content-lg-start">
               <Link to="/SignUp" className="btn btn-lg btn-primary rounded-pill py-3 px-5 me-md-2">Register</Link>
               <Link to="/SignIn" className="btn btn-outline-secondary btn-lg rounded-pill py-3 px-5">Login</Link>
             </div>
