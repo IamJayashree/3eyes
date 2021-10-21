@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/esm/Button';
 
 import WaveSVG from '../assets/images/wave.svg';
 import SignUpSVG from '../assets/images/signup.svg';
-import { DEFAULT_MIN_VERSION } from 'tls';
 
 export default function SignUp(props) {
   function handleSubmit(event) {

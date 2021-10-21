@@ -5,9 +5,6 @@ import Church from '../assets/images/church.jpg';
 import Hospital from '../assets/images/hospital.jpg';
 
 export default function LandingPage(props) {
-  const { firstName, lastName } =
-    (props.location && props.location.state) || {};
-
   return (
     <>
       <div className="container px-4 py-5">
@@ -125,7 +122,7 @@ export default function LandingPage(props) {
       </div>
 
       {/* <!-- Vertically centered scrollable modal --> */}
-      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-body">

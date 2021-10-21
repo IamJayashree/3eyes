@@ -1,14 +1,10 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 import Grabber from '../assets/images/grabber.jpg';
 import Physical from '../assets/images/physical.jpg';
 import Innovation from '../assets/images/innovation.jpg';
 
 export default function LandingPage(props) {
-  const { firstName, lastName } =
-    (props.location && props.location.state) || {};
-
   return (
     <>
       <div className="container px-4 py-5">
@@ -94,7 +90,7 @@ export default function LandingPage(props) {
       </div>
 
       {/* <!-- Vertically centered scrollable modal --> */}
-      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-body">
