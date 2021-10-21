@@ -11,17 +11,35 @@ export default function LandingPage(props) {
   return (
     <>
       <div className="container px-4 py-5">
-        {/*
-        <h1 className="display-5 fw-bold lh-1 mb-3 me-auto">
-          Welcome {firstName} {lastName},
-        </h1>
-        */}
-        <div className="d-grid gap-4 d-sm-flex justify-content-sm-center align-items-center">
+        <div className="row align-items-md-center">
+          <div className="col-md-8">
+            <div className="h-100">
+              <h1 className="display-5 fw-bold lh-1 mb-3">
+                Everything for everyone by everyone
+              </h1>
+              <p className="lead mb-4">
+                Include everyone, Involve in community &amp; Inspire every one
+              </p>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="h-100 p-5 bg-light border rounded-3">
+              <h2>Feeling low?</h2>
+              <p>Activate Happiness Together withus now!</p>
+              <Link to="/NeedHelp" className="btn btn-outline-primary btn-lg rounded-pill px-4">
+                Get happiness now!
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container px-4 py-5">
+        <div className="d-grid gap-4 d-sm-flex justify-content-sm-center align-items-center border-bottom border-5">
           <h2 className="display-5 fw-bold lh-1 mb-3 me-auto">
             My Events
           </h2>
           <Link to="/NeedHelp" className="btn btn-primary btn-lg rounded-pill px-4">
-            Need Help
+            Create Help Event
           </Link>
         </div>
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
