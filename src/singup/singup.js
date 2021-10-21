@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/esm/Button';
 import SignUpSvg from '../assets/images/signup.svg';
@@ -24,7 +24,7 @@ export default function SignUp(props) {
         <div className="container px-4 py-5">
             <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div className="col-10 col-sm-8 col-lg-6 d-none d-md-block">
-                    <img src={SignUpSvg} className="d-block mx-lg-auto img-fluid" alt="3I image" width="700" height="500"
+                    <img src={SignUpSvg} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500"
                         loading="lazy" />
                 </div>
                 <div className="col-lg-6">

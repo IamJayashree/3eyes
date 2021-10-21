@@ -53,28 +53,28 @@ export default function LandingPage(props) {
                                 <div className="row gx-0 gy-1 mt-auto">
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            {/* <use xlink:href="#pick"></use> */}
+                                            {/* <use xlinkHref="#pick"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">#3759 Boring Lane, San Francisco, CA 94107</small>
                                     <div className="col-12"></div>
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            {/* <use xlink:href="#drop"></use> */}
+                                            {/* <use xlinkHref="#drop"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">St. Philomena's Cathedral, #3834 Larry Street, San Francisco, CA 94108</small>
                                     <div className="col-12"></div>
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="16" height="16">
-                                            {/* <use xlink:href="#calendar"></use> */}
+                                            {/* <use xlinkHref="#calendar"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">Nov 11, 2021</small>
                                     <div className="col-12"></div>
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="16" height="16">
-                                            {/* <use xlink:href="#time"></use> */}
+                                            {/* <use xlinkHref="#time"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">10:00 am - 12:00 pm</small>
@@ -94,28 +94,28 @@ export default function LandingPage(props) {
                                 <div className="row gx-0 gy-1 mt-auto">
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            {/* <use xlink:href="#pick"></use> */}
+                                            {/* <use xlinkHref="#pick"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">#3834 Larry Street, San Francisco, CA 94108</small>
                                     <div className="col-12"></div>
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            {/* <use xlink:href="#drop"></use> */}
+                                            {/* <use xlinkHref="#drop"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">Apollo Hospital, #3759 Boring Lane, San Francisco, CA 94107</small>
                                     <div className="col-12"></div>
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="16" height="16">
-                                            {/* <use xlink:href="#calendar"></use> */}
+                                            {/* <use xlinkHref="#calendar"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">Nov 12, 2021</small>
                                     <div className="col-12"></div>
                                     <div className="col-auto">
                                         <svg className="bi me-2" width="16" height="16">
-                                            {/* <use xlink:href="#time"></use> */}
+                                            {/* <use xlinkHref="#time"></use> */}
                                         </svg>
                                     </div>
                                     <small className="col">4:30 pm - 6:00 pm</small>
@@ -139,13 +139,13 @@ export default function LandingPage(props) {
                                     </li>
                                     <li className="d-flex align-items-center me-3">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#pick"></use>
+                                            <use xlinkHref="#pick"></use>
                                         </svg>
                                         <small>Berkeley</small>
                                     </li>
                                     <li className="d-flex align-items-center">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#calendar"></use>
+                                            <use xlinkHref="#calendar"></use>
                                         </svg>
                                         <small>3d</small>
                                     </li>
@@ -163,13 +163,13 @@ export default function LandingPage(props) {
                                     </li>
                                     <li className="d-flex align-items-center me-3">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#pick"></use>
+                                            <use xlinkHref="#pick"></use>
                                         </svg>
                                         <small>New South Wales</small>
                                     </li>
                                     <li className="d-flex align-items-center">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#calendar"></use>
+                                            <use xlinkHref="#calendar"></use>
                                         </svg>
                                         <small>4d</small>
                                     </li>
@@ -187,13 +187,13 @@ export default function LandingPage(props) {
                                     </li>
                                     <li className="d-flex align-items-center me-3">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#pick"></use>
+                                            <use xlinkHref="#pick"></use>
                                         </svg>
                                         <small>California</small>
                                     </li>
                                     <li className="d-flex align-items-center">
                                         <svg className="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#calendar"></use>
+                                            <use xlinkHref="#calendar"></use>
                                         </svg>
                                         <small>5d</small>
                                     </li>
@@ -220,13 +220,11 @@ export default function LandingPage(props) {
                             </svg>
                         </div>
                         <div className="modal-footer">
-                            <a className="btn btn-primary btn-lg rounded-pill px-4">Accept</a>
+                            <button type="button" className="btn btn-primary btn-lg rounded-pill px-4">Accept</button>
                         </div>
                     </div>
                 </div>
             </div>
         </body>
-
-
     );
 }

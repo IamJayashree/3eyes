@@ -1,7 +1,6 @@
 import React from "react";
 import AppSvg from './assets/images/app.svg';
-import Nav from 'react-bootstrap/Nav';
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Home(props) {
     return (
@@ -19,7 +18,7 @@ export default function Home(props) {
                     </div>
                 </div>
                 <div className="img">
-                    <img src={AppSvg} />
+                    <img src={AppSvg} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy"/>
                 </div>
             </div>
             <div className="container">
