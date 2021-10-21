@@ -1,7 +1,7 @@
 import React from "react";
 import AppSvg from './assets/images/app.svg';
 import Nav from 'react-bootstrap/Nav';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Home(props) {
     return (
@@ -15,7 +15,7 @@ export default function Home(props) {
                         <p className="lead mb-5">
                             our mission is to provide local help for  via tech for free. Seek help or volunteer to give for a good cause
                         </p>
-                        <Nav.Link as={NavLink} to="/SingUp"> <button className="btn btn-lg btn-primary rounded-pill py-3 px-5" type="button">Register </button></Nav.Link>
+                        <Link to="/SingUp" className="btn btn-lg btn-primary rounded-pill py-3 px-5">Register</Link>
                     </div>
                 </div>
                 <div className="img">
@@ -29,8 +29,8 @@ export default function Home(props) {
                         <p className="display-6">Just volunteer to do something good for the one who needs it badly</p>
                     </div>
                     <div className="col-auto">
-                        <Nav.Link as={NavLink} to="/Login">
-                            <button className="btn btn-lg btn-light rounded-pill py-3 px-5 me-3">Login</button></Nav.Link></div>
+                        <Link to="/Login" className="btn btn-lg btn-light rounded-pill py-3 px-5 me-3">Login</Link>
+                    </div>
                 </div>
                 <div className="vh-30"></div>
                 <div className="text-center">
@@ -50,7 +50,7 @@ export default function Home(props) {
                                 <h3 className="mb-0">Featured post</h3>
                                 <div className="mb-1 text-muted">Nov 12</div>
                                 <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="stretched-link">Continue reading</a>
+                                <Link to='/' className="stretched-link">Continue reading</Link>
                             </div>
                             <div className="col-auto d-none d-lg-block">
                                 <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -65,7 +65,7 @@ export default function Home(props) {
                                 <h3 className="mb-0">Post title</h3>
                                 <div className="mb-1 text-muted">Nov 11</div>
                                 <p className="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="stretched-link">Continue reading</a>
+                                <Link to='/' className="stretched-link">Continue reading</Link>
                             </div>
                             <div className="col-auto d-none d-lg-block">
                                 <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -80,7 +80,7 @@ export default function Home(props) {
                                 <h3 className="mb-0">Featured post</h3>
                                 <div className="mb-1 text-muted">Nov 12</div>
                                 <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="stretched-link">Continue reading</a>
+                                <Link to='/' className="stretched-link">Continue reading</Link>
                             </div>
                             <div className="col-auto d-none d-lg-block">
                                 <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -95,7 +95,7 @@ export default function Home(props) {
                                 <h3 className="mb-0">Post title</h3>
                                 <div className="mb-1 text-muted">Nov 11</div>
                                 <p className="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="stretched-link">Continue reading</a>
+                                <Link to='/' className="stretched-link">Continue reading</Link>
                             </div>
                             <div className="col-auto d-none d-lg-block">
                                 <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
