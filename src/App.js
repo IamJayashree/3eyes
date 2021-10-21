@@ -18,12 +18,12 @@ function App() {
   return (
     <div>
       <Router>
-        {/* <img class="wave wave-l" src={WaveLeftSvg} /> */}
-        <nav class="navbar navbar-expand-lg navbar-light px-lg-4 py-lg-3 shadow mb-5" aria-label="">
-          <div class="container-fluid">
+        {/* <img className="wave wave-l" src={WaveLeftSvg} /> */}
+        <nav className="navbar navbar-expand-lg navbar-light px-lg-4 py-lg-3 shadow mb-5" aria-label="">
+          <div className="container-fluid">
             <Nav.Link as={NavLink} to="/Home">
-              <a class="navbar-brand p-0 me-2" href="index.html" aria-label="iii">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-inline-block my-1 me-2" viewBox="0 0 40 32" role="img">
+              <a className="navbar-brand p-0 me-2" href="index.html" aria-label="iii">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" className="d-inline-block my-1 me-2" viewBox="0 0 40 32" role="img">
                   <path d="M40 16C40 16 31 28 20 28C9 28 0 16 0 16C0 16 9 4 20 4C31 4 40 16 40 16Z" fill="black" />
                   <circle cx="20" cy="10" r="2" fill="white" />
                   <circle cx="13" cy="14" r="2" fill="white" />
@@ -35,17 +35,17 @@ function App() {
                 <span>i</span>nclude <span>i</span>nvolve <span>i</span>nspire
               </a>
             </Nav.Link>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+            <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
               aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse collapse" id="navbarsExample09">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+            <div className="navbar-collapse collapse" id="navbarsExample09">
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
                   <Nav.Link as={NavLink} to="/Login">Login</Nav.Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Nav.Link as={NavLink} to="/SingUp">Register</Nav.Link>
                 </li>
               </ul>
