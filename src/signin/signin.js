@@ -31,30 +31,25 @@ export default function Login(props) {
               <h1 className="display-5 fw-bold lh-1 mb-5 text-center">
                 Sign in
               </h1>
-              <div className="form-floating mb-3">
-                <Form.Group size="lg" controlId="email">
-                  <Form.Label className="px-4">Email address</Form.Label>
-                  <Form.Control className="form-control px-4 rounded-pill"
-                    autoFocus
-                    type="email"
-                    placeholder="name@example.com"
-                    name="email"
-                    required
-                  />
-                </Form.Group>
-              </div>
-              <div className="form-floating mb-3">
-                <Form.Group size="lg" controlId="password">
-                  <Form.Label className="px-4">Password</Form.Label>
-                  <Form.Control className="form-control px-4 rounded-pill"
-                    autoFocus
-                    type="password"
-                    placeholder="Password"
-                    name="password"
-                    required
-                  />
-                </Form.Group>
-              </div>
+              <Form.Group size="lg" controlId="email" className="form-floating mb-3">
+                <Form.Control className="form-control px-4 rounded-pill"
+                  autoFocus
+                  type="email"
+                  placeholder="name@example.com"
+                  name="email"
+                  required
+                />
+                <Form.Label className="px-4">Email address</Form.Label>
+              </Form.Group>
+              <Form.Group size="lg" controlId="password" className="form-floating mb-3">
+                <Form.Control className="form-control px-4 rounded-pill"
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <Form.Label className="px-4">Password</Form.Label>
+              </Form.Group>
               <Button block size="lg" type="submit" className="btn btn-lg btn-primary rounded-pill py-3 w-100">
                 Sign In
               </Button>
