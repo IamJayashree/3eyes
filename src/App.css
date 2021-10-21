@@ -1,4 +1,54 @@
+.wave {
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+}
+.wave-lg {
+  height: 200vh;
+}
+@media screen and (max-width: 900px){
+	.wave{
+		display: none;
+	}
+}
+
 .navbar-brand > span {
   color: #0d6efd;
   display: inline-block;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.w-badge {
+  width: 100px;
+}
+
+.bi {
+  fill: currentColor;
+  vertical-align: -.125em;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.card-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.card-cover > .d-flex {
+  cursor: pointer;
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,.75));
+}
+.card-cover:hover > .d-flex {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,1));
 }

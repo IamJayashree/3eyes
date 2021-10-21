@@ -2,109 +2,122 @@ import React from "react";
 import AppSvg from './assets/images/app.svg';
 import { Link } from "react-router-dom";
 
+import Grabber from './assets/images/grabber.jpg';
+import Physical from './assets/images/physical.jpg';
+import Innovation from './assets/images/innovation.jpg';
+import WaveLg from './assets/images/wave-lg.svg';
+
 export default function Home(props) {
-    return (
-        <>
-            <div className="contain">
-                <div className="landing-content">
-                    <div>
-                        <h2 className="display-5">
-                            Include Involve Inspire
-                        </h2>
-                        <p className="lead mb-5">
-                            our mission is to provide local help for  via tech for free. Seek help or volunteer to give for a good cause
-                        </p>
-                        <Link to="/SingUp" className="btn btn-lg btn-primary rounded-pill py-3 px-5">Register</Link>
-                    </div>
-                </div>
-                <div className="img">
-                    <img src={AppSvg} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy"/>
-                </div>
+  return (
+    <>
+      <img className="wave wave-lg" src={WaveLg} alt="3I" />
+      <div className="container px-4 py-5">
+        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div className="col-10 col-sm-8 col-lg-6">
+            <img src={AppSvg} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy" />
+          </div>
+          <div className="col-lg-6">
+            <h1 className="display-5 fw-bold lh-1 mb-3">
+              Include Involve Inspire
+            </h1>
+            <p className="lead mb-4">
+              Our mission is to provide local help for via tech for free. Seek help or volunteer to give for a good cause
+            </p>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+              <Link to="/SignUp" className="btn btn-lg btn-primary rounded-pill py-3 px-5 me-md-2">Register</Link>
+              <Link to="/SignIn" className="btn btn-outline-secondary btn-lg rounded-pill py-3 px-5">Login</Link>
             </div>
-            <div className="container">
-                <div className="vh-30"></div>
-                <div className="row align-items-center bg-dark my-5 p-5 rounded-3 text-light">
-                    <div className="col">
-                        <p className="display-6">Just volunteer to do something good for the one who needs it badly</p>
-                    </div>
-                    <div className="col-auto">
-                        <Link to="/Login" className="btn btn-lg btn-light rounded-pill py-3 px-5 me-3">Login</Link>
-                    </div>
-                </div>
-                <div className="vh-30"></div>
-                <div className="text-center">
-                    <h2 className="display-5">
-                        Include Involve Inspire
-                    </h2>
-                    <p className="lead mb-5">
-                        This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.
-                    </p>
-                </div>
-                <div className="vh-30"></div>
-                <div className="row mb-2">
-                    <div className="col-md-6">
-                        <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div className="col p-4 d-flex flex-column position-static">
-                                <strong className="d-inline-block mb-2 text-primary">Category</strong>
-                                <h3 className="mb-0">Featured post</h3>
-                                <div className="mb-1 text-muted">Nov 12</div>
-                                <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <Link to='/' className="stretched-link">Continue reading</Link>
-                            </div>
-                            <div className="col-auto d-none d-lg-block">
-                                <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          </div>
+        </div>
+      </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div className="col p-4 d-flex flex-column position-static">
-                                <strong className="d-inline-block mb-2 text-primary">Category</strong>
-                                <h3 className="mb-0">Post title</h3>
-                                <div className="mb-1 text-muted">Nov 11</div>
-                                <p className="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <Link to='/' className="stretched-link">Continue reading</Link>
-                            </div>
-                            <div className="col-auto d-none d-lg-block">
-                                <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div className="col p-4 d-flex flex-column position-static">
-                                <strong className="d-inline-block mb-2 text-primary">Category</strong>
-                                <h3 className="mb-0">Featured post</h3>
-                                <div className="mb-1 text-muted">Nov 12</div>
-                                <p className="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <Link to='/' className="stretched-link">Continue reading</Link>
-                            </div>
-                            <div className="col-auto d-none d-lg-block">
-                                <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
-                        <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div className="col p-4 d-flex flex-column position-static">
-                                <strong className="d-inline-block mb-2 text-primary">Category</strong>
-                                <h3 className="mb-0">Post title</h3>
-                                <div className="mb-1 text-muted">Nov 11</div>
-                                <p className="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <Link to='/' className="stretched-link">Continue reading</Link>
-                            </div>
-                            <div className="col-auto d-none d-lg-block">
-                                <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#0d6efd"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="vh-30"></div>
+      <div className="container px-4 py-5">
+        <h2 className="display-5 fw-bold lh-1 mb-3">Upcoming Events</h2>
+        <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div className="col">
+            <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Grabber})` }}>
+              <div className="d-flex flex-column h-100 p-5 pb-3 text-white">
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1">
+                  Makeathon to build tech for people with disabilities
+                </h2>
+                <ul className="d-flex list-unstyled mt-auto">
+                  <li className="me-auto">
+                    {' '}
+                  </li>
+                  <li className="d-flex align-items-center me-3">
+                    <svg className="bi me-2" width="1em" height="1em">
+                      <use xlinkHref="#pick"></use>
+                    </svg>
+                    <small>Berkeley</small>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <svg className="bi me-2" width="1em" height="1em">
+                      <use xlinkHref="#calendar"></use>
+                    </svg>
+                    <small>3d</small>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </>
-    );
+          </div>
+          <div className="col">
+            <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Innovation})` }}>
+              <div className="d-flex flex-column h-100 p-5 pb-3 text-white">
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1">Students with disability to benefit from innovative programs</h2>
+                <ul className="d-flex list-unstyled mt-auto">
+                  <li className="me-auto">
+                    {' '}
+                  </li>
+                  <li className="d-flex align-items-center me-3">
+                    <svg className="bi me-2" width="1em" height="1em">
+                      <use xlinkHref="#pick"></use>
+                    </svg>
+                    <small>New South Wales</small>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <svg className="bi me-2" width="1em" height="1em">
+                      <use xlinkHref="#calendar"></use>
+                    </svg>
+                    <small>4d</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Physical})` }}>
+              <div className="d-flex flex-column h-100 p-5 pb-3">
+                <h2 className="pt-5 mt-5 mb-4 display-6 lh-1">Strengthening the collection of data on disability</h2>
+                <ul className="d-flex list-unstyled mt-auto">
+                  <li className="me-auto">
+                    {' '}
+                  </li>
+                  <li className="d-flex align-items-center me-3">
+                    <svg className="bi me-2" width="1em" height="1em">
+                      <use xlinkHref="#pick"></use>
+                    </svg>
+                    <small>California</small>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <svg className="bi me-2" width="1em" height="1em">
+                      <use xlinkHref="#calendar"></use>
+                    </svg>
+                    <small>5d</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container px-4">
+        <div
+          className="d-grid gap-4 d-sm-flex justify-content-sm-center align-items-center bg-dark my-5 g-4 p-5 rounded-3 text-light">
+          <p className="display-6">Just volunteer to do something good for the one who needs it badly</p>
+          <Link to="SignIn" className="btn btn-lg btn-light rounded-pill py-3 px-5">Register</Link>
+        </div>
+      </div>
+    </>
+  );
 }
