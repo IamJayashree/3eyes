@@ -12,6 +12,7 @@ import SignUp from './signup/signup';
 import SignIn from './signin/signin';
 import LandingPage from './landingpage/landingpage';
 import NeedHelp from './help/needhelp';
+import Happiness from './happiness/happiness';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
         <Route path="/SignUp" exact component={SignUp} />
         <Route path="/LandingPage" exact component={LandingPage} />
         <Route path="/NeedHelp" exact component={NeedHelp} />
+        <Route path="/Happiness" exact component={Happiness} />
       </Router>
     </>
   );

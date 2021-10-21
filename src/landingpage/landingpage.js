@@ -26,7 +26,7 @@ export default function LandingPage(props) {
             <div className="h-100 p-5 bg-light border rounded-3">
               <h2>Feeling low?</h2>
               <p>Activate Happiness Together withus now!</p>
-              <Link to="/NeedHelp" className="btn btn-outline-primary btn-lg rounded-pill px-4">
+              <Link to="/Happiness" className="btn btn-outline-primary btn-lg rounded-pill px-4">
                 Get happiness now!
               </Link>
             </div>
