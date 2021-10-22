@@ -41,22 +41,22 @@ export default function SignUp(props) {
                   autoFocus
                   type="text"
                   name="firstName"
+                  placeholder="First Name"
                   required
                 />
                 <Form.Label className="px-4">First Name</Form.Label>
               </Form.Group>
               <Form.Group size="lg" controlId="lastName" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
-                  autoFocus
                   type="text"
                   name="lastName"
+                  placeholder="Last Name"
                   required
                 />
                 <Form.Label className="px-4">Last Name</Form.Label>
               </Form.Group>
               <Form.Group size="lg" controlId="email" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
-                  autoFocus
                   type="email"
                   placeholder="name@example.com"
                   name="email"
