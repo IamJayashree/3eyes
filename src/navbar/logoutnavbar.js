@@ -1,12 +1,6 @@
-import {
-  BrowserRouter as Router,
-  // Route,
-  // Link,
-  // NavLink,
-  useHistory
-} from "react-router-dom";
-// import Nav from 'react-bootstrap/Nav';
-
+import React from 'react';
+import { BrowserRouter as Router, useHistory } from "react-router-dom";
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
 export default function LogoutNavBar() {
   let history = useHistory();
@@ -14,36 +8,34 @@ export default function LogoutNavBar() {
     localStorage.clear();
     history.push("/Home");
   }
+  const name = localStorage.getItem("userName");
 
   return (
-    <div>
-      <Router>
-        <nav className="navbar navbar-expand-lg navbar-light px-lg-4 py-3 shadow sticky-top bg-light" aria-label="">
-          <div className="container px-4">
-            <a href="/LandingPage" className="navbar-brand p-0 me-2 fw-bold lh-lg" aria-label="iii">
-              <svg className="d-inline-block my-1 me-2" xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32" role="img">
-                <use xlinkHref="#logo"></use>
-              </svg>
-              <span>i</span>nclude{' '}
-              <span>i</span>nvolve{' '}
-              <span>i</span>nspire
-            </a>
-            <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-3E" aria-controls="navbar-3E" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="navbar-collapse collapse" id="navbar-3E">
-              <ul className="navbar-nav mb-2 mb-lg-0 ms-5 ms-lg-auto mt-3 mt-lg-0">
-                <li className="nav-item me-3">
-                  <a className="nav-link" href="/HowItWork">How it works?</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/" onClick={handleLogout}>Logout</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </Router>
-    </div>
+    <Router>
+      <Navbar bg="light" variant="light" expand="lg" fixed="top" className="px-lg-4 shadow">
+        <Container>
+          <Navbar.Brand href="/LandingPage" className="navbar-brand p-0 me-2 fw-bold lh-lg">
+            <svg className="d-inline-block my-1 me-2" xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32" role="img">
+              <use xlinkHref="#logo"></use>
+            </svg>
+            <span>i</span>nclude{' '}
+            <span>i</span>nvolve{' '}
+            <span>i</span>nspire
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="/HowItWork">How It Works?</Nav.Link>
+              <Nav.Link href="/NeedHelp">Request Help</Nav.Link>
+              <NavDropdown title={name} id="basic-nav-dropdown">
+                {/* <NavDropdown.Item href="#">Profile Info</NavDropdown.Item> */}
+                {/* <NavDropdown.Divider /> */}
+                <NavDropdown.Item href="/" onClick={handleLogout}>Logout</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </Router>
   );
 }

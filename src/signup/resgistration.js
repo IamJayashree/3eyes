@@ -54,7 +54,7 @@ export default function Registration(props) {
                         <div className="row g-0">
                             <div className="col-lg-8">
                                 <div className="card-body p-4 p-md-5">
-                                    <h3 className="fw-bold lh-1 mb-3">Welcome {name}</h3>
+                                    <h3 className="fw-bold lh-1 mb-3">Welcome {name},</h3>
                                     <p className="mb-5">Please provide some more information about yourself to quickly get started.</p>
                                     <div className="row g-3">
                                         <div className="col-12">

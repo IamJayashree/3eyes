@@ -1,43 +1,30 @@
-import {
-  BrowserRouter as Router,
-  // Link,
-  // NavLink
-} from "react-router-dom";
-// import Nav from 'react-bootstrap/Nav';
+import React from 'react';
+import { BrowserRouter as Router, useHistory } from "react-router-dom";
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
 export default function LoginNavBar() {
   return (
-    <>
-      <Router>
-        <nav className="navbar navbar-expand-lg navbar-light px-lg-4 py-3 shadow sticky-top bg-light" aria-label="">
-          <div className="container px-4">
-            <a href="/Home" className="navbar-brand p-0 me-2 fw-bold lh-lg" aria-label="iii">
-              <svg className="d-inline-block my-1 me-2" xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32" role="img">
-                <use xlinkHref="#logo"></use>
-              </svg>
-              <span>i</span>nclude{' '}
-              <span>i</span>nvolve{' '}
-              <span>i</span>nspire
-            </a>
-            <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-3E" aria-controls="navbar-3E" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="navbar-collapse collapse" id="navbar-3E">
-              <ul className="navbar-nav mb-2 mb-lg-0 ms-5 ms-lg-auto mt-3 mt-lg-0">
-                <li className="nav-item me-3">
-                  <a className="nav-link" href="/HowItWorks">How it works?</a>
-                </li>
-                <li className="nav-item me-3">
-                  <a className="nav-link" href="/SignIn">Login</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/SignUp">Register</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </Router>
-    </>
+    <Router>
+      <Navbar bg="light" variant="light" expand="lg" fixed="top" className="px-lg-4 shadow">
+        <Container>
+          <Navbar.Brand href="/" className="navbar-brand p-0 me-2 fw-bold lh-lg">
+            <svg className="d-inline-block my-1 me-2" xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32" role="img">
+              <use xlinkHref="#logo"></use>
+            </svg>
+            <span>i</span>nclude{' '}
+            <span>i</span>nvolve{' '}
+            <span>i</span>nspire
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="/HowItWorks">How It Works?</Nav.Link>
+              <Nav.Link href="/SignIn">Login</Nav.Link>
+              <Nav.Link href="/SignUp">Register</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </Router>
   );
 }

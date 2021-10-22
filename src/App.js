@@ -1,9 +1,6 @@
 import './App.css';
-import "react-bootstrap/dist/react-bootstrap.min.js";
-import {
-  BrowserRouter as Router,
-  Route
-} from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
+
 import Home from './home';
 import SignUp from './signup/signup';
 import SignIn from './signin/signin';
@@ -48,18 +45,17 @@ function App() {
           <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
         </symbol>
       </svg>
-      <Router>
+      <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/Home" exact component={Home} />
-        <Route path="/SignIn" exact component={SignIn} />
-        <Route path="/SignUp" exact component={SignUp} />
-        <Route path="/Registration" exact component={Registration} />
-        <Route path="/LandingPage" exact component={LandingPage} />
-        <Route path="/NeedHelp" exact component={NeedHelp} />
-        <Route path="/Happiness" exact component={Happiness} />
-        <Route path="/HowItWorks" exact component={HowItWorks} />
-        <Route path="/HowItWork" exact component={HowItWork} />
-      </Router>
+        <Route path="/SignIn" component={SignIn} />
+        <Route path="/SignUp" component={SignUp} />
+        <Route path="/Registration" component={Registration} />
+        <Route path="/LandingPage" component={LandingPage} />
+        <Route path="/NeedHelp" component={NeedHelp} />
+        <Route path="/Happiness" component={Happiness} />
+        <Route path="/HowItWorks" component={HowItWorks} />
+        <Route path="/HowItWork" component={HowItWork} />
+      </Switch>
     </>
   );
 }
