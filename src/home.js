@@ -6,10 +6,12 @@ import Grabber from './assets/images/grabber.jpg';
 import Physical from './assets/images/physical.jpg';
 import Innovation from './assets/images/innovation.jpg';
 import WaveLgSVG from './assets/images/wave-lg.svg';
+import LoginNavBar from "./navbar/loginnavbar";
 
 export default function Home(props) {
   return (
     <>
+      <LoginNavBar></LoginNavBar>
       <img className="wave wave-lg" src={WaveLgSVG} alt="3I" />
       <div className="container px-4 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">

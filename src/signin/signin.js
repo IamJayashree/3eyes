@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 
 import WaveSVG from '../assets/images/wave.svg';
 import SignInSVG from "../assets/images/signin.svg";
+import LoginNavBar from "../navbar/loginnavbar";
 
 export default function Login(props) {
 
@@ -20,6 +21,7 @@ export default function Login(props) {
 
   return (
     <>
+      <LoginNavBar></LoginNavBar>
       <img className="wave" src={WaveSVG} alt="3I" />
       <div className="container px-4 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">

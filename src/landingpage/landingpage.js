@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 
 import Church from '../assets/images/church.jpg';
 import Hospital from '../assets/images/hospital.jpg';
+import LogoutNavBar from '../navbar/logoutnavbar';
 
 export default function LandingPage(props) {
+
+  const isRequested = localStorage.getItem("isRequested");
+  const isVolunteer = localStorage.getItem("isVolunteer");
+
   return (
     <>
+      <LogoutNavBar></LogoutNavBar>
       <div className="container px-4 py-5">
         <div className="row align-items-md-center">
           <div className="col-md-8">
@@ -22,7 +28,7 @@ export default function LandingPage(props) {
           <div className="col-md-4">
             <div className="h-100 p-5 bg-light border rounded-3">
               <h2>Feeling low?</h2>
-              <p>Activate Happiness Together withus now!</p>
+              <p>Activate Happiness Together with us now!</p>
               <Link to="/Happiness" className="btn btn-outline-primary btn-lg rounded-pill px-4">
                 Get happiness now!
               </Link>
@@ -30,14 +36,40 @@ export default function LandingPage(props) {
           </div>
         </div>
       </div>
+
+      {isRequested &&
+        <div className="container px-4 py-5">
+          <div className="d-grid gap-4 d-sm-flex justify-content-sm-center align-items-center border-bottom border-5">
+            <h2 className="display-5 fw-bold lh-1 mb-3 me-auto">
+              Status
+            </h2>
+
+          </div>
+          <h5> Help is on your way</h5>
+          <p className="lead mb-4">
+            Esther will reach out to you!
+            <br />
+            Contact Details yet to be added
+          </p>
+        </div>
+      }
       <div className="container px-4 py-5">
         <div className="d-grid gap-4 d-sm-flex justify-content-sm-center align-items-center border-bottom border-5">
           <h2 className="display-5 fw-bold lh-1 mb-3 me-auto">
             My Events
           </h2>
+
+          {isVolunteer == 'true' &&
+            <Link to="/NeedHelp" className="btn btn-primary btn-lg rounded-pill px-4">
+              Look for Oppurtunities
+              add new page
+            </Link>
+          }
+
           <Link to="/NeedHelp" className="btn btn-primary btn-lg rounded-pill px-4">
             Create Help Event
           </Link>
+
         </div>
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
           <div className="col">
@@ -126,7 +158,7 @@ export default function LandingPage(props) {
         <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-body">
-              <button type="button" className="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close" style={{right: '20px', top: '20px'}}></button>
+              <button type="button" className="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close" style={{ right: '20px', top: '20px' }}></button>
               <svg className="bd-placeholder-img mb-3" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
                 aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <rect width="100%" height="100%" fill="#999"></rect>

@@ -4,18 +4,20 @@ import Button from 'react-bootstrap/esm/Button';
 
 import WaveSVG from '../assets/images/wave.svg';
 import SignUpSVG from '../assets/images/signup.svg';
+import LoginNavBar from '../navbar/loginnavbar';
 
 export default function SignUp(props) {
   function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
 
+    localStorage.setItem("userName", data.get('firstName'));
     fetch('/api/form-submit-url', {
       method: 'POST',
       body: data,
     });
     props.history.push({
-      pathname: '/LandingPage', state: {
+      pathname: '/Registration', state: {
         firstName: data.get('firstName'),
         lastName: data.get('lastName')
       }
@@ -24,6 +26,7 @@ export default function SignUp(props) {
 
   return (
     <>
+      <LoginNavBar></LoginNavBar>
       <img className="wave" src={WaveSVG} alt="3I" />
       <div className="container px-4 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -33,6 +36,24 @@ export default function SignUp(props) {
           <div className="col-lg-6">
             <Form onSubmit={handleSubmit} className="p-md-4 p-md-5">
               <h1 className="display-5 fw-bold lh-1 mb-5 text-center">Sign up</h1>
+              <Form.Group size="lg" controlId="firstName" className="form-floating mb-3">
+                <Form.Control className="form-control px-4 rounded-pill"
+                  autoFocus
+                  type="text"
+                  name="firstName"
+                  required
+                />
+                <Form.Label className="px-4">First Name</Form.Label>
+              </Form.Group>
+              <Form.Group size="lg" controlId="lastName" className="form-floating mb-3">
+                <Form.Control className="form-control px-4 rounded-pill"
+                  autoFocus
+                  type="text"
+                  name="lastName"
+                  required
+                />
+                <Form.Label className="px-4">Last Name</Form.Label>
+              </Form.Group>
               <Form.Group size="lg" controlId="email" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   autoFocus
@@ -65,7 +86,6 @@ export default function SignUp(props) {
                 Sign Up
               </Button>
             </Form>
-
           </div>
         </div>
       </div>
