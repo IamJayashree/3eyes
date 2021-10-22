@@ -59,7 +59,7 @@ export default function LandingPage(props) {
             My Events
           </h2>
 
-          {isVolunteer == 'true' &&
+          {isVolunteer === 'true' &&
             <Link to="/NeedHelp" className="btn btn-primary btn-lg rounded-pill px-4">
               Look for Oppurtunities
               add new page

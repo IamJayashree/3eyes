@@ -1,11 +1,11 @@
 import {
     BrowserRouter as Router,
-    Route,
+    // Route,
     Link,
-    NavLink,
+    // NavLink,
     useHistory
 } from "react-router-dom";
-import Nav from 'react-bootstrap/Nav';
+// import Nav from 'react-bootstrap/Nav';
 
 
 export default function LogoutNavBar() {
@@ -59,12 +59,11 @@ export default function LogoutNavBar() {
                         </button>
                         <div className="navbar-collapse collapse" id="navbar-3E">
                             <ul className="navbar-nav mb-2 mb-lg-0 ms-5 ms-lg-auto mt-3 mt-lg-0">
-
                                 <li className="nav-item">
                                     <a className="nav-link" href="/">How it works? add a new page</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={handleLogout}>Logout</a>
+                                    <a className="nav-link" href="/" onClick={handleLogout}>Logout</a>
                                 </li>
                             </ul>
                         </div>

@@ -1,15 +1,15 @@
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
 import { useState } from 'react';
 
-import {
-    Route,
-    Link
-} from "react-router-dom";
-import Login from '../signin/signin';
-import LoginNavBar from '../navbar/loginnavbar';
+// import {
+    // Route,
+    // Link
+// } from "react-router-dom";
+// import Login from '../signin/signin';
+// import LoginNavBar from '../navbar/loginnavbar';
 import LogoutNavBar from '../navbar/logoutnavbar';
 
 export default function Registration(props) {
@@ -28,7 +28,7 @@ export default function Registration(props) {
         event.preventDefault();
         const data = new FormData(event.target);
 
-        let value = status == 1 ? true : false;
+        let value = status === 1 ? true : false;
         localStorage.setItem("isVolunteer", value);
 
         const form = event.currentTarget;
