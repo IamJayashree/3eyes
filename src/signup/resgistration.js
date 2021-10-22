@@ -49,46 +49,27 @@ export default function Registration(props) {
         <div>
             <LogoutNavBar></LogoutNavBar>
             <div className="container px-4 py-5">
-                <h1 className="display-5 fw-bold lh-1 mb-3">Welcome {name}</h1>
-                <p className="lead mb-5">Please provide some more information about yourself to quickly get started.</p>
                 <Form noValidate validated={validated} onSubmit={handleSubmit} className="needs-validation">
                     <div className="card shadow">
-                        <div className="row">
+                        <div className="row g-0">
                             <div className="col-lg-8">
                                 <div className="card-body p-4 p-md-5">
-                                    <h4 className="mb-3 border-bottom border-1">Basic Info</h4>
+                                    <h3 className="fw-bold lh-1 mb-3">Welcome {name}</h3>
+                                    <p className="mb-5">Please provide some more information about yourself to quickly get started.</p>
                                     <div className="row g-3">
-                                        {/* <div className="col-sm-6">
-                                            <label htmlFor="firstName" className="form-label">First name</label>
-                                            <input type="text" className="form-control" id="firstName" placeholder="" value="" required="" />
-                                            <div className="invalid-feedback">
-                                                Valid first name is required.
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <label htmlFor="lastName" className="form-label">Last name</label>
-                                            <input type="text" className="form-control" id="lastName" placeholder="" value="" required="" />
-                                            <div className="invalid-feedback">
-                                                Valid last name is required.
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <label htmlFor="email" className="form-label">Email</label>
-                                            <input type="email" className="form-control" id="email" placeholder="you@example.com" required="" />
-                                            <div className="invalid-feedback">
-                                                Please enter a valid email address
-                                            </div>
-                                        </div> */}
                                         <div className="col-12">
                                             <label className="form-label mr-auto" htmlFor="address">Address</label>
-                                            <textarea className="form-control" id="address" cols="30" rows="2" required=""></textarea>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" id="address" placeholder="Get current location address" aria-label="Address" aria-describedby="Address"/>
+                                                <span class="input-group-text">
+                                                    <svg width="1em" height="1em">
+                                                        <use xlinkHref="#geo"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
                                             <div className="invalid-feedback">
                                                 Please enter your address.
                                             </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <label htmlFor="address2" className="form-label">Address 2 <span className="text-muted">(Optional)</span></label>
-                                            <textarea id="address2" className="form-control" cols="30" rows="2" required=""></textarea>
                                         </div>
                                         <div className="col-md-5">
                                             <label htmlFor="country" className="form-label">Country</label>
@@ -117,115 +98,61 @@ export default function Registration(props) {
                                                 Zip code required.
                                             </div>
                                         </div>
-                                        <div className="col-md-12">
-                                            <div className="pt-4 mt-4"></div>
-                                            <h4 className="mb-3 border-bottom border-1">Personal Info</h4>
-                                        </div>
-                                        <div className="col-md-6">
+                                        <div className="col-md-5">
                                             <label htmlFor="dob" className="form-label">Date of Birth</label>
                                             <input type="date" className="form-control" id="dob" placeholder="MM/DD/YYY" required="" />
                                             <div className="invalid-feedback">
                                                 Please input a valid Date of Birth.
                                             </div>
                                         </div>
-                                        <div className="col-md-6">
-                                            <label className="form-label mb-0">Gender</label><br />
-                                            <div className="my-3">
-                                                <div className="form-check-inline">
-                                                    <input id="genderMale" name="disability1" type="radio" className="form-check-input me-2" />
-                                                    <label className="form-check-label" htmlFor="genderMale">Male</label>
-                                                </div>
-                                                <div className="form-check-inline">
-                                                    <input id="genderFemale" name="disability1" type="radio" className="form-check-input me-2" />
-                                                    <label className="form-check-label" htmlFor="genderFemale">Female</label>
-                                                </div>
-                                                <div className="form-check-inline">
-                                                    <input id="genderOther" name="disability1" type="radio" className="form-check-input me-2" />
-                                                    <label className="form-check-label" htmlFor="genderOther">Other</label>
-                                                </div>
+                                        <div className="col-md-7">
+                                            <label htmlFor="state" className="form-label">Pronouns</label>
+                                            <select className="form-select" id="state" required="">
+                                                <option value="">Choose...</option>
+                                                <option>he/him/his</option>
+                                                <option>she/her/hers</option>
+                                                <option>they/them/theirs</option>
+                                            </select>
+                                            <div className="invalid-feedback">
+                                                Please provide a pronoun
                                             </div>
                                         </div>
                                         <div className="col-md-12">
-                                            <label htmlFor="dob" className="form-label col-12">Do you have any specific accessibility
-                                                requirements?</label>
-                                            <div className="form-check mb-2">
-                                                <input id="blind" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="blind">Visually impaired</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="deaf" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="deaf">Hearing-impaired</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="mobility-aid" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="mobility-aid">Mobility/Walking</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="assisted-aid" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="assisted-aid">Assisted living</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="prosthetic-implant" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="prosthetic-implant">Prosthetic Implant</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="paralysis-orthoses" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="paralysis-orthoses">Paralysis Orthoses</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="mental-helth" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="mental-helth">Mental health</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="other" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="other">Other</label>
-                                            </div>
-                                            <div className="form-check mb-2">
-                                                <input id="none" type="checkbox" className="form-check-input" />
-                                                <label className="form-check-label" htmlFor="none">None</label>
-                                            </div>
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <label className="form-label">Are you willing for volunteering?</label><br />
+                                            <label htmlFor="dob" className="form-label col-12">
+                                                Do you have any disability?
+                                            </label>
                                             <div className="form-check-inline">
-                                                <input type="radio" name="release" id="Yes" className="form-check-input me-2" checked={status === 1} onClick={(e) => radioHandler(1)} />
-                                                <label className="form-check-label" htmlFor="Yes">Yes</label>
+                                                <input id="physical" type="checkbox" className="form-check-input me-2" />
+                                                <label className="form-check-label" htmlFor="physical">Physical</label>
                                             </div>
                                             <div className="form-check-inline">
-                                                <input type="radio" name="release" id="No" className="form-check-input me-2" checked={status === 2} onClick={(e) => radioHandler(2)} />
-                                                <label className="form-check-label" htmlFor="No">No</label>
+                                                <input id="visual" type="checkbox" className="form-check-input me-2" />
+                                                <label className="form-check-label" htmlFor="visual">Visual</label>
+                                            </div>
+                                            <div className="form-check-inline">
+                                                <input id="hearing" type="checkbox" className="form-check-input me-2" />
+                                                <label className="form-check-label" htmlFor="hearing">Hearing</label>
+                                            </div>
+                                            <div className="form-check-inline">
+                                                <input id="mental" type="checkbox" className="form-check-input me-2" />
+                                                <label className="form-check-label" htmlFor="mental">Mental</label>
+                                            </div>
+                                            <div className="form-check-inline">
+                                                <input id="neuroDiversity" type="checkbox" className="form-check-input me-2" />
+                                                <label className="form-check-label" htmlFor="neuroDiversity">Neuro Diversity</label>
+                                            </div>
+                                            <div className="form-check-inline">
+                                                <input id="others" type="checkbox" className="form-check-input me-2" />
+                                                <label className="form-check-label" htmlFor="others">Others</label>
                                             </div>
                                         </div>
-
-                                        {status === 1 &&
-
-                                            <div className="col-md-12">
-                                                <label className="form-label">What is the area of your interest?</label><br />
-
-                                                <div className="form-check mb-2">
-                                                    <input id="blind1" type="checkbox" className="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="blind1">Educational</label>
-                                                </div>
-                                                <div className="form-check mb-2">
-                                                    <input id="deaf1" type="checkbox" className="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="deaf1">Advocacy and Human Rights</label>
-                                                </div>
-                                                <div className="form-check mb-2">
-                                                    <input id="mobility-aid1" type="checkbox" className="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="mobility-aid1">Animals</label>
-                                                </div>
-                                                <div className="form-check mb-2">
-                                                    <input id="assisted-aid1" type="checkbox" className="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="assisted-aid1">Childern and Youth</label>
-                                                </div>
-                                                <div className="form-check mb-2">
-                                                    <input id="other-aid" type="checkbox" className="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="other-aid">Other</label>
-                                                </div>
+                                        <div className="col-md-12 mb-4">
+                                            <input type="text" className="form-control" placeholder="Show this input when Others is checked" required="" />
+                                            <div className="invalid-feedback">
+                                                Other required
                                             </div>
-                                        }
-                                        <label className="form-label mt-4 mb-0 col-12 fw-bold">Family/Additional Contact Information</label>
+                                        </div>
+                                        <label className="form-label mt-4 mb-0 col-12 fw-bold">Emergency Contact</label>
                                         <div className="col-md-5">
                                             <label htmlFor="a-name" className="form-label">Full Name <span className="text-muted">(Optional)</span></label>
                                             <input type="text" className="form-control" id="a-name" placeholder="" />
@@ -241,12 +168,69 @@ export default function Registration(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col border-left d-none d-md-block ">
-                                &nbsp;
+                            <div className="col bg-light border">
+                                <div className="card-body p-4 p-md-5">
+                                    <div className="form-check form-switch mb-3">
+                                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                                        <label className="form-check-label" for="flexSwitchCheckDefault">Do you wish to Volunteer?</label>
+                                    </div>
+                                    <label className="form-label">Do you wish to Volunteer?</label><br />
+                                    <div className="form-check-inline">
+                                        <input type="radio" name="release" id="Yes" className="form-check-input me-2" checked={status === 1} onClick={(e) => radioHandler(1)} />
+                                        <label className="form-check-label" htmlFor="Yes">Yes</label>
+                                    </div>
+                                    <div className="form-check-inline">
+                                        <input type="radio" name="release" id="No" className="form-check-input me-2" checked={status === 2} onClick={(e) => radioHandler(2)} />
+                                        <label className="form-check-label" htmlFor="No">No</label>
+                                    </div>
+                                    {
+                                        status === 1 &&
+                                        <>
+                                            <div className="py-4">
+                                                <label className="form-label">What's your area of interest?</label><br />
+                                                <div className="form-check mb-2">
+                                                    <input id="mobility-aid1" type="checkbox" className="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="mobility-aid1">Animals</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="blind1" type="checkbox" className="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="blind1">Educational</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="assisted-aid1" type="checkbox" className="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="assisted-aid1">Childern and Youth</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="deaf1" type="checkbox" className="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="deaf1">Advocacy and Human Rights</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="other-aid" type="checkbox" className="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="other-aid">Other</label>
+                                                </div>
+                                                <div className="mb-2">
+                                                    <input type="text" className="form-control" placeholder="Show when Other is checked" required="" />
+                                                    <div className="invalid-feedback">
+                                                        Other required
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                You've committed yourself to something that you're passionate about, so put a smile on your face with a good attitude.
+                                            </p>
+                                            <b>Volunteer Etiquette</b>
+                                            <ol className="px-3 mt-2">
+                                                <li>Be on time.</li>
+                                                <li>Communicate.</li>
+                                                <li>Dress appropriately.</li>
+                                                <li>Get along with others.</li>
+                                                <li>Do the best job you can.</li>
+                                            </ol>
+                                        </>
+                                    }
+                                </div>
                             </div>
                         </div>
-
-
                         <div className="card-footer p-4 px-md-5">
                             <Button block size="lg" type="submit" className="px-5 btn btn-primary btn-lg d-block d-md-inline-block">
                                 Update
