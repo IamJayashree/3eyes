@@ -59,7 +59,7 @@ export default function NeedHelp(props) {
                       <Form.Group size="lg" controlId="helpcategory">
                         <Form.Label className="form-label">Help Category</Form.Label>
                         <br />
-                        <select value="   ">
+                        <select value=" " className="form-select">
                           <option value="">Please select </option>
                           <option value="Emergency">Emergency</option>
                           <option value="Recreational">Recreational</option>
