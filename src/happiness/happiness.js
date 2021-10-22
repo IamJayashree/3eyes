@@ -3,10 +3,12 @@ import React from 'react';
 import Grabber from '../assets/images/grabber.jpg';
 import Physical from '../assets/images/physical.jpg';
 import Innovation from '../assets/images/innovation.jpg';
+import LogoutNavBar from '../navbar/logoutnavbar';
 
 export default function LandingPage(props) {
   return (
     <>
+      <LogoutNavBar></LogoutNavBar>
       <div className="container px-4 py-5">
         <h2 className="display-5 fw-bold lh-1 mb-3">
           Turn the table for happiness - Today's session

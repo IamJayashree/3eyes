@@ -11,6 +11,8 @@ import LandingPage from './landingpage/landingpage';
 import NeedHelp from './help/needhelp';
 import Happiness from './happiness/happiness';
 import Registration from './signup/resgistration';
+import HowItWorks from './howitworks/howitworks';
+import HowItWork from './howitworks/howitwork';
 
 
 function App() {
@@ -51,6 +53,8 @@ function App() {
         <Route path="/LandingPage" exact component={LandingPage} />
         <Route path="/NeedHelp" exact component={NeedHelp} />
         <Route path="/Happiness" exact component={Happiness} />
+        <Route path="/HowItWorks" exact component={HowItWorks} />
+        <Route path="/HowItWork" exact component={HowItWork} />
       </Router>
     </>
   );
