@@ -1,26 +1,11 @@
 import Form from 'react-bootstrap/Form';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
 import { useState } from 'react';
-
-// import {
-    // Route,
-    // Link
-// } from "react-router-dom";
-// import Login from '../signin/signin';
-// import LoginNavBar from '../navbar/loginnavbar';
 import LogoutNavBar from '../navbar/logoutnavbar';
 
 export default function Registration(props) {
-
-    const [status, setStatus] = useState(0) // 0: no show, 1: show yes, 2: show no.
-
-    const radioHandler = (status) => {
-        setStatus(status);
-    };
-
-
+    const [status, setStatus] = useState(false);
+    const [otherStatus, setOtherStatus] = useState(false);
     const [validated, setValidated] = useState(false);
     const name = localStorage.getItem("userName");
 
@@ -59,9 +44,9 @@ export default function Registration(props) {
                                     <div className="row g-3">
                                         <div className="col-12">
                                             <label className="form-label mr-auto" htmlFor="address">Address</label>
-                                            <div class="input-group mb-3">
-                                                <input type="text" class="form-control" id="address" placeholder="Get current location address" aria-label="Address" aria-describedby="Address"/>
-                                                <span class="input-group-text">
+                                            <div className="input-group mb-3">
+                                                <input type="text" className="form-control" id="address" placeholder="Get current location address" aria-label="Address" aria-describedby="Address" />
+                                                <span className="input-group-text">
                                                     <svg width="1em" height="1em">
                                                         <use xlinkHref="#geo"></use>
                                                     </svg>
@@ -170,21 +155,17 @@ export default function Registration(props) {
                             </div>
                             <div className="col bg-light border">
                                 <div className="card-body p-4 p-md-5">
-                                    <div className="form-check form-switch mb-3">
-                                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                                        <label className="form-check-label" for="flexSwitchCheckDefault">Do you wish to Volunteer?</label>
-                                    </div>
-                                    <label className="form-label">Do you wish to Volunteer?</label><br />
-                                    <div className="form-check-inline">
-                                        <input type="radio" name="release" id="Yes" className="form-check-input me-2" checked={status === 1} onClick={(e) => radioHandler(1)} />
-                                        <label className="form-check-label" htmlFor="Yes">Yes</label>
-                                    </div>
-                                    <div className="form-check-inline">
-                                        <input type="radio" name="release" id="No" className="form-check-input me-2" checked={status === 2} onClick={(e) => radioHandler(2)} />
-                                        <label className="form-check-label" htmlFor="No">No</label>
+                                    <div>
+                                        <Form.Check
+                                            type="switch"
+                                            id="custom-switch"
+                                            label="Do you wish to Volunteer"
+                                            onChange={() => { setStatus(!status); }}
+                                        //onChange={(e) => radioHandler(status)}
+                                        />
                                     </div>
                                     {
-                                        status === 1 &&
+                                        status &&
                                         <>
                                             <div className="py-4">
                                                 <label className="form-label">What's your area of interest?</label><br />
@@ -205,15 +186,17 @@ export default function Registration(props) {
                                                     <label className="form-check-label" htmlFor="deaf1">Advocacy and Human Rights</label>
                                                 </div>
                                                 <div className="form-check mb-2">
-                                                    <input id="other-aid" type="checkbox" className="form-check-input" />
+                                                    <input id="other-aid" type="checkbox" className="form-check-input" onChange={() => { setOtherStatus(!otherStatus); }} />
                                                     <label className="form-check-label" htmlFor="other-aid">Other</label>
                                                 </div>
-                                                <div className="mb-2">
-                                                    <input type="text" className="form-control" placeholder="Show when Other is checked" required="" />
-                                                    <div className="invalid-feedback">
-                                                        Other required
-                                                    </div>
-                                                </div>
+                                                {otherStatus &&
+                                                    <div className="mb-2">
+                                                        <input type="text" className="form-control" placeholder="Please enter your interest" required="" />
+                                                        <div className="invalid-feedback">
+                                                            Other required
+                                                        </div>
+                                                    </div>}
+
                                             </div>
                                             <p>
                                                 You've committed yourself to something that you're passionate about, so put a smile on your face with a good attitude.
