@@ -24,8 +24,8 @@ export default function Login(props) {
       <LoginNavBar></LoginNavBar>
       <img className="wave" src={WaveSVG} alt="3I" />
       <div className="container px-4 py-5">
-        <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div className="col-10 col-sm-8 col-lg-6 d-none d-lg-block m-auto">
+        <div className="row flex-lg-row-reverse g-5">
+          <div className="col-10 col-sm-8 col-lg-6 d-none d-lg-block m-auto py-5 my-5">
             <img src={SignInSVG} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy" />
           </div>
           <div className="col-lg-6">
