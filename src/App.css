@@ -96,3 +96,7 @@
 body {
   padding-top: 60px;
 }
+
+.tbl td {
+  vertical-align: middle;
+}
