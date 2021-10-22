@@ -193,14 +193,13 @@ export default function NeedHelp(props) {
                 &nbsp;
               </div>
             </div>
-            <div className="card-footer py-4 px-5">
-              <Button block size="lg" type="submit" className="px-5 btn btn-primary btn-lg">
+            <div className="card-footer py-4 px-5 d-grid gap-3 d-md-flex justify-content-md-start">
+              <Button size="lg" type="submit" className="px-5 btn btn-primary btn-lg">
                 Create Help
               </Button>
-            </div>
-            <br />
-            <div className="col-md-6">
-              <a className="nav-link" href="/LandingPage">Close</a>
+              <a href="/LandingPage" className="px-5 btn btn-outline-primary btn-lg">
+                Cancel
+              </a>
             </div>
           </div>
         </Form>
