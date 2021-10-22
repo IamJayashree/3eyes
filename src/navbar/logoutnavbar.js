@@ -1,7 +1,7 @@
 import {
   BrowserRouter as Router,
   // Route,
-  Link,
+  // Link,
   // NavLink,
   useHistory
 } from "react-router-dom";
@@ -33,7 +33,7 @@ export default function LogoutNavBar() {
             </button>
             <div className="navbar-collapse collapse" id="navbar-3E">
               <ul className="navbar-nav mb-2 mb-lg-0 ms-5 ms-lg-auto mt-3 mt-lg-0">
-                <li className="nav-item">
+                <li className="nav-item me-3">
                   <a className="nav-link" href="/HowItWork">How it works?</a>
                 </li>
                 <li className="nav-item">

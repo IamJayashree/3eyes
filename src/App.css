@@ -85,3 +85,10 @@
   display: block;
   content: "";
 }
+
+.navbar-nav .nav-link {
+  border-bottom: .25rem solid transparent;
+}
+.navbar-nav .active {
+  border-bottom-color: #0d6efd;
+}
