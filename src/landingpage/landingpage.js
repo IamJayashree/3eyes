@@ -16,6 +16,9 @@ export default function LandingPage(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const help = JSON.parse(localStorage.getItem("helpObj"));
+
+
   return (
     <>
       <LogoutNavBar></LogoutNavBar>
@@ -197,9 +200,15 @@ export default function LandingPage(props) {
                 isRequested &&
                 <div className="p-4 mb-5 bg-light rounded shadow border">
                   <h5>Help is on your way</h5>
+
                   <p className="mb-0">
-                    Esther will reach out to you!<br />
-                    Contact Details yet to be added
+                    Status : In-Progress <br />
+                    Help Title: {help.helpTitle} <br />
+                    Category: {help.helpTitle} <br />
+                    Date: {help.date} <br />
+
+                    Comments: <br />
+                    A person will reach out to you!
                   </p>
                 </div>
               }

@@ -7,7 +7,11 @@ import PlacesAutocomplete from '../locationpicker/auto';
 export default function NeedHelp(props) {
 
   const [validated, setValidated] = useState(false);
+  const [category, setCategory] = useState(null);
 
+  const handleSelect = (e) => {
+    setCategory(e.currentTarget.value)
+  }
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -16,8 +20,16 @@ export default function NeedHelp(props) {
     } else {
 
       localStorage.setItem("isRequested", true);
-
       const data = new FormData(event.target);
+      let help = {
+        "helpTitle": data.get('helpTitle'),
+        "category": category,
+        "date": data.get('date'),
+        "time": data.get('time')
+      }
+
+      localStorage.setItem("helpObj", JSON.stringify(help));
+
       props.history.push({
         pathname: '/LandingPage', state: {
           name: data.get('email'),
@@ -56,19 +68,15 @@ export default function NeedHelp(props) {
                     </div>
 
                     <div className="col-md-12">
-                      <Form.Group size="lg" controlId="helpcategory">
-                        <Form.Label className="form-label">Help Category</Form.Label>
-                        <br />
-                        <select value=" " className="form-select">
-                          <option value="">Please select </option>
-                          <option value="Emergency">Emergency</option>
-                          <option value="Recreational">Recreational</option>
-                          <option value="Community">Community Help</option>
+                      <label className="form-label">Help Category</label>
+                      <br />
+                      <select className="form-select" onChange={handleSelect}>
+                        <option value="">Please select </option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="Recreational">Recreational</option>
+                        <option value="Community">Community Help</option>
 
-                        </select>
-                      </Form.Group>
-
-
+                      </select>
                     </div>
                     <div className="col-md-6">
                       <Form.Group size="lg" controlId="date">
@@ -128,33 +136,6 @@ export default function NeedHelp(props) {
                           id="other"
                         />
                       </Form.Group>
-
-                      {/* <Form.Label className="form-label">Volunteer gender</Form.Label>
-                      {['radio'].map((type) => (
-                        <div key={`inline-${type}`} className="mb-3">
-                          <Form.Check
-                            inline
-                            label="Male"
-                            name="gender"
-                            type={type}
-                            id={`inline-${type}-1`}
-                          />
-                          <Form.Check
-                            inline
-                            label="Female"
-                            name="gender"
-                            type={type}
-                            id={`inline-${type}-2`}
-                          />
-                          <Form.Check
-                            inline
-                            label="Other"
-                            name="gender"
-                            type={type}
-                            id={`inline-${type}-3`}
-                          />
-                        </div>
-                      ))} */}
                     </div>
                     <div className="col-12">
                       <Form.Group size="lg" controlId="info">
