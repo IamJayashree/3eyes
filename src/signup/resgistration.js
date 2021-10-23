@@ -9,6 +9,8 @@ export default function Registration(props) {
     const [otherStatus, setOtherStatus] = useState(false);
     const [otherDisableStatus, setOtherDisableStatus] = useState(false);
     const [validated, setValidated] = useState(false);
+    const [professionalHelp, setProfessionalHelp] = useState(false);
+    const [otherProfession, setOtherProfession] = useState(false);
     const name = localStorage.getItem("userName");
 
     const handleSubmit = (event) => {
@@ -180,6 +182,50 @@ export default function Registration(props) {
                                     }
                                 </div>
                             </div>
+                            <div className="bg-light border">
+                                <div className="card-body p-4 p-md-5">
+                                    < Form.Check
+                                        type="switch"
+                                        id="professionalHelp"
+                                        label="Interested in Professional Assist?"
+                                        onChange={() => { setProfessionalHelp(!professionalHelp); }}
+                                    />
+                                    {
+                                        professionalHelp &&
+                                        <>
+                                            <div className="py-4">
+                                                <label className="form-label">Choose your profession?</label><br />
+                                                <div className="form-check mb-2">
+                                                    <input id="accessibleTechnology" type="checkbox" lassName="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="physical">Educational</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="accessibleTechnology" type="checkbox" lassName="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="physical">Educational</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="healthCare" type="checkbox" lassName="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="hearing">Helath Care</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="healthCare" type="checkbox" lassName="form-check-input" />
+                                                    <label className="form-check-label" htmlFor="hearing">Personal Care</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="otherProfession" type="checkbox" lassName="form-check-input" onChange={() => { setOtherProfession(!otherProfession); }} />
+                                                    <label className="form-check-label" htmlFor="others">Others</label>
+                                                </div>
+                                                {otherProfession &&
+                                                    <div className="mb-2">
+                                                        <input type="text" className="form-control" placeholder="Please enter your Profession" required="" />
+
+                                                    </div>
+                                                }
+                                            </div>
+                                        </>
+                                    }
+                                </div>
+                            </div>
                         </div>
                         <div className="card-footer p-4 px-md-5">
                             <Button block size="lg" type="submit" className="px-5 btn btn-primary btn-lg d-block d-md-inline-block">
@@ -205,7 +251,7 @@ export default function Registration(props) {
                     <p className="mb-5">few line of text goes here few line of text goes here few line of text goes here few line of text goes here </p>
                 </div>
             </div>
-</div>
+        </div>
 
     );
 }
