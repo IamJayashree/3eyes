@@ -156,9 +156,7 @@ export default function NeedHelp(props) {
                   </div>
                 </div>
               </div>
-              <div className="col">
-                &nbsp;
-              </div>
+              <div className="col d-none d-md-block">&nbsp;</div>
             </div>
             <div className="card-footer py-4 px-5 d-grid gap-3 d-md-flex justify-content-md-start">
               <Button size="lg" type="submit" className="px-5 btn btn-primary btn-lg">
