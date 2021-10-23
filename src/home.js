@@ -113,7 +113,7 @@ export default function Home(props) {
         <div
           className="d-grid gap-4 d-sm-flex justify-content-sm-center align-items-center bg-dark my-5 g-4 p-5 rounded-3 text-light">
           <p className="display-6">Just volunteer to do something good for the one who needs it badly</p>
-          <Link to="SignIn" className="btn btn-lg btn-light rounded-pill py-3 px-5">Register</Link>
+          <Link to="SignUp" className="btn btn-lg btn-light rounded-pill py-3 px-5">Register</Link>
         </div>
       </div>
     </>
