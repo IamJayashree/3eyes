@@ -8,7 +8,6 @@ export default function LogoutNavBar() {
     localStorage.clear();
     history.push("/Home");
   }
-  const name = localStorage.getItem("userName");
 
   return (
     <Router>
@@ -27,11 +26,7 @@ export default function LogoutNavBar() {
             <Nav className="ms-auto">
               <Nav.Link href="/HowItWork">How It Works?</Nav.Link>
               <Nav.Link href="/NeedHelp">Request Help</Nav.Link>
-              <NavDropdown title={name} id="basic-nav-dropdown">
-                {/* <NavDropdown.Item href="#">Profile Info</NavDropdown.Item> */}
-                {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item href="/" onClick={handleLogout}>Logout</NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="/" onClick={handleLogout}>Logout</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

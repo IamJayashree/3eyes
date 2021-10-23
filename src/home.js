@@ -33,10 +33,10 @@ export default function Home(props) {
 
       <div class="bg-dark cover-container d-flex px-4 py-5 mx-auto flex-column"
       style={{ backgroundImage: `url(${HomeCoverImagelight})` }}>
-        <div class="container py-5 my-5">
+        <div class="container py-5 my-5 text-dark">
           <div className="col-6">
             <h1 class="display-5 fw-bold">Everything for everyone by everyone</h1>
-            <div class="col-lg-6 text-secondary">
+            <div class="col-lg-6">
               <p class="fs-5 mb-4">Include everyone, Involve in community &amp; Inspire every one</p>
             </div>
           </div>
