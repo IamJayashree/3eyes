@@ -255,13 +255,6 @@ export default function LandingPage(props) {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex">
-                  <div>
-
-                  </div>
-                  <div className="w-100">
-                  </div>
-                </div>
               </div>
               {/* Profile Info Ends */}
               {/* Feeling Low Card */}

@@ -46,7 +46,7 @@ function App() {
           <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
         </symbol>
       </svg>
-
+      <InNetwork></InNetwork>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/Home1" component={Home1} />
@@ -59,7 +59,6 @@ function App() {
         <Route path="/HowItWorks" component={HowItWorks} />
         <Route path="/HowItWork" component={HowItWork} />
       </Switch>
-      <InNetwork></InNetwork>
     </>
   );
 }
