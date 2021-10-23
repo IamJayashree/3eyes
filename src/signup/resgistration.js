@@ -17,8 +17,8 @@ export default function Registration(props) {
         event.preventDefault();
         const data = new FormData(event.target);
 
-        let value = status === 1 ? true : false;
-        localStorage.setItem("isVolunteer", value);
+        // let value = status === 1 ? true : false;
+        localStorage.setItem("isVolunteer", status);
 
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -195,10 +195,6 @@ export default function Registration(props) {
                                         <>
                                             <div className="py-4">
                                                 <label className="form-label">Choose your profession?</label><br />
-                                                <div className="form-check mb-2">
-                                                    <input id="accessibleTechnology" type="checkbox" lassName="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="physical">Educational</label>
-                                                </div>
                                                 <div className="form-check mb-2">
                                                     <input id="accessibleTechnology" type="checkbox" lassName="form-check-input" />
                                                     <label className="form-check-label" htmlFor="physical">Educational</label>

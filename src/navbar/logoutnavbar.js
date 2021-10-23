@@ -5,7 +5,10 @@ import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 export default function LogoutNavBar() {
   let history = useHistory();
   function handleLogout() {
-    localStorage.clear();
+    //localStorage.clear();
+    localStorage.removeItem('userName');
+    localStorage.removeItem('isRequested');
+    localStorage.removeItem('isVolunteer');
     history.push("/Home");
   }
 

@@ -25,7 +25,11 @@ export default function NeedHelp(props) {
         "helpTitle": data.get('helpTitle'),
         "category": category,
         "date": data.get('date'),
-        "time": data.get('time')
+        "time": data.get('time'),
+        "notes": data.get('info'),
+        "name": localStorage.getItem("userName"),
+        "pickUp": data.get('pickUp'),
+        "destination": data.get('destination'),
       }
 
       localStorage.setItem("helpObj", JSON.stringify(help));
@@ -107,13 +111,13 @@ export default function NeedHelp(props) {
                     <div className="col-sm-12">
                       <label className="form-label mr-auto" htmlFor="address">Pickup Location</label>
                       <div className="placesAutoComplete">
-                        <PlacesAutocomplete></PlacesAutocomplete>
+                        <PlacesAutocomplete fieldName="pickUp"></PlacesAutocomplete>
                       </div>
                     </div>
                     <div className="col-sm-12">
                       <label className="form-label mr-auto" htmlFor="address">Destination</label>
                       <div className="placesAutoComplete">
-                        <PlacesAutocomplete></PlacesAutocomplete>
+                        <PlacesAutocomplete fieldName="destination"></PlacesAutocomplete>
                       </div>                    </div>
                     <div className="col-md-12">
                       <Form.Group className="mb-3">

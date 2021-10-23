@@ -3,7 +3,7 @@ import usePlacesAutocomplete, {
     getLatLng,
 } from "use-places-autocomplete";
 
-export default function PlacesAutocomplete() {
+export default function PlacesAutocomplete(props) {
     const {
         ready,
         value,
@@ -16,6 +16,7 @@ export default function PlacesAutocomplete() {
         debounce: 300,
     });
 
+    const filedName = props.fieldName;
     const handleInput = (e) => {
         setValue(e.target.value);
     };
@@ -52,7 +53,7 @@ export default function PlacesAutocomplete() {
 
     return (
         <>
-            <input className="form-control" id="address"
+            <input className="form-control" name={filedName}
                 placeholder="Type your address" aria-label="Address" aria-describedby="Address"
                 value={value}
                 onChange={handleInput}
