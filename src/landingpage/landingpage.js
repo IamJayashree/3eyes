@@ -25,7 +25,7 @@ export default function LandingPage(props) {
             <div className="my-3 p-3 bg-body rounded shadow-sm">
               <h6 className="border-bottom pb-2 mb-0">Volunteer help requests</h6>
               {/* repeat item */}
-              <div className="d-flex text-muted pt-3">
+              <div className="d-flex pt-3">
                 <div className="calendar">
                   <span className="calendar-month">Oct</span>
                   <span className="calendar-day">24</span>
@@ -43,11 +43,11 @@ export default function LandingPage(props) {
                         <a href="#">Peter parker</a>
                         (physical)
                       </small>
-                      <small className="d-block mb-1">5:00pm - 7:00pm.</small>
-                      <small className="d-block mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
+                      <small className="d-block text-muted mb-1">5:00pm - 7:00pm.</small>
+                      <small className="d-block text-muted mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
                       <span className="d-block">I need some one to assistance me to visit citi park due to some...</span>
                     </div>
-                    <div className="text-center">
+                    <div className="text-md-center">
                       <button className="btn btn-sm px-3 btn-pill btn-outline-primary">Track</button>
                       <small class="d-block mt-2">Accepted by<br/><a href="#">John doe</a></small>
                     </div>
@@ -56,10 +56,10 @@ export default function LandingPage(props) {
               </div>
               {/* repeat item ends */}
               {/* repeat item */}
-              <div className="d-flex text-muted pt-3">
+              <div className="d-flex pt-3">
                 <div className="calendar">
                   <span className="calendar-month">Oct</span>
-                  <span className="calendar-day">24</span>
+                  <span className="calendar-day">25</span>
                 </div>
                 <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
                   <div className="d-flex justify-content-between flex-column flex-md-row">
@@ -74,13 +74,13 @@ export default function LandingPage(props) {
                         <a href="#">John doe</a>
                         (Visual)
                       </small>
-                      <small className="d-block mb-1">6:00PM - 7:00PM</small>
-                      <small className="d-block mb-2">Citibank, 1399 Post St, San Francisco, CA 94109</small>
+                      <small className="d-block text-muted mb-1">6:00PM - 7:00PM</small>
+                      <small className="d-block text-muted mb-2">Citibank, 1399 Post St, San Francisco, CA 94109</small>
                       <span className="d-block mb-2">
                         I need some one to assistance me to visit citibank due to...
                       </span>
                     </div>
-                    <div className="text-center">
+                    <div className="text-md-center">
                       <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
                     </div>
                   </div>
@@ -97,7 +97,7 @@ export default function LandingPage(props) {
             <div className="my-3 p-3 bg-body rounded shadow-sm">
               <h6 className="border-bottom pb-2 mb-0">Assistive services</h6>
               {/* repeat item */}
-              <div className="d-flex text-muted pt-3">
+              <div className="d-flex pt-3">
                 <div className="calendar paid">
                   <span className="calendar-month">Oct</span>
                   <span className="calendar-day">24</span>
@@ -115,11 +115,11 @@ export default function LandingPage(props) {
                         <a href="#">Peter parker</a>
                         (physical)
                       </small>
-                      <small className="d-block mb-1">5:00pm - 7:00pm.</small>
-                      <small className="d-block mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
+                      <small className="d-block text-muted mb-1">5:00pm - 7:00pm.</small>
+                      <small className="d-block text-muted mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
                       <span className="d-block">I need some one to assistance me to visit citi park due to some...</span>
                     </div>
-                    <div className="text-center">
+                    <div className="text-md-center">
                       <button className="btn btn-sm px-3 btn-pill btn-outline-primary">Track</button>
                       <small class="d-block mt-2">Accepted by<br/><a href="#">John doe</a></small>
                     </div>
@@ -128,10 +128,10 @@ export default function LandingPage(props) {
               </div>
               {/* repeat item ends */}
               {/* repeat item */}
-              <div className="d-flex text-muted pt-3">
+              <div className="d-flex pt-3">
                 <div className="calendar paid">
                   <span className="calendar-month">Oct</span>
-                  <span className="calendar-day">24</span>
+                  <span className="calendar-day">25</span>
                 </div>
                 <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
                   <div className="d-flex justify-content-between flex-column flex-md-row">
@@ -146,13 +146,13 @@ export default function LandingPage(props) {
                         <a href="#">John doe</a>
                         (Visual)
                       </small>
-                      <small className="d-block mb-1">6:00PM - 7:00PM</small>
-                      <small className="d-block mb-2">Citibank, 1399 Post St, San Francisco, CA 94109</small>
+                      <small className="d-block text-muted mb-1">6:00PM - 7:00PM</small>
+                      <small className="d-block text-muted mb-2">Citibank, 1399 Post St, San Francisco, CA 94109</small>
                       <span className="d-block mb-2">
                         I need some one to assistance me to visit citibank due to...
                       </span>
                     </div>
-                    <div className="text-center">
+                    <div className="text-md-center">
                       <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
                     </div>
                   </div>
@@ -171,7 +171,7 @@ export default function LandingPage(props) {
               <h6 class="border-bottom pb-2 mb-0">
                 Feeling low?
               </h6>
-              <div className="d-flex text-muted pt-3 mb-3">
+              <div className="d-flex pt-3 mb-3">
                 Activate Happiness Together with us now!
               </div>
               <Link to="/Happiness" className="btn btn-outline-primary rounded-pill px-4">
@@ -184,7 +184,7 @@ export default function LandingPage(props) {
               <h6 class="border-bottom pb-2 mb-0">
                 Upcoming Requests
               </h6>
-              <div className="d-flex text-muted pt-3">
+              <div className="d-flex pt-3">
                 <div className="calendar">
                   <span className="calendar-month">Oct</span>
                   <span className="calendar-day">24</span>
@@ -200,11 +200,9 @@ export default function LandingPage(props) {
                     <a href="#">John doe</a>
                     (Visual)
                   </small>
-                  <small className="d-block">6:00PM - 7:00PM</small>
-                  <small className="d-block mb-2">Citibank, 1399 Post St, San Francisco, CA 94109</small>
-                  <small className="d-block mb-2">
-                    I need some one to assistance me to visit citibank due to...
-                  </small>
+                  <small className="d-block text-muted mb-1">5:00pm - 7:00pm.</small>
+                  <small className="d-block text-muted mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
+                  <span className="d-block mb-2">I need some one to assistance me to visit citi park due to some...</span>
                   <button className="btn btn-sm px-3 btn-primary">Accept</button>
                 </div>
               </div>
@@ -222,7 +220,7 @@ export default function LandingPage(props) {
               <div className="pt-3 small lh-sm">
                 <small className="d-block">Profession: Doctor</small>
                 <small className="d-block">Followers: 7</small>
-                <small className="d-block">Fllowing: 1</small>
+                <small className="d-block">Following: 1</small>
               </div>
             </div>
             {/* Profile Info Ends */}
