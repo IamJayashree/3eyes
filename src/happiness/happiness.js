@@ -10,7 +10,7 @@ export default function LandingPage(props) {
     <>
       <LogoutNavBar></LogoutNavBar>
       <div className="container px-4 py-5">
-        <h2 className="display-5 fw-bold lh-1 mb-3">
+        <h2 className="display-5 lh-1 mb-3">
           Turn the table for happiness - Today's session
         </h2>
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">

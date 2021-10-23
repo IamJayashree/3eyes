@@ -23,7 +23,7 @@ export default function LandingPage(props) {
         <div className="row g-5">
           <div className="col-md-8">
             <div className="">
-              <h1 className="display-5 fw-bold lh-1 mb-3">
+              <h1 className="display-5 lh-1 mb-3">
                 Everything for everyone by everyone
               </h1>
               <p className="lead mb-4">

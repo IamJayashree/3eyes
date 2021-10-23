@@ -19,7 +19,7 @@ export default function Home(props) {
             <img src={AppSvg} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy" />
           </div>
           <div className="col-lg-6 text-center text-lg-start">
-            <h1 className="display-5 fw-bold lh-1 mb-3">
+            <h1 className="display-5 lh-1 mb-3">
               Everything for everyone by everyone
             </h1>
             <p className="lead mb-4">
@@ -30,7 +30,7 @@ export default function Home(props) {
       </div>
 
       <div className="container px-4 py-5">
-        <h2 className="display-5 fw-bold lh-1 mb-3">Upcoming Events</h2>
+        <h2 className="display-5 lh-1 mb-3">Upcoming Events</h2>
         <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
           <div className="col">
             <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Grabber})` }}>

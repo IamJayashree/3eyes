@@ -105,7 +105,7 @@ export default function Registration(props) {
                                                 </div>
                                             </div>
                                         }
-                                        <label className="form-label mt-4 mb-0 col-12 fw-bold">Emergency Contact</label>
+                                        <label className="form-label mt-4 mb-0 col-12">Emergency Contact</label>
                                         <div className="col-md-5">
                                             <label htmlFor="a-name" className="form-label">Full Name <span className="text-muted">(Optional)</span></label>
                                             <input type="text" className="form-control" id="a-name" placeholder="" />

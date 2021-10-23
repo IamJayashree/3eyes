@@ -7,7 +7,7 @@ export default function LoginNavBar() {
     <Router>
       <Navbar bg="light" variant="light" expand="lg" fixed="top" className="px-lg-4 shadow">
         <Container>
-          <Navbar.Brand href="/" className="navbar-brand p-0 me-2 fw-bold lh-lg">
+          <Navbar.Brand href="/" className="navbar-brand p-0 me-2 lh-lg">
             <svg className="d-inline-block my-1 me-2" xmlns="http://www.w3.org/2000/svg" width="40" height="32" viewBox="0 0 40 32" role="img">
               <use xlinkHref="#logo"></use>
             </svg>

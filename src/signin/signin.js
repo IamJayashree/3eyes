@@ -30,7 +30,7 @@ export default function Login(props) {
           </div>
           <div className="col-lg-6">
             <Form onSubmit={handleSubmit} className="p-md-4 p-md-5">
-              <h1 className="display-5 fw-bold lh-1 mb-5 text-center">
+              <h1 className="display-5 lh-1 mb-5 text-center">
                 Sign in
               </h1>
               <Form.Group size="lg" controlId="email" className="form-floating mb-3">
