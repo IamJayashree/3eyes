@@ -10,6 +10,7 @@ import Happiness from './happiness/happiness';
 import Registration from './signup/resgistration';
 import HowItWorks from './howitworks/howitworks';
 import HowItWork from './howitworks/howitwork';
+import InNetwork from './social/innetwork';
 
 function App() {
   return (
@@ -56,7 +57,7 @@ function App() {
         <Route path="/HowItWorks" component={HowItWorks} />
         <Route path="/HowItWork" component={HowItWork} />
       </Switch>
-
+      <InNetwork></InNetwork>
     </>
   );
 }
