@@ -43,14 +43,14 @@ export default function NeedHelp(props) {
   return (
     <>
       <LogoutNavBar></LogoutNavBar>
-      <div className="container px-4 py-5">
-        <h1 className="display-5 lh-1 mb-3">Request Help</h1>
-        <p className="lead mb-5">Please provide some more information about yourself and the kind of help you need.</p>
+      <div className="container px-4 py-4">
         <Form onSubmit={handleSubmit} className="needs-validation" noValidate validated={validated}>
           <div className="card shadow">
             <div className="row">
               <div className="col-lg-8">
                 <div className="card-body p-4 p-md-5">
+                  <h3 class="fw-bold lh-1 mb-3">Request Help</h3>
+                  <p class="mb-5">Please provide some more information about yourself and the kind of help you need.</p>
                   <div className="row g-3">
                     <div className="col-md-12">
                       <Form.Group size="lg" controlId="helpTitle">
