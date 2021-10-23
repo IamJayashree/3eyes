@@ -11,9 +11,12 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.1",
     "react-dom": "^17.0.2",
+    "react-google-autocomplete": "^2.4.3",
+    "react-location-picker": "^1.5.0",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "use-places-autocomplete": "^1.9.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

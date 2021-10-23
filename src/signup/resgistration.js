@@ -2,10 +2,12 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/esm/Button';
 import { useState } from 'react';
 import LogoutNavBar from '../navbar/logoutnavbar';
+import PlacesAutocomplete from '../locationpicker/auto';
 
 export default function Registration(props) {
     const [status, setStatus] = useState(false);
     const [otherStatus, setOtherStatus] = useState(false);
+    const [otherDisableStatus, setOtherDisableStatus] = useState(false);
     const [validated, setValidated] = useState(false);
     const name = localStorage.getItem("userName");
 
@@ -44,44 +46,7 @@ export default function Registration(props) {
                                     <div className="row g-3">
                                         <div className="col-12">
                                             <label className="form-label mr-auto" htmlFor="address">Address</label>
-                                            <div className="input-group mb-3">
-                                                <input type="text" className="form-control" id="address" placeholder="Get current location address" aria-label="Address" aria-describedby="Address" />
-                                                <span className="input-group-text">
-                                                    <svg width="1em" height="1em">
-                                                        <use xlinkHref="#geo"></use>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <div className="invalid-feedback">
-                                                Please enter your address.
-                                            </div>
-                                        </div>
-                                        <div className="col-md-5">
-                                            <label htmlFor="country" className="form-label">Country</label>
-                                            <select className="form-select" id="country" required="">
-                                                <option value="">Choose...</option>
-                                                <option>United States</option>
-                                            </select>
-                                            <div className="invalid-feedback">
-                                                Please select a valid country.
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <label htmlFor="state" className="form-label">State</label>
-                                            <select className="form-select" id="state" required="">
-                                                <option value="">Choose...</option>
-                                                <option>California</option>
-                                            </select>
-                                            <div className="invalid-feedback">
-                                                Please provide a valid state.
-                                            </div>
-                                        </div>
-                                        <div className="col-md-3">
-                                            <label htmlFor="zip" className="form-label">Zip</label>
-                                            <input type="text" className="form-control" id="zip" placeholder="" required="" />
-                                            <div className="invalid-feedback">
-                                                Zip code required.
-                                            </div>
+                                            <PlacesAutocomplete></PlacesAutocomplete>
                                         </div>
                                         <div className="col-md-5">
                                             <label htmlFor="dob" className="form-label">Date of Birth</label>
@@ -127,16 +92,19 @@ export default function Registration(props) {
                                                 <label className="form-check-label" htmlFor="neuroDiversity">Neuro Diversity</label>
                                             </div>
                                             <div className="form-check-inline">
-                                                <input id="others" type="checkbox" className="form-check-input me-2" />
+                                                <input id="others" type="checkbox" className="form-check-input me-2" onChange={() => { setOtherDisableStatus(!otherDisableStatus); }} />
                                                 <label className="form-check-label" htmlFor="others">Others</label>
                                             </div>
                                         </div>
-                                        <div className="col-md-12 mb-4">
-                                            <input type="text" className="form-control" placeholder="Show this input when Others is checked" required="" />
-                                            <div className="invalid-feedback">
-                                                Other required
+
+                                        {otherDisableStatus &&
+                                            <div className="col-md-12 mb-4">
+                                                <input type="text" className="form-control" placeholder="Please provide the details" required="" />
+                                                <div className="invalid-feedback">
+                                                    Other required
+                                                </div>
                                             </div>
-                                        </div>
+                                        }
                                         <label className="form-label mt-4 mb-0 col-12 fw-bold">Emergency Contact</label>
                                         <div className="col-md-5">
                                             <label htmlFor="a-name" className="form-label">Full Name <span className="text-muted">(Optional)</span></label>
@@ -161,7 +129,6 @@ export default function Registration(props) {
                                             id="custom-switch"
                                             label="Do you wish to Volunteer"
                                             onChange={() => { setStatus(!status); }}
-                                        //onChange={(e) => radioHandler(status)}
                                         />
                                     </div>
                                     {

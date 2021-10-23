@@ -116,7 +116,8 @@ export default function LandingPage(props) {
                 </div>
               </div>
               <div className="col">
-                <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Hospital})` }} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Hospital})` }}
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <div className="d-flex flex-column h-100 p-4 px-md-5 text-white">
                     <div className="d-flex justify-content-end">
                       <span className="badge bg-success w-badge">Scheduled</span>
@@ -157,7 +158,7 @@ export default function LandingPage(props) {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="position-sticky" style={{top: '100px'}}>
+            <div className="position-sticky" style={{ top: '100px' }}>
               <div className="p-4 mb-5 bg-light rounded shadow border">
                 <h5>Feeling low?</h5>
                 <p>Activate Happiness Together with us now!</p>
@@ -170,7 +171,7 @@ export default function LandingPage(props) {
                 <div className="p-4 mb-5 bg-light rounded shadow border">
                   <h5>Help is on your way</h5>
                   <p className="mb-0">
-                    Esther will reach out to you!<br/>
+                    Esther will reach out to you!<br />
                     Contact Details yet to be added
                   </p>
                 </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/esm/Button';
 import LogoutNavBar from '../navbar/logoutnavbar';
+import PlacesAutocomplete from '../locationpicker/auto';
 
 export default function NeedHelp(props) {
 
@@ -30,7 +31,6 @@ export default function NeedHelp(props) {
   return (
     <>
       <LogoutNavBar></LogoutNavBar>
-
       <div className="container px-4 py-5">
         <h1 className="display-5 fw-bold lh-1 mb-3">Request Help</h1>
         <p className="lead mb-5">Please provide some more information about yourself and the kind of help you need.</p>
@@ -95,31 +95,14 @@ export default function NeedHelp(props) {
                           Please input a valid Time.
                         </Form.Control.Feedback>
                       </Form.Group>
-
                     </div>
                     <div className="col-sm-12">
-                      <Form.Group size="lg" controlId="pickupLocation">
-                        <Form.Label className="form-label">Pickup Location</Form.Label>
-                        <Form.Control className="form-control"
-                          type="text"
-                          name="label"
-                          required />
-                        <Form.Control.Feedback type="invalid" className="invalid-feedback">
-                          Valid pickup location is required.
-                        </Form.Control.Feedback>
-                      </Form.Group>
+                      <label className="form-label mr-auto" htmlFor="address">Pickup Location</label>
+                      <PlacesAutocomplete></PlacesAutocomplete>
                     </div>
                     <div className="col-sm-12">
-                      <Form.Group size="lg" controlId="destination">
-                        <Form.Label className="form-label">Destination</Form.Label>
-                        <Form.Control className="form-control"
-                          type="text"
-                          name="destination"
-                          required />
-                        <Form.Control.Feedback type="invalid" className="invalid-feedback">
-                          Valid destination location is required
-                        </Form.Control.Feedback>
-                      </Form.Group>
+                      <label className="form-label mr-auto" htmlFor="address">Destination</label>
+                      <PlacesAutocomplete></PlacesAutocomplete>
                     </div>
                     <div className="col-md-12">
                       <Form.Group className="mb-3">
