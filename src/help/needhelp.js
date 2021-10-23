@@ -106,12 +106,15 @@ export default function NeedHelp(props) {
                     </div>
                     <div className="col-sm-12">
                       <label className="form-label mr-auto" htmlFor="address">Pickup Location</label>
-                      <PlacesAutocomplete></PlacesAutocomplete>
+                      <div className="placesAutoComplete">
+                        <PlacesAutocomplete></PlacesAutocomplete>
+                      </div>
                     </div>
                     <div className="col-sm-12">
                       <label className="form-label mr-auto" htmlFor="address">Destination</label>
-                      <PlacesAutocomplete></PlacesAutocomplete>
-                    </div>
+                      <div className="placesAutoComplete">
+                        <PlacesAutocomplete></PlacesAutocomplete>
+                      </div>                    </div>
                     <div className="col-md-12">
                       <Form.Group className="mb-3">
                         <Form.Label className="form-label">
