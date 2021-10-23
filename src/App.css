@@ -125,3 +125,7 @@ body {
 .placesAutoComplete small {
   color: rgb(140, 140, 140);
 }
+
+.cover-container {
+  background-position: center center;
+}
