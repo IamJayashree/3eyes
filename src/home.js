@@ -7,11 +7,12 @@ import Physical from './assets/images/physical.jpg';
 import Innovation from './assets/images/innovation.jpg';
 import WaveLgSVG from './assets/images/wave-lg.svg';
 import LoginNavBar from "./navbar/loginnavbar";
+import Footer from "./footer";
 
 export default function Home(props) {
   return (
     <>
-      <LoginNavBar></LoginNavBar>
+      <LoginNavBar />
       <img className="wave wave-lg" src={WaveLgSVG} alt="3I" />
       <div className="container px-4 py-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -116,6 +117,7 @@ export default function Home(props) {
           <Link to="SignUp" className="btn btn-lg btn-light rounded-pill py-3 px-5">Register</Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

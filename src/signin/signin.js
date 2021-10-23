@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import WaveSVG from '../assets/images/wave.svg';
 import SignInSVG from "../assets/images/signin.svg";
 import LoginNavBar from "../navbar/loginnavbar";
+import Footer from "../footer";
 
 export default function Login(props) {
 
@@ -59,6 +60,7 @@ export default function Login(props) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

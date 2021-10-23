@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/esm/Button';
 import WaveSVG from '../assets/images/wave.svg';
 import SignUpSVG from '../assets/images/signup.svg';
 import LoginNavBar from '../navbar/loginnavbar';
+import Footer from "../footer";
 
 export default function SignUp(props) {
   function handleSubmit(event) {
@@ -80,6 +81,7 @@ export default function SignUp(props) {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
