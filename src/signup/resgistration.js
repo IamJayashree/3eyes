@@ -46,7 +46,9 @@ export default function Registration(props) {
                                     <div className="row g-3">
                                         <div className="col-12">
                                             <label className="form-label mr-auto" htmlFor="address">Address</label>
-                                            <PlacesAutocomplete></PlacesAutocomplete>
+                                            <div className="placesAutoComplete">
+                                                <PlacesAutocomplete></PlacesAutocomplete>
+                                            </div>
                                         </div>
                                         <div className="col-md-5">
                                             <label htmlFor="dob" className="form-label">Date of Birth</label>
@@ -123,14 +125,12 @@ export default function Registration(props) {
                             </div>
                             <div className="col bg-light border">
                                 <div className="card-body p-4 p-md-5">
-                                    <div>
-                                        <Form.Check
-                                            type="switch"
-                                            id="custom-switch"
-                                            label="Do you wish to Volunteer"
-                                            onChange={() => { setStatus(!status); }}
-                                        />
-                                    </div>
+                                    <Form.Check
+                                        type="switch"
+                                        id="custom-switch"
+                                        label="Do you wish to Volunteer"
+                                        onChange={() => { setStatus(!status); }}
+                                    />
                                     {
                                         status &&
                                         <>
@@ -189,7 +189,23 @@ export default function Registration(props) {
                     </div>
                 </Form>
             </div >
-        </div >
+            <div className="container px-5">
+                <div id="showOnMobile" className="d-none d-lg-block">
+                    <h5>Personal Section</h5>
+                    <p className="mb-5">few line of text goes here few line of text goes here few line of text goes here few line of text goes here </p>
+                </div>
+                <button className="btn btn-primary d-lg-none">Next</button>
+                <div id="showOnMobile" className="d-none d-lg-block">
+                    <h5>Additional Contact Section</h5>
+                    <p className="mb-5">few line of text goes here few line of text goes here few line of text goes here few line of text goes here </p>
+                </div>
+                <button className="btn btn-primary d-lg-none">Next</button>
+                <div id="showOnMobile" className="d-none d-lg-block">
+                    <h5>Emergency Contact Section</h5>
+                    <p className="mb-5">few line of text goes here few line of text goes here few line of text goes here few line of text goes here </p>
+                </div>
+            </div>
+</div>
 
     );
 }
