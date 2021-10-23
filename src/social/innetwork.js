@@ -10,8 +10,9 @@ export default function InNetwork() {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
-                Need Assistant?
+            <Button variant="primary" onClick={handleShow} className="floating-button">
+                <span class="spinner-grow spinner-grow-sm me-3" role="status" aria-hidden="true"></span>
+                Need assistance?
             </Button>
             <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
@@ -20,7 +21,7 @@ export default function InNetwork() {
                 <Offcanvas.Body>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>Advisory Assitant</Accordion.Header>
+                            <Accordion.Header>Advisory assistance</Accordion.Header>
                             <Accordion.Body>
                                 <ul>
                                     <li>Name: AnnMarie <br />
@@ -33,7 +34,7 @@ export default function InNetwork() {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header>Mental Helath Assitant</Accordion.Header>
+                            <Accordion.Header>Mental Helath assistance</Accordion.Header>
                             <Accordion.Body>
                                 <ul>
                                     <li>Name: AnnMarie <br />
@@ -59,7 +60,7 @@ export default function InNetwork() {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
-                            <Accordion.Header>Educational Assitant</Accordion.Header>
+                            <Accordion.Header>Educational assistance</Accordion.Header>
                             <Accordion.Body>
                                 <ul>
                                     <li>Name: AnnMarie <br />
