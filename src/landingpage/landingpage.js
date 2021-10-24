@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import LogoutNavBar from '../navbar/logoutnavbar';
 // import Explorations from './explorations';
-import Avatar from '../assets/images/avatar.jpg';
+import Avatar from '../assets/images/avatar/14.jpg';
 
 import '../index.css';
 import './explorations.css';
@@ -277,15 +277,14 @@ export default function LandingPage(props) {
                   </div>
                   <div className="col">
                     <h6 class="mb-0">
-                      Preethi Srinivasan
-                      {/* {name} */}
+                      Nick Vujicic
                     </h6>
                     <div className="small mb-1 border-bottom pb-1">
-                      <small>Cricketer, Evangelist</small>
+                      <small>Evangelist</small>
                     </div>
                     <div className="small lh-sm">
-                      <small className="d-inline-block me-5">Followers: 7</small>
-                      <small className="d-inline-block">Following: 1</small>
+                      <small className="d-inline-block me-5">Followers: 10</small>
+                      <small className="d-inline-block">Following: 24</small>
                     </div>
                   </div>
                 </div>
