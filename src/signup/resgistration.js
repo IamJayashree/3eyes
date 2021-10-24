@@ -32,19 +32,15 @@ export default function Registration(props) {
   };
 
   return (
-    <div>
+    <>
       <LogoutNavBar></LogoutNavBar>
-      <div className="card-body">
-        <h3 className="fw-bold lh-1 mb-3">Welcome {name},</h3>
-      </div>
-      <div className="container">
+      <div className="container px-4 py-4 mb-4">
         <Form noValidate validated={validated} onSubmit={handleSubmit} className="needs-validation">
           <div className="card shadow">
             <div className="row g-0">
               <div className="col-lg-8">
                 <div className="card-body p-4 p-md-5">
-                  {/* <h3 className="fw-bold lh-1 mb-3">Welcome {name},</h3> */}
-                  {/* <p className="mb-2">Please provide some more information about yourself.</p> */}
+                  <h3 className="fw-bold lh-1 fw-bold lh-1 mb-3">Welcome {name},</h3>
                   <div className="row g-3">
                     <div className="col-12">
                       <label className="form-label mr-auto" htmlFor="address">Address</label>
@@ -183,7 +179,7 @@ export default function Registration(props) {
       <br />
       <br />
       <br />
-    </div>
+    </>
   );
 }
 
