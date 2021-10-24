@@ -13,6 +13,7 @@ import HowItWork from './howitworks/howitwork';
 import Assistant from './assistant/assistant';
 import MyNetwork from './mynetwork/mynetwork';
 import AssistivePage from './assistant/assistivepage';
+import InNetwork from './social/innetwork';
 
 // import InNetwork from './social/innetwork';
 
@@ -49,7 +50,7 @@ function App() {
           <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
         </symbol>
       </svg>
-      {/* <InNetwork></InNetwork> */}
+      <InNetwork></InNetwork>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/SignIn" component={SignIn} />

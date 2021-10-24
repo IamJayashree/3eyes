@@ -41,7 +41,7 @@ export default function LandingPage(props) {
                   <span className="d-block mb-1">Ride to Church</span>
                   <span className="rounded badge bg-soft-primary">Open</span>
                 </div>
-                <div className="col-auto border-bottom text-center" style={{width: '100px'}}>
+                <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
                   <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</a>
                   <a href="#" className="btn btn-sm btn-link mb-2">More Info</a>
                 </div>
@@ -59,7 +59,7 @@ export default function LandingPage(props) {
                   <span className="d-block mb-1">Food Collection</span>
                   <span className="rounded badge bg-soft-primary">Open</span>
                 </div>
-                <div className="col-auto border-bottom text-center" style={{width: '100px'}}>
+                <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
                   <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</a>
                   <a href="#" className="btn btn-sm btn-link mb-2">More Info</a>
                 </div>
@@ -93,12 +93,12 @@ export default function LandingPage(props) {
               </div>
             }
             {
-              volunteerHelp && 
+              volunteerHelp &&
               <div class="my-3 p-3 bg-body rounded shadow-sm">
                 <NeedHelp />
               </div>
             }
-            <Link to="/Happiness" className="btn btn-lg btn-primary rounded-pill py-3 w-100">
+            <Link to="/AssistivePage" className="btn btn-lg btn-primary rounded-pill py-3 w-100">
               Assistive Services in 3eyes
             </Link>
           </div>
