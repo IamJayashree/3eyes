@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Accordion from 'react-bootstrap/Accordion';
+import { Link } from "react-router-dom";
 
 import Avatar01 from '../assets/images/avatar/01.jpg';
 import Avatar02 from '../assets/images/avatar/02.jpg';
@@ -30,13 +31,19 @@ export default function InNetwork() {
         <>
             <Button variant="primary" onClick={handleShow} className="floating-button">
                 <span class="spinner-grow spinner-grow-sm me-3" role="status" aria-hidden="true"></span>
-                Need assistance?
+                <a href="/Happiness"> Get Happiness Now! </a>
+                {/* <Link to="/Happiness" className="btn btn-outline-primary rounded-pill px-4" onClick={() => { setShow(false); }}>
+                    Get happiness now!
+                </Link> */}
             </Button>
-            <Offcanvas show={show} onHide={handleClose}>
+            {/* <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Need Professional Help?</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
+                    <Link to="/Happiness" className="btn btn-outline-primary rounded-pill px-4" onClick={() => { setShow(false); }}>
+                        Get happiness now!
+                    </Link>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Advisory Assistance</Accordion.Header>
@@ -172,7 +179,7 @@ export default function InNetwork() {
                         </Accordion.Item>
                     </Accordion>
                 </Offcanvas.Body>
-            </Offcanvas>
+            </Offcanvas> */}
         </>
     );
 }
