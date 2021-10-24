@@ -14,9 +14,6 @@ import Assistant from './assistant/assistant';
 import MyNetwork from './mynetwork/mynetwork';
 import InNetwork from './social/innetwork';
 import AssistivePage from './assistant/assistivepage';
-import InNetwork from './social/innetwork';
-
-// import InNetwork from './social/innetwork';
 
 function App() {
   return (
