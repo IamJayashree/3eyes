@@ -5,8 +5,7 @@ import LogoutNavBar from '../navbar/logoutnavbar';
 import PlacesAutocomplete from '../locationpicker/auto';
 
 export default function Registration(props) {
-  const [status, setStatus] = useState(false);
-  const [otherStatus, setOtherStatus] = useState(false);
+  const [status] = useState(false);
   const [otherDisableStatus, setOtherDisableStatus] = useState(false);
   const [validated, setValidated] = useState(false);
   const [emergencyContact, setEmergencyContact] = useState(false);

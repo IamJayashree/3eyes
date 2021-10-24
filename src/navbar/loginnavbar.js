@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { BrowserRouter as Router} from "react-router-dom";
+import { Navbar, Container } from 'react-bootstrap';
 
 export default function LoginNavBar() {
   return (

@@ -12,8 +12,8 @@ import Assistant from '../assistant/assistant';
 import NeedHelp from '../help/needhelp';
 
 export default function LandingPage(props) {
-  const name = localStorage.getItem("userName");
-  const isRequested = localStorage.getItem("isRequested");
+  // const name = localStorage.getItem("userName");
+  // const isRequested = localStorage.getItem("isRequested");
   const isVolunteer = localStorage.getItem("isVolunteer");
   const help = JSON.parse(localStorage.getItem("assistantObj"));
   let date = (help != null && help.date) ? new Date(help.date) : new Date();
@@ -43,8 +43,8 @@ export default function LandingPage(props) {
                   <span className="rounded badge bg-soft-primary">Open</span>
                 </div>
                 <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
-                  <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</a>
-                  <a href="#" className="btn btn-sm btn-link mb-2">More Info</a>
+                  <button type="button" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</button>
+                  <button type="button" className="btn btn-sm btn-link mb-2">More Info</button>
                 </div>
               </div>
               {/* repeat item */}
@@ -61,13 +61,13 @@ export default function LandingPage(props) {
                   <span className="rounded badge bg-soft-primary">Open</span>
                 </div>
                 <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
-                  <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</a>
-                  <a href="#" className="btn btn-sm btn-link mb-2">More Info</a>
+                  <button type="button" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</button>
+                  <button type="button" className="btn btn-sm btn-link mb-2">More Info</button>
                 </div>
               </div>
               {/* repeat item */}
               <small className="d-block text-end mt-3">
-                <a href="#">View all</a>
+                <button type="button" className="btn btn-sm btn-link">View all</button>
               </small>
             </div>
             {
@@ -77,8 +77,8 @@ export default function LandingPage(props) {
             }
 
             {(help && help.helpTitle) ?
-              <div class="my-3 p-3 bg-body rounded shadow-sm">
-                <h6 class="border-bottom pb-2 mb-0">
+              <div className="my-3 p-3 bg-body rounded shadow-sm">
+                <h6 className="border-bottom pb-2 mb-0">
                   Help requested by you
                 </h6>
                 <div className="d-flex pt-3">
@@ -100,14 +100,14 @@ export default function LandingPage(props) {
                           className="me-2 rounded-circle shadow-sm" />
                           <small className="lh-1">
                             <small className="small text-muted d-block text-center">Accepted by</small>
-                            <a href="#" className="small">Sarah Gordy</a>
+                            <button type="button" className="small btn btn-link">Sarah Gordy</button>
                           </small>
                         </div>
                       </>
                     :
-                      <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Requested</a>
+                      <button type="button" className="btn btn-sm btn-outline-primary mb-1 w-100">Requested</button>
                     }
-                    {/* <a href="#" className="btn btn-sm btn-link mb-2">More Info</a> */}
+                    {/* <button type="button" className="btn btn-sm btn-link mb-2">More Info</button> */}
                   </div>
 
                 </div>
@@ -117,27 +117,27 @@ export default function LandingPage(props) {
               </>
             }
 
-            <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <div className="my-3 p-3 bg-body rounded shadow-sm">
               <Form.Group className="form-check-inline m-0">
                 <Form.Label className="form-check-label d-block m-0 me-2">
                   Need {(help && help.helpTitle) ? "more" : ""} help?
                 </Form.Label>
-                <input id="professional" name="help" type="radio" class="form-check-input me-2" onChange={() => { setProfessionalHelp(!professionalHelp); setVolunteerHelp(false) }} />
-                <label class="form-check-label me-3" for="professional">Professional</label>
-                <input id="volunteer" name="help" type="radio" class="form-check-input me-2" onChange={() => { setVolunteerHelp(!volunteerHelp); setProfessionalHelp(false) }} />
-                <label class="form-check-label" for="volunteer">Volunteer</label>
+                <input id="professional" name="help" type="radio" className="form-check-input me-2" onChange={() => { setProfessionalHelp(!professionalHelp); setVolunteerHelp(false) }} />
+                <label className="form-check-label me-3" htmlFor="professional">Professional</label>
+                <input id="volunteer" name="help" type="radio" className="form-check-input me-2" onChange={() => { setVolunteerHelp(!volunteerHelp); setProfessionalHelp(false) }} />
+                <label className="form-check-label" htmlFor="volunteer">Volunteer</label>
               </Form.Group>
             </div>
 
             {
               professionalHelp &&
-              <div class="my-3 p-3 bg-body rounded shadow-sm">
+              <div className="my-3 p-3 bg-body rounded shadow-sm">
                 <Assistant />
               </div>
             }
             {
               volunteerHelp &&
-              <div class="my-3 p-3 bg-body rounded shadow-sm">
+              <div className="my-3 p-3 bg-body rounded shadow-sm">
                 <NeedHelp />
               </div>
             }
@@ -150,13 +150,13 @@ export default function LandingPage(props) {
           <div className="col-md-4">
             <div className="position-sticky" style={{ top: '80px' }}>
               {/* Profile Info Card */}
-              <div class="my-3 p-3 bg-body rounded shadow-sm">
+              <div className="my-3 p-3 bg-body rounded shadow-sm">
                 <div className="row g-0">
                   <div className="col-auto">
-                    <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
+                    <img className="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
                   </div>
                   <div className="col">
-                    <h6 class="mb-0">
+                    <h6 className="mb-0">
                       Varun
                     </h6>
                     <div className="small text-muted mb-1 border-bottom pb-1">

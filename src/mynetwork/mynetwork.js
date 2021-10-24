@@ -51,7 +51,7 @@ export default function myMetwork(props) {
               <div className="text-center g-4 row row row-cols-2 row-cols-lg-3 align-items-stretch">
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a01[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a01[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a01[1]}
                   </h6>
@@ -63,7 +63,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a02[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a02[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a02[1]}
                   </h6>
@@ -75,7 +75,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a03[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a03[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a03[1]}
                   </h6>
@@ -87,7 +87,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a04[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a04[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a04[1]}
                   </h6>
@@ -99,7 +99,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a05[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a05[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a05[1]}
                   </h6>
@@ -111,7 +111,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a06[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a06[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a06[1]}
                   </h6>
@@ -123,7 +123,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a07[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a07[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a07[1]}
                   </h6>
@@ -135,7 +135,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a11[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a11[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a11[1]}
                   </h6>
@@ -147,7 +147,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a12[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a12[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a12[1]}
                   </h6>
@@ -159,7 +159,7 @@ export default function myMetwork(props) {
                 {/* repeat items ends */}
                 {/* repeat items */}
                 <div className="col">
-                  <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a13[0]} width="100" height="100" alt="" />
+                  <img className="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a13[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a13[1]}
                   </h6>
@@ -174,13 +174,13 @@ export default function myMetwork(props) {
           </div>
           <div className="col-md-4">
             {/* Profile Info Card */}
-            <div class="mt-3 p-3 bg-body rounded shadow-sm">
+            <div className="mt-3 p-3 bg-body rounded shadow-sm">
               <div className="row g-0">
                 <div className="col-auto">
-                  <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
+                  <img className="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
                 </div>
                 <div className="col">
-                  <h6 class="mb-0">
+                  <h6 className="mb-0">
                     Nick Vujicic
                   </h6>
                   <div className="small mb-1 border-bottom pb-1">
@@ -195,8 +195,8 @@ export default function myMetwork(props) {
             </div>
             {/* Profile Info Ends */}
             {/* Feeling Low Card */}
-            <div class="my-3 p-3 bg-body rounded shadow-sm bg-holder">
-              <h6 class="border-bottom pb-2 mb-0">
+            <div className="my-3 p-3 bg-body rounded shadow-sm bg-holder">
+              <h6 className="border-bottom pb-2 mb-0">
                 Feeling low?
               </h6>
               <div className="d-flex pt-3 mb-3">
@@ -208,16 +208,16 @@ export default function myMetwork(props) {
             </div>
             {/* Feeling Low Card Ends */}
             {/* Invitations */}
-            <div class="mt-3 p-3 bg-body rounded shadow-sm">
-              <h6 class="border-bottom pb-2 mb-3">
+            <div className="mt-3 p-3 bg-body rounded shadow-sm">
+              <h6 className="border-bottom pb-2 mb-3">
                 Invitation to connect
               </h6>
               <div className="row g-0 mb-3">
                 <div className="col-auto">
-                  <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a08[0]} width="64" height="64" alt="" />
+                  <img className="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a08[0]} width="64" height="64" alt="" />
                 </div>
                 <div className="col border-bottom pb-2">
-                  <h6 class="mb-0">
+                  <h6 className="mb-0">
                     {a08[1]}
                   </h6>
                   <div className="small text-muted">
@@ -234,10 +234,10 @@ export default function myMetwork(props) {
               </div>
               <div className="row g-0 mb-3">
                 <div className="col-auto">
-                  <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a09[0]} width="64" height="64" alt="" />
+                  <img className="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a09[0]} width="64" height="64" alt="" />
                 </div>
                 <div className="col border-bottom pb-2">
-                  <h6 class="mb-0">
+                  <h6 className="mb-0">
                     {a09[1]}
                   </h6>
                   <div className="small text-muted">
@@ -254,10 +254,10 @@ export default function myMetwork(props) {
               </div>
               <div className="row g-0">
                 <div className="col-auto">
-                  <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a10[0]} width="64" height="64" alt="" />
+                  <img className="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a10[0]} width="64" height="64" alt="" />
                 </div>
                 <div className="col">
-                  <h6 class="mb-0">
+                  <h6 className="mb-0">
                     {a10[1]}
                   </h6>
                   <div className="small text-muted">

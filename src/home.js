@@ -19,7 +19,7 @@ export default function Home(props) {
       <div className="container px-4">
         <div className="row flex-lg-row-reverse align-items-center mt-3 mb-4 g-lg-5 py-lg-5">
           <div className="col-10 col-sm-8 col-lg-6 m-auto">
-            <img src={HomeImage} class="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy" />
+            <img src={HomeImage} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy" />
           </div>
           <div className="col-lg-6 text-center text-lg-start">
             <h1 className="lh-1 mb-2 mx-4 mx-lg-0">

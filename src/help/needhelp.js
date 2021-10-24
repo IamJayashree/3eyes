@@ -50,7 +50,7 @@ export default function NeedHelp(props) {
       <Form onSubmit={handleSubmit} className="needs-validation" noValidate validated={validated}>
 
         <h5 className="border-bottom pb-2 mb-2">Request Help</h5>
-        <p class="mb-3">Please provide some more information about yourself and the kind of help you need.</p>
+        <p className="mb-3">Please provide some more information about yourself and the kind of help you need.</p>
 
         <Form.Group size="lg" controlId="helpTitle" className="mb-3">
           <Form.Label className="form-label">What can we help you with?</Form.Label>

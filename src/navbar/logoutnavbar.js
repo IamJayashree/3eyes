@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, useHistory } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function LogoutNavBar() {
   let history = useHistory();

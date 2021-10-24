@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Grabber from '../assets/images/grabber.jpg';
-import Physical from '../assets/images/physical.jpg';
-import Innovation from '../assets/images/innovation.jpg';
+// import Physical from '../assets/images/physical.jpg';
+// import Innovation from '../assets/images/innovation.jpg';
 import LogoutNavBar from '../navbar/logoutnavbar';
 
 export default function LandingPage(props) {

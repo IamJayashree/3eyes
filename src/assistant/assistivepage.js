@@ -10,11 +10,9 @@ export default function AssistivePage(props) {
     const [activeState4, setActiveState4] = useState(false);
     const [activeState5, setActiveState5] = useState(false);
 
-    function handleSelect(status) {
-
-        if (setActiveState(!activeState)) { }
-
-    }
+    // function handleSelect(status) {
+    //     if (setActiveState(!activeState)) { }
+    // }
 
     return (<>
         <LogoutNavBar />
@@ -62,22 +60,22 @@ export default function AssistivePage(props) {
                 </h4>
             </div>
             <div className="row row-cols-2 row-cols-lg-6 align-items-stretch g-3 text-center">
-                <div class="col pointer">
+                <div className="col pointer">
                     <div
                         className={activeState ? "pressed" : "p-3 bg-body rounded shadow-sm"}
                         onClick={() => {
                             setActiveState(!activeState); setActiveState1(false);
                             setActiveState2(false); setActiveState3(false); setActiveState4(false); setActiveState5(false);
                         }}>
-                        <svg class="mb-3" width="64" height="64">
+                        <svg className="mb-3" width="64" height="64">
                             <use xlinkHref="#mini-mic"></use>
                         </svg>
-                        <h6 class="mb-0">
+                        <h6 className="mb-0">
                             {Assistive[0]}
                         </h6>
                     </div>
                 </div>
-                <div class="col pointer">
+                <div className="col pointer">
                     <div
                         className={activeState1 ? "pressed" : "p-3 bg-body rounded shadow-sm"}
                         onClick={() => {
@@ -85,15 +83,15 @@ export default function AssistivePage(props) {
                             setActiveState(false);
                             setActiveState2(false); setActiveState3(false); setActiveState4(false); setActiveState5(false);
                         }}>
-                        <svg class="mb-3" width="64" height="64">
+                        <svg className="mb-3" width="64" height="64">
                             <use xlinkHref="#loud-music"></use>
                         </svg>
-                        <h6 class="mb-0">
+                        <h6 className="mb-0">
                             {Assistive[1]}
                         </h6>
                     </div>
                 </div>
-                <div class="col pointer">
+                <div className="col pointer">
                     <div
                         className={activeState2 ? "pressed" : "p-3 bg-body rounded shadow-sm"}
                         onClick={() => {
@@ -101,15 +99,15 @@ export default function AssistivePage(props) {
                             setActiveState1(false);
                             setActiveState(false); setActiveState3(false); setActiveState4(false); setActiveState5(false);
                         }}>
-                        <svg class="mb-3" width="64" height="64">
+                        <svg className="mb-3" width="64" height="64">
                             <use xlinkHref="#out-door"></use>
                         </svg>
-                        <h6 class="mb-0">
+                        <h6 className="mb-0">
                             {Assistive[2]}
                         </h6>
                     </div>
                 </div>
-                <div class="col pointer">
+                <div className="col pointer">
                     <div
                         className={activeState3 ? "pressed" : "p-3 bg-body rounded shadow-sm"}
                         onClick={() => {
@@ -117,15 +115,15 @@ export default function AssistivePage(props) {
                             setActiveState1(false);
                             setActiveState2(false); setActiveState(false); setActiveState4(false); setActiveState5(false);
                         }}>
-                        <svg class="mb-3" width="64" height="64">
+                        <svg className="mb-3" width="64" height="64">
                             <use xlinkHref="#traffic"></use>
                         </svg>
-                        <h6 class="mb-0">
+                        <h6 className="mb-0">
                             {Assistive[3]}
                         </h6>
                     </div>
                 </div>
-                <div class="col pointer">
+                <div className="col pointer">
                     <div
                         className={activeState4 ? "pressed" : "p-3 bg-body rounded shadow-sm"}
                         onClick={() => {
@@ -133,15 +131,15 @@ export default function AssistivePage(props) {
                             setActiveState1(false);
                             setActiveState2(false); setActiveState3(false); setActiveState(false); setActiveState5(false);
                         }}>
-                        <svg class="mb-3" width="64" height="64">
+                        <svg className="mb-3" width="64" height="64">
                             <use xlinkHref="#restaurant"></use>
                         </svg>
-                        <h6 class="mb-0">
+                        <h6 className="mb-0">
                             {Assistive[4]}
                         </h6>
                     </div>
                 </div>
-                <div class="col pointer">
+                <div className="col pointer">
                     <div
                         className={activeState5 ? "pressed" : "p-3 bg-body rounded shadow-sm"}
                         onClick={() => {
@@ -149,10 +147,10 @@ export default function AssistivePage(props) {
                             setActiveState1(false);
                             setActiveState2(false); setActiveState3(false); setActiveState4(false); setActiveState(false);
                         }}>
-                        <svg class="mb-3" width="64" height="64">
+                        <svg className="mb-3" width="64" height="64">
                             <use xlinkHref="#all-around"></use>
                         </svg>
-                        <h6 class="mb-0">
+                        <h6 className="mb-0">
                             {Assistive[5]}
                         </h6>
                     </div>
