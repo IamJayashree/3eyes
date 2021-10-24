@@ -16,10 +16,7 @@ export default function Registration(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.target);
-
-        // let value = status === 1 ? true : false;
         localStorage.setItem("isVolunteer", status);
-
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.stopPropagation();
@@ -103,7 +100,7 @@ export default function Registration(props) {
 
                                         {otherDisableStatus &&
                                             <div className="col-md-12 mb-4">
-                                                <input type="text" className="form-control" placeholder="Please provide the details" required="" />
+                                                <input type="text" className="form-control" required="" />
                                                 <div className="invalid-feedback">
                                                     Other required
                                                 </div>
@@ -112,15 +109,15 @@ export default function Registration(props) {
                                         <label className="form-label mt-4 mb-0 col-12">Emergency Contact</label>
                                         <div className="col-md-5">
                                             <label htmlFor="a-name" className="form-label">Full Name <span className="text-muted">(Optional)</span></label>
-                                            <input type="text" className="form-control" id="a-name" placeholder="" />
+                                            <input type="text" className="form-control" id="a-name" />
                                         </div>
                                         <div className="col-md-4">
                                             <label htmlFor="a-email" className="form-label">Email <span className="text-muted">(Optional)</span></label>
-                                            <input type="text" className="form-control" id="a-email" placeholder="" />
+                                            <input type="text" className="form-control" id="a-email" />
                                         </div>
                                         <div className="col-md-3">
                                             <label htmlFor="a-phone" className="form-label">Phone <span className="text-muted">(Optional)</span></label>
-                                            <input type="text" className="form-control" id="a-phone" placeholder="" />
+                                            <input type="text" className="form-control" id="a-phone" />
                                         </div>
                                     </div>
                                 </div>
@@ -156,20 +153,20 @@ export default function Registration(props) {
                                                 </div>
                                                 {otherProfession &&
                                                     <div className="mb-2">
-                                                        <input type="text" className="form-control" placeholder="Please enter your Profession" required="" />
+                                                        <input type="text" className="form-control" required="" />
                                                     </div>
                                                 }
                                             </div>
                                         </>
                                     }
-                                    {/*
+
                                     <Form.Check
                                         type="switch"
                                         id="custom-switch"
                                         label="Do you wish to Volunteer"
                                         onChange={() => { setStatus(!status); }}
                                     />
-                                    {
+                                    {/* {
                                         status &&
                                         <>
                                             <div className="py-4">
@@ -215,8 +212,8 @@ export default function Registration(props) {
                                                 <li>Do the best job you can.</li>
                                             </ol>
                                         </>
-                                    }
-                                    */}
+                                    } */}
+
                                 </div>
                             </div>
                         </div>

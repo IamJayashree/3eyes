@@ -14,6 +14,7 @@ import HowItWork from './howitworks/howitwork';
 import InNetwork from './social/innetwork';
 import Assistant from './assistant/assistant';
 import MyNetwork from './mynetwork/mynetwork';
+import AssistivePage from './assistant/assistivepage';
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
         <Route path="/HowItWork" component={HowItWork} />
         <Route path="/Assistant" component={Assistant} />
         <Route path="/MyNetwork" component={MyNetwork} />
+        <Route path="/AssistivePage" component={AssistivePage} />
       </Switch>
     </>
   );
