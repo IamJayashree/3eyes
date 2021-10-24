@@ -60,6 +60,9 @@ export default function Login(props) {
         </div>
       </div>
       <Footer />
+      <br />
+      <br />
+      <br />
     </>
   );
 }
