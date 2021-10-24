@@ -9,6 +9,7 @@ export default function LogoutNavBar() {
     localStorage.removeItem('userName');
     localStorage.removeItem('isRequested');
     localStorage.removeItem('isVolunteer');
+    localStorage.removeItem('isUserLoggedIn');
     history.push("/Home");
   }
 

@@ -61,7 +61,7 @@ export default function Home(props) {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col d-none d-lg-block">
             <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Innovation})` }}>
               <div className="d-flex flex-column h-100 px-4 py-lg-4 pb-lg-3 text-white">
                 <h2 className="pt-3 mt-3 pt-md-5 mt-md-5 mb-4 lh-1">Students with disability to benefit from innovative programs</h2>
@@ -89,7 +89,7 @@ export default function Home(props) {
             <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Physical})` }}>
               <div className="d-flex flex-column h-100 px-4 py-lg-4 pb-lg-3 text-white">
                 <h2 className="pt-3 mt-3 pt-md-5 mt-md-5 mb-4 lh-1">
-                  Strengthening the collection of data on disability  
+                  Strengthening the collection of data on disability
                 </h2>
                 <ul className="d-flex list-unstyled mt-auto">
                   <li className="me-auto">
