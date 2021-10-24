@@ -2,13 +2,29 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Accordion from 'react-bootstrap/Accordion';
-import Avatar from '../assets/images/avatar.jpg';
-import Avatar1 from '../assets/images/nick.jpg';
+
+import Avatar01 from '../assets/images/avatar/01.jpg';
+import Avatar02 from '../assets/images/avatar/02.jpg';
+import Avatar03 from '../assets/images/avatar/03.jpg';
+import Avatar04 from '../assets/images/avatar/04.jpg';
+import Avatar05 from '../assets/images/avatar/05.jpg';
+import Avatar06 from '../assets/images/avatar/06.jpg';
+import Avatar07 from '../assets/images/avatar/07.jpg';
+import Avatar08 from '../assets/images/avatar/08.jpg';
 
 export default function InNetwork() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const a01 = [Avatar01, "Lee Ridley", "Comedian"];
+    const a02 = [Avatar02, "Sarah Gordy", "Actress"];
+    const a03 = [Avatar03, "Temple Grandin", "Scientist"];
+    const a04 = [Avatar04, "Rick Hansen", "Athlete"];
+    const a05 = [Avatar05, "Freyja Haraldsdóttir", "Politician"];
+    const a06 = [Avatar06, "Tom Shakespeare", "Sociologist & Bioethicist"];
+    const a07 = [Avatar07, "Christy Brown", "Writer"];
+    const a08 = [Avatar08, "Kim Peek", "Megasavant"];
 
     return (
         <>
@@ -27,28 +43,28 @@ export default function InNetwork() {
                             <Accordion.Body>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar1} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a01[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col mb-3 pb-3 border-bottom">
                                         <h6 class="mb-0">
-                                            Nick Vujicic
+                                            {a01[1]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Australian evangelist</small>
+                                            <small>{a01[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a02[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col">
                                         <h6 class="mb-0">
-                                            Preethi Srinivasan
+                                            {a02[2]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Cricketer, Evangelist</small>
+                                            <small>{a02[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
@@ -60,28 +76,28 @@ export default function InNetwork() {
                             <Accordion.Body>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar1} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a03[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col mb-3 pb-3 border-bottom">
                                         <h6 class="mb-0">
-                                            Nick Vujicic
+                                            {a03[1]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Australian evangelist</small>
+                                            <small>{a03[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a04[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col">
                                         <h6 class="mb-0">
-                                            Preethi Srinivasan
+                                            {a04[1]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Cricketer, Evangelist</small>
+                                            <small>{a04[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
@@ -93,28 +109,28 @@ export default function InNetwork() {
                             <Accordion.Body>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar1} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a05[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col mb-3 pb-3 border-bottom">
                                         <h6 class="mb-0">
-                                            Nick Vujicic
+                                            {a05[1]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Australian evangelist</small>
+                                            <small>{a05[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a06[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col">
                                         <h6 class="mb-0">
-                                            Preethi Srinivasan
+                                            {a06[1]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Cricketer, Evangelist</small>
+                                            <small>{a06[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
@@ -126,28 +142,28 @@ export default function InNetwork() {
                             <Accordion.Body>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar1} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a07[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col mb-3 pb-3 border-bottom">
                                         <h6 class="mb-0">
-                                            Nick Vujicic
+                                            {a07[1]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Australian evangelist</small>
+                                            <small>{a07[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
                                     <div className="col-auto">
-                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
+                                        <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={a08[0]} width="64" height="64" alt="" />
                                     </div>
                                     <div className="col">
                                         <h6 class="mb-0">
-                                            Preethi Srinivasan
+                                            {a08[1]}
                                         </h6>
                                         <div className="small mb-1 pb-1">
-                                            <small>Cricketer, Evangelist</small>
+                                            <small>{a08[2]}</small>
                                         </div>
                                         <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
