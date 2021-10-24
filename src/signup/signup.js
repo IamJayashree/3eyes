@@ -48,7 +48,6 @@ export default function SignUp(props) {
               </Form.Group>
               <Form.Group size="lg" controlId="phone" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
-                  autoFocus
                   type="text"
                   name="phone"
                   required
