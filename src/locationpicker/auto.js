@@ -53,7 +53,7 @@ export default function PlacesAutocomplete(props) {
 
     return (
         <>
-            <input className="form-control px-4 rounded-pill" name={filedName}
+            <input className="form-control px-4 " name={filedName}
                 placeholder="Type your address" aria-label="Address" aria-describedby="Address"
                 value={value}
                 onChange={handleInput}

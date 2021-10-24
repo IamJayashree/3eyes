@@ -59,11 +59,11 @@ export default function Assistant(props) {
             {userName ? <LogoutNavBar /> : <LoginNavBar />}
             <Form onSubmit={handleSubmit} className="needs-validation" noValidate validated={validated}>
 
-                <h5 className="border-bottom pb-2 mb-2">Request Assistant</h5>
-                <p class="mb-3">Please provide some more information about yourself and the kind of assistant you need.</p>
+                {/* <h5 className="border-bottom pb-2 mb-2">Request Assistant</h5> */}
+                {/* <p class="mb-3">Please provide some more information about yourself and the kind of assistant you need.</p> */}
 
                 <Form.Group size="lg" controlId="helpTitle" className="mb-3">
-                    <Form.Label className="form-label">What can we help you with?</Form.Label>
+                    <Form.Label className="form-label">What help do you want?</Form.Label>
                     <Form.Control className="form-control"
                         autoFocus
                         type="text"
@@ -83,6 +83,7 @@ export default function Assistant(props) {
                     <option value="Recreational">Mental Health</option>
                     <option value="Community">Personal Care</option>
                     <option value="Community">Educational</option>
+                    <option value="Community">Acting</option>
                 </select>
 
                 <Form.Group size="lg" controlId="date" className="mb-3">
@@ -97,7 +98,7 @@ export default function Assistant(props) {
                     </Form.Control.Feedback>
                 </Form.Group>
 
-                <Form.Group size="lg" controlId="time" className="mb-3">
+                {/* <Form.Group size="lg" controlId="time" className="mb-3">
                     <Form.Label className="form-label">Time</Form.Label>
                     <Form.Control className="form-control"
                         type="time"
@@ -107,8 +108,8 @@ export default function Assistant(props) {
                     <Form.Control.Feedback type="invalid" className="invalid-feedback">
                         Please input a valid Time.
                     </Form.Control.Feedback>
-                </Form.Group>
-            
+                </Form.Group> */}
+
                 <Form.Group size="lg" controlId="info" className="mb-3">
                     <Form.Label className="form-label">More information to assist you better</Form.Label>
                     <Form.Control className="form-control"
@@ -121,21 +122,21 @@ export default function Assistant(props) {
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Button type="submit" className="mb-3 w-100">
-                    Request Assistant
+                    Confirm
                 </Button>
                 {
                     userName ?
-                    <>
-                        <a href="/LandingPage" className="btn btn-outline-primary w-100">
-                            Cancel
-                        </a>
-                    </>
-                    :
-                    <>
-                        <a href="/" className="btn btn-outline-primary w-100">
-                            Cancel
-                        </a>
-                    </>
+                        <>
+                            <a href="/LandingPage" className="btn btn-outline-primary w-100">
+                                Cancel
+                            </a>
+                        </>
+                        :
+                        <>
+                            <a href="/" className="btn btn-outline-primary w-100">
+                                Cancel
+                            </a>
+                        </>
                 }
             </Form>
         </>

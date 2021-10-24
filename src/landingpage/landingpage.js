@@ -14,12 +14,12 @@ export default function LandingPage(props) {
   const name = localStorage.getItem("userName");
   const isRequested = localStorage.getItem("isRequested");
   const isVolunteer = localStorage.getItem("isVolunteer");
-  const help = JSON.parse(localStorage.getItem("helpObj"));
+  const help = JSON.parse(localStorage.getItem("assistantObj"));
   let date = (help != null && help.date) ? new Date(help.date) : new Date();
   const [professionalHelp, setProfessionalHelp] = useState(false);
   const [volunteerHelp, setVolunteerHelp] = useState(false);
 
-
+  let isUserLoggedIn = localStorage.getItem("isUserLoggedIn");
   return (
     <>
       <LogoutNavBar />
@@ -28,7 +28,7 @@ export default function LandingPage(props) {
           <div className="col-md-8">
             {/* Your Recent help requests */}
             <div className="my-3 p-3 bg-body rounded shadow-sm">
-              <h6 className="border-bottom pb-2 mb-0">Open Service Request</h6>
+              <h6 className="border-bottom pb-2 mb-0">Open Service Requests</h6>
               {/* repeat item */}
               <div className="row g-0 mt-3">
                 <div className="col-auto">
@@ -52,7 +52,7 @@ export default function LandingPage(props) {
                 <div className="col-auto">
                   <div className="calendar me-3">
                     <span className="calendar-month">Oct</span>
-                    <span className="calendar-day">25</span>
+                    <span className="calendar-day">26</span>
                   </div>
                 </div>
                 <div className="col border-bottom">
@@ -74,10 +74,44 @@ export default function LandingPage(props) {
               <>
               </>
             }
+
+            {(help && help.helpTitle) ?
+              <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <h6 class="border-bottom pb-2 mb-0">
+                  Help requested by you
+                </h6>
+                <div className="d-flex pt-3">
+
+                  <div className="col-auto">
+                    <div className="calendar me-3">
+                      <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
+                      <span className="calendar-day">{parseInt(date.toLocaleString("en", { day: "numeric" })) + 1}</span>
+                    </div>
+                  </div>
+                  <div className="col border-bottom">
+                    <span className="d-block mb-1">{help.helpTitle}</span>
+                  </div>
+                  <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
+                    {isUserLoggedIn ? <>
+                      <small> Accepted by </small><br /><a href="#" className="btn btn-sm btn-link mb-2">Sara</a>
+                    </>
+                      :
+                      <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Requested</a>
+                    }
+                    {/* <a href="#" className="btn btn-sm btn-link mb-2">More Info</a> */}
+                  </div>
+
+                </div>
+              </div>
+              :
+              <>
+              </>
+            }
+
             <div class="my-3 p-3 bg-body rounded shadow-sm">
               <Form.Group className="form-check-inline m-0">
                 <Form.Label className="form-check-label d-block m-0 me-2">
-                  Need help?
+                  Need {(help && help.helpTitle) ? "more" : ""} help?
                 </Form.Label>
                 <input id="professional" name="help" type="radio" class="form-check-input me-1" onChange={() => { setProfessionalHelp(!professionalHelp); setVolunteerHelp(false) }} />
                 <label class="form-check-label me-3" for="professional">Professional</label>
@@ -99,25 +133,13 @@ export default function LandingPage(props) {
               </div>
             }
             <Link to="/AssistivePage" className="btn btn-lg btn-primary rounded-pill py-3 w-100">
-              Assistive Services in 3eyes
+              Assistive Services in 3Eyes
             </Link>
           </div>
+
+
           <div className="col-md-4">
             <div className="position-sticky" style={{ top: '80px' }}>
-              {/* Feeling Low Card */}
-              <div class="mb-3 p-3 bg-body rounded shadow-sm bg-holder">
-                <h6 class="border-bottom pb-2 mb-0">
-                  Feeling low?
-                </h6>
-                <div className="d-flex pt-3 mb-3">
-                  Activate Happiness Together with us now!
-                </div>
-                <Link to="/Happiness" className="btn btn-outline-primary rounded-pill px-4">
-                  Get happiness now!
-                </Link>
-              </div>
-              {/* Feeling Low Card Ends */}
-
               {/* Profile Info Card */}
               <div class="my-3 p-3 bg-body rounded shadow-sm">
                 <div className="row g-0">
@@ -132,41 +154,15 @@ export default function LandingPage(props) {
                       Evangelist
                     </div>
                     <div className="small lh-sm">
-                      <span className="d-inline-block me-4">Followers: 10</span>
-                      <span className="d-inline-block">Following: 24</span>
+                      <span className="d-inline-block me-4">Followers: {isUserLoggedIn ? 10 : 0}</span>
+                      <span className="d-inline-block">Following: {isUserLoggedIn ? 24 : 0}</span>
                     </div>
                   </div>
                 </div>
               </div>
               {/* Profile Info Ends */}
               {/* Events Cards */}
-              {(help && help.helpTitle && isRequested && !isVolunteer) &&
-                <div class="my-3 p-3 bg-body rounded shadow-sm">
-                  <h6 class="border-bottom pb-2 mb-0">
-                    Open Requests
-                  </h6>
-                  <div className="d-flex pt-3">
-                    <div className="calendar">
-                      <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
-                      <span className="calendar-day">{date.toLocaleString("en", { day: "numeric" })}</span>
-                    </div>
-                    <div className="ms-3 pb-3 small lh-sm border-bottom">
-                      <h6 class="mb-0">
-                        <span className="d-flex justify-content-between flex-column flex-md-row">
-                          <small className="d-inline-block me-2">{help.helpTitle}</small>
-                          <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
-                        </span>
-                      </h6>
-                      <small className="d-block mb-2">
-                        {help.category}
-                      </small>
-                      <small className="d-block text-muted mb-1">{help.time}</small>
-                      <small className="d-block text-muted mb-2">{help.pickUp}</small>
-                      <span className="d-block mb-2">{help.notes}</span>
-                    </div>
-                  </div>
-                </div>
-              }
+
               {/* Events Cards Ends */}
             </div>
           </div>

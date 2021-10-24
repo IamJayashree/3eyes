@@ -12,6 +12,7 @@ export default function Login(props) {
   function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
+    localStorage.setItem("isUserLoggedIn", true);
     props.history.push({
       pathname: '/LandingPage', state: {
         name: data.get('email'),
