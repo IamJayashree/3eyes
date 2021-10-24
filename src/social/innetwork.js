@@ -29,14 +29,16 @@ export default function InNetwork() {
 
     return (
         <>
+            <a href="/Happiness" className="floating-button btn btn-primary rounded-pill py-3 px-4">
+            <span class="spinner-grow spinner-grow-sm me-3" role="status" aria-hidden="true"></span>
+                Get Happiness Now!
+            </a>
+            {/*
             <Button variant="primary" onClick={handleShow} className="floating-button">
                 <span class="spinner-grow spinner-grow-sm me-3" role="status" aria-hidden="true"></span>
-                <a href="/Happiness"> Get Happiness Now! </a>
-                {/* <Link to="/Happiness" className="btn btn-outline-primary rounded-pill px-4" onClick={() => { setShow(false); }}>
-                    Get happiness now!
-                </Link> */}
+                Get Happiness Now!
             </Button>
-            {/* <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas show={show} onHide={handleClose}>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Need Professional Help?</Offcanvas.Title>
                 </Offcanvas.Header>

@@ -12,6 +12,7 @@ import HowItWorks from './howitworks/howitworks';
 import HowItWork from './howitworks/howitwork';
 import Assistant from './assistant/assistant';
 import MyNetwork from './mynetwork/mynetwork';
+import InNetwork from './social/innetwork';
 import AssistivePage from './assistant/assistivepage';
 import InNetwork from './social/innetwork';
 

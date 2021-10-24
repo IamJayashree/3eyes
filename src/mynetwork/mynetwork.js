@@ -187,7 +187,7 @@ export default function myMetwork(props) {
                     <span>Evangelist</span>
                   </div>
                   <div className="small lh-sm">
-                    <span className="d-inline-block me-5">Followers: 10</span>
+                    <span className="d-inline-block me-4">Followers: 10</span>
                     <span className="d-inline-block">Following: 24</span>
                   </div>
                 </div>
