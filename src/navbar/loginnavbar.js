@@ -17,8 +17,8 @@ export default function LoginNavBar() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <div className="d-flex flex-column flex-lg-row ms-auto">
-              <a href="/HowItWorks" className="nav-link text-black-50">How It Works?</a>
+            <div className="d-flex flex-column flex-md-row mt-3 mt-md-0 ms-auto">
+              {/* <a href="/HowItWorks" className="nav-link text-black-50">How It Works?</a> */}
               <a href="/SignIn" className="btn btn-outline-primary mb-2 me-md-2">Login</a>
               <a href="/SignUp" className="btn btn-primary mb-2">Register</a>
             </div>

@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
+import Form from 'react-bootstrap/Form';
 import LogoutNavBar from '../navbar/logoutnavbar';
 // import Explorations from './explorations';
 import Avatar from '../assets/images/avatar/14.jpg';
+import Avatar1 from '../assets/images/avatar/02.jpg';
 
 import '../index.css';
 import './explorations.css';
+import Assistant from '../assistant/assistant';
+import NeedHelp from '../help/needhelp';
 
 export default function LandingPage(props) {
   const name = localStorage.getItem("userName");
   const isRequested = localStorage.getItem("isRequested");
   const isVolunteer = localStorage.getItem("isVolunteer");
-  const help = JSON.parse(localStorage.getItem("helpObj"));
+  const help = JSON.parse(localStorage.getItem("assistantObj"));
   let date = (help != null && help.date) ? new Date(help.date) : new Date();
+  const [professionalHelp, setProfessionalHelp] = useState(false);
+  const [volunteerHelp, setVolunteerHelp] = useState(false);
 
+  let isUserLoggedIn = localStorage.getItem("isUserLoggedIn");
   return (
     <>
       <LogoutNavBar />
@@ -22,251 +28,125 @@ export default function LandingPage(props) {
         <div className="row g-3">
           <div className="col-md-8">
             {/* Your Recent help requests */}
-            {
-              isVolunteer &&
-              <>
-                <div className="my-3 p-3 bg-body rounded shadow-sm">
-                  <h6 className="border-bottom pb-2 mb-0">Volunteer Requestes</h6>
-                  {/* repeat item */}
-                  <div className="d-flex pt-3">
-                    <div className="calendar">
-                      <span className="calendar-month">Oct</span>
-                      <span className="calendar-day">24</span>
-                    </div>
-                    <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                      <div className="d-flex justify-content-between flex-column flex-md-row">
-                        <div className="mb-3 mb-md-0">
-                          <h6 class="mb-0">
-                            <span className="d-flex flex-column flex-md-row">
-                              <small className="d-inline-block me-2">Ride to Church</small>
-                              <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-primary">Scheduled</span></span>
-                            </span>
-                          </h6>
-                          <small className="d-block mb-2">
-                            <a href="#">Peter parker</a>
-                            (Recreational)
-                          </small>
-                          <small className="d-block text-muted mb-1">5:00pm - 7:00pm</small>
-                          <small className="d-block text-muted mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
-                          <span className="d-block">Need a ride to Church for Sunday fellowship</span>
-                        </div>
-                        <div className="text-md-center">
-                          <button className="btn btn-sm px-3 btn-pill btn-outline-primary" disabled>Accepted</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* repeat item ends */}
-                  {/* repeat item */}
-                  <div className="d-flex pt-3">
-                    <div className="calendar">
-                      <span className="calendar-month">Oct</span>
-                      <span className="calendar-day">25</span>
-                    </div>
-                    <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                      <div className="d-flex justify-content-between flex-column flex-md-row">
-                        <div className="mb-3 mb-md-0">
-                          <h6 class="mb-0">
-                            <span className="d-flex flex-column flex-md-row">
-                              <small className="d-inline-block me-2">Food Collection</small>
-                              <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
-                            </span>
-                          </h6>
-                          <small className="d-block mb-2">
-                            <a href="#">Windsor Community</a>
-                            (Community Help)
-                          </small>
-                          <small className="d-block text-muted mb-1">6:00PM - 7:00PM</small>
-                          <small className="d-block text-muted mb-2">Hartford, Connecticut</small>
-                          <span className="d-block mb-2">
-                            Collect food from your local Food Bank
-                          </span>
-                        </div>
-                        <div className="text-md-center">
-                          <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {help &&
-                    <div className="d-flex pt-3">
-                      <div className="calendar">
-                        <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
-                        <span className="calendar-day">{date.toLocaleString("en", { day: "numeric" })}</span>
-                      </div>
-                      <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                        <div className="d-flex justify-content-between flex-column flex-md-row">
-                          <div className="mb-3 mb-md-0">
-                            <h6 class="mb-0">
-                              <span className="d-flex flex-column flex-md-row">
-                                <small className="d-inline-block me-2">{help.helpTitle}</small>
-                                <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
-                              </span>
-                            </h6>
-                            <small className="d-block mb-2">
-                              <a href="#">{help.name}</a> ({help.category})
-                            </small>
-                            <small className="d-block text-muted mb-1">{help.time}</small>
-                            <small className="d-block text-muted mb-2">{help.pickUp}</small>
-                            <span className="d-block mb-2">
-                              {help.notes}
-                            </span>
-                          </div>
-                          <div className="text-md-center">
-                            <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  }
-                  {/* repeat item ends */}
-                  <small className="d-block text-end mt-3">
-                    <a href="#">View all</a>
-                  </small>
-                </div>
-
-              </>
-            }
-            {/* Your Recent help requests End */}
-            {/* Assistive services */}
             <div className="my-3 p-3 bg-body rounded shadow-sm">
-              <h6 className="border-bottom pb-2 mb-0">Requested for help</h6>
+              <h6 className="border-bottom pb-2 mb-0">Open Service Requests</h6>
               {/* repeat item */}
-              <div className="d-flex pt-3">
-                <div className="calendar paid">
-                  <span className="calendar-month">Oct</span>
-                  <span className="calendar-day">24</span>
-                </div>
-                <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                  <div className="d-flex justify-content-between flex-column flex-md-row">
-                    <div className="mb-3 mb-md-0">
-                      <h6 class="mb-0">
-                        <span className="d-flex flex-column flex-md-row">
-                          <small className="d-inline-block me-2">Visit to Citi Park</small>
-                          <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-primary">Scheduled</span></span>
-                        </span>
-                      </h6>
-                      <small className="d-block mb-2">
-                        <a href="#">Peter parker</a>
-                        (physical)
-                      </small>
-                      <small className="d-block text-muted mb-1">5:00pm - 7:00pm</small>
-                      <small className="d-block text-muted mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
-                      <span className="d-block">I need some one to assistance me to visit citi park due to some...</span>
-                    </div>
-                    <div className="text-md-center">
-                      <button className="btn btn-sm px-3 btn-pill btn-outline-primary">Track</button>
-                      <small class="d-block mt-2">Accepted by<br /><a href="#">John doe</a></small>
-                    </div>
+              <div className="row g-0 mt-3">
+                <div className="col-auto">
+                  <div className="calendar me-3">
+                    <span className="calendar-month">Oct</span>
+                    <span className="calendar-day">25</span>
                   </div>
                 </div>
-              </div>
-              {/* repeat item ends */}
-              {/* repeat item */}
-              <div className="d-flex pt-3">
-                <div className="calendar paid">
-                  <span className="calendar-month">Oct</span>
-                  <span className="calendar-day">25</span>
+                <div className="col border-bottom">
+                  <span className="d-block mb-1">Ride to Church</span>
+                  <span className="rounded badge bg-soft-primary">Open</span>
                 </div>
-                <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                  <div className="d-flex justify-content-between flex-column flex-md-row">
-                    <div className="mb-3 mb-md-0">
-                      <h6 class="mb-0">
-                        <span className="d-flex flex-column flex-md-row">
-                          <small className="d-inline-block me-2">Visit to Citibank</small>
-                          <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
-                        </span>
-                      </h6>
-                      <small className="d-block mb-2">
-                        <a href="#">John doe</a>
-                        (Visual)
-                      </small>
-                      <small className="d-block text-muted mb-1">6:00PM - 7:00PM</small>
-                      <small className="d-block text-muted mb-2">Citibank, 1399 Post St, San Francisco, CA 94109</small>
-                      <span className="d-block mb-2">
-                        I need some one to assistance me to visit citibank due to...
-                      </span>
-                    </div>
-                    <div className="text-md-center">
-                      <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
-                    </div>
+                <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
+                  <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</a>
+                  <a href="#" className="btn btn-sm btn-link mb-2">More Info</a>
+                </div>
+              </div>
+              {/* repeat item */}
+              {/* repeat item */}
+              <div className="row g-0 mt-3">
+                <div className="col-auto">
+                  <div className="calendar me-3">
+                    <span className="calendar-month">Oct</span>
+                    <span className="calendar-day">26</span>
                   </div>
                 </div>
+                <div className="col border-bottom">
+                  <span className="d-block mb-1">Food Collection</span>
+                  <span className="rounded badge bg-soft-primary">Open</span>
+                </div>
+                <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
+                  <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Accept</a>
+                  <a href="#" className="btn btn-sm btn-link mb-2">More Info</a>
+                </div>
               </div>
-              {/* repeat item ends */}
+              {/* repeat item */}
               <small className="d-block text-end mt-3">
                 <a href="#">View all</a>
               </small>
             </div>
-            {/* Assistive services End */}
-            {/* My Network services */}
-            {/* <div className="my-3 p-3 bg-body rounded shadow-sm">
-              <h6 className="border-bottom pb-2 mb-0">Public help requests / My network help requests</h6>
-              <div className="d-flex pt-3">
-                <div className="calendar">
-                  <span className="calendar-month">Oct</span>
-                  <span className="calendar-day">24</span>
-                </div>
-                <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                  <div className="d-flex justify-content-between flex-column flex-md-row">
-                    <div className="mb-3 mb-md-0">
-                      <h6 class="mb-0">
-                        <span className="d-flex flex-column flex-md-row">
-                          <small className="d-inline-block me-2">Visit to Citi Park</small>
-                          <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
-                        </span>
-                      </h6>
-                      <small className="d-block mb-2">
-                        <a href="#">Peter parker</a>
-                        (physical)
-                      </small>
-                      <small className="d-block text-muted mb-1">5:00pm - 7:00pm</small>
-                      <small className="d-block text-muted mb-2">City Park, 1399 Post St, San Francisco, CA 94109</small>
-                      <span className="d-block">I need some one to assistance me to visit citi park due to some...</span>
-                    </div>
-                    <div className="text-md-center">
-                      <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
+            {
+              isVolunteer &&
+              <>
+              </>
+            }
+
+            {(help && help.helpTitle) ?
+              <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <h6 class="border-bottom pb-2 mb-0">
+                  Help requested by you
+                </h6>
+                <div className="d-flex pt-3">
+                  <div className="col-auto">
+                    <div className="calendar me-3">
+                      <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
+                      <span className="calendar-day">{parseInt(date.toLocaleString("en", { day: "numeric" })) + 1}</span>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="d-flex pt-3">
-                <div className="calendar paid">
-                  <span className="calendar-month">Oct</span>
-                  <span className="calendar-day">25</span>
-                </div>
-                <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                  <div className="d-flex justify-content-between flex-column flex-md-row">
-                    <div className="mb-3 mb-md-0">
-                      <h6 class="mb-0">
-                        <span className="d-flex flex-column flex-md-row">
-                          <small className="d-inline-block me-2">Visit to Citibank</small>
-                          <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
-                        </span>
-                      </h6>
-                      <small className="d-block mb-2">
-                        <a href="#">John doe</a>
-                        (Visual)
-                      </small>
-                      <small className="d-block text-muted mb-1">6:00PM - 7:00PM</small>
-                      <small className="d-block text-muted mb-2">Citibank, 1399 Post St, San Francisco, CA 94109</small>
-                      <span className="d-block mb-2">
-                        I need some one to assistance me to visit citibank due to...
-                      </span>
-                    </div>
-                    <div className="text-md-center">
-                      <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
-                    </div>
+                  <div className="col">
+                    <span className="d-block mb-1">{help.helpTitle}</span>
                   </div>
+                  <div className="col-auto">
+                    {
+                      isUserLoggedIn ?
+                      <>
+                        <div className="d-flex">
+                          <img src={Avatar1} alt="" width="32" height="32"
+                          className="me-2 rounded-circle shadow-sm" />
+                          <small className="lh-1">
+                            <small className="small text-muted d-block text-center">Accepted by</small>
+                            <a href="#" className="small">Sarah Gordy</a>
+                          </small>
+                        </div>
+                      </>
+                    :
+                      <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Requested</a>
+                    }
+                    {/* <a href="#" className="btn btn-sm btn-link mb-2">More Info</a> */}
+                  </div>
+
                 </div>
               </div>
-              <small className="d-block text-end mt-3">
-                <a href="#">View all</a>
-              </small>
-            </div> */}
-            {/* My Network services End */}
+              :
+              <>
+              </>
+            }
+
+            <div class="my-3 p-3 bg-body rounded shadow-sm">
+              <Form.Group className="form-check-inline m-0">
+                <Form.Label className="form-check-label d-block m-0 me-2">
+                  Need {(help && help.helpTitle) ? "more" : ""} help?
+                </Form.Label>
+                <input id="professional" name="help" type="radio" class="form-check-input me-2" onChange={() => { setProfessionalHelp(!professionalHelp); setVolunteerHelp(false) }} />
+                <label class="form-check-label me-3" for="professional">Professional</label>
+                <input id="volunteer" name="help" type="radio" class="form-check-input me-2" onChange={() => { setVolunteerHelp(!volunteerHelp); setProfessionalHelp(false) }} />
+                <label class="form-check-label" for="volunteer">Volunteer</label>
+              </Form.Group>
+            </div>
+
+            {
+              professionalHelp &&
+              <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <Assistant />
+              </div>
+            }
+            {
+              volunteerHelp &&
+              <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <NeedHelp />
+              </div>
+            }
+            <Link to="/AssistivePage" className="btn btn-lg btn-primary rounded-pill py-3 w-100">
+              Assistive Services in 3Eyes
+            </Link>
           </div>
+
+
           <div className="col-md-4">
             <div className="position-sticky" style={{ top: '80px' }}>
               {/* Profile Info Card */}
@@ -277,64 +157,26 @@ export default function LandingPage(props) {
                   </div>
                   <div className="col">
                     <h6 class="mb-0">
-                      Nick Vujicic
+                      Varun
                     </h6>
-                    <div className="small mb-1 border-bottom pb-1">
-                      <small>Evangelist</small>
+                    <div className="small text-muted mb-1 border-bottom pb-1">
+                      Evangelist
                     </div>
                     <div className="small lh-sm">
-                      <small className="d-inline-block me-5">Followers: 10</small>
-                      <small className="d-inline-block">Following: 24</small>
+                      <span className="d-inline-block me-4">Followers: {isUserLoggedIn ? 10 : 0}</span>
+                      <span className="d-inline-block">Following: {isUserLoggedIn ? 24 : 0}</span>
                     </div>
                   </div>
                 </div>
               </div>
               {/* Profile Info Ends */}
-              {/* Feeling Low Card */}
-              <div class="my-3 p-3 bg-body rounded shadow-sm bg-holder">
-                <h6 class="border-bottom pb-2 mb-0">
-                  Feeling low?
-                </h6>
-                <div className="d-flex pt-3 mb-3">
-                  Activate Happiness Together with us now!
-                </div>
-                <Link to="/Happiness" className="btn btn-outline-primary rounded-pill px-4">
-                  Get happiness now!
-                </Link>
-              </div>
-              {/* Feeling Low Card Ends */}
               {/* Events Cards */}
-              {(help && help.helpTitle && isRequested && !isVolunteer) &&
-                <div class="my-3 p-3 bg-body rounded shadow-sm">
-                  <h6 class="border-bottom pb-2 mb-0">
-                    Open Requests
-                  </h6>
-                  <div className="d-flex pt-3">
-                    <div className="calendar">
-                      <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
-                      <span className="calendar-day">{date.toLocaleString("en", { day: "numeric" })}</span>
-                    </div>
-                    <div className="ms-3 pb-3 small lh-sm border-bottom">
-                      <h6 class="mb-0">
-                        <span className="d-flex justify-content-between flex-column flex-md-row">
-                          <small className="d-inline-block me-2">{help.helpTitle}</small>
-                          <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
-                        </span>
-                      </h6>
-                      <small className="d-block mb-2">
-                        {help.category}
-                      </small>
-                      <small className="d-block text-muted mb-1">{help.time}</small>
-                      <small className="d-block text-muted mb-2">{help.pickUp}</small>
-                      <span className="d-block mb-2">{help.notes}</span>
-                    </div>
-                  </div>
-                </div>
-              }
+
               {/* Events Cards Ends */}
             </div>
           </div>
         </div>
+        <div><br /><br /><br /></div>
       </div>
       {/* <Explorations/> */}
     </>

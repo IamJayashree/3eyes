@@ -40,7 +40,7 @@ export default function LandingPage(props) {
               </div>
             </div>
           </div>
-          <div className="col">
+          {/* <div className="col">
             <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Innovation})` }}>
               <div className="d-flex flex-column h-100 p-5 pb-3 text-white">
                 <h2 className="pt-5 mt-5 mb-4 display-6 lh-1">Students with disability to benefit from innovative programs</h2>
@@ -63,8 +63,8 @@ export default function LandingPage(props) {
                 </ul>
               </div>
             </div>
-          </div>
-          <div className="col">
+          </div> */}
+          {/* <div className="col">
             <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style={{ backgroundImage: `url(${Physical})` }}>
               <div className="d-flex flex-column h-100 p-5 pb-3">
                 <h2 className="pt-5 mt-5 mb-4 display-6 lh-1">Strengthening the collection of data on disability</h2>
@@ -87,7 +87,7 @@ export default function LandingPage(props) {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -96,7 +96,7 @@ export default function LandingPage(props) {
         <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-body">
-              <button type="button" className="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close" style={{right: '20px', top: '20px'}}></button>
+              <button type="button" className="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close" style={{ right: '20px', top: '20px' }}></button>
               <svg className="bd-placeholder-img mb-3" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img"
                 aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <rect width="100%" height="100%" fill="#999"></rect>

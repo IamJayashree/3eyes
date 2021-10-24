@@ -1,4 +1,9 @@
-To Start the app 
+# 3Eyes(include, involve, inspire)
+  
+We are change makers with a mission of enabling everything for everyone by everyone . We "Include everyone, Involve in transformative community & Inspire every one" to redesign the world for everyone.
 
-1) yarn install
-2) yarn start
+## To run this example:
+ 
+* Clone this repo
+* Install dependencies with `npm install` or `yarn install`
+* Run in device or simulator with `yarn start`

@@ -2,7 +2,6 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
 import Home from './home';
-import Home1 from './home1';
 import SignUp from './signup/signup';
 import SignIn from './signin/signin';
 import LandingPage from './landingpage/landingpage';
@@ -11,9 +10,10 @@ import Happiness from './happiness/happiness';
 import Registration from './signup/resgistration';
 import HowItWorks from './howitworks/howitworks';
 import HowItWork from './howitworks/howitwork';
-import InNetwork from './social/innetwork';
 import Assistant from './assistant/assistant';
 import MyNetwork from './mynetwork/mynetwork';
+import InNetwork from './social/innetwork';
+import AssistivePage from './assistant/assistivepage';
 
 function App() {
   return (
@@ -51,7 +51,6 @@ function App() {
       <InNetwork></InNetwork>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/Home1" component={Home1} />
         <Route path="/SignIn" component={SignIn} />
         <Route path="/SignUp" component={SignUp} />
         <Route path="/Registration" component={Registration} />
@@ -62,6 +61,7 @@ function App() {
         <Route path="/HowItWork" component={HowItWork} />
         <Route path="/Assistant" component={Assistant} />
         <Route path="/MyNetwork" component={MyNetwork} />
+        <Route path="/AssistivePage" component={AssistivePage} />
       </Switch>
     </>
   );

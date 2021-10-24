@@ -9,6 +9,7 @@ export default function LogoutNavBar() {
     localStorage.removeItem('userName');
     localStorage.removeItem('isRequested');
     localStorage.removeItem('isVolunteer');
+    localStorage.removeItem('isUserLoggedIn');
     history.push("/Home");
   }
 
@@ -27,9 +28,9 @@ export default function LogoutNavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/HowItWork">How It Works?</Nav.Link>
+              {/* <Nav.Link href="/HowItWork">How It Works?</Nav.Link> */}
               <Nav.Link href="/MyNetwork">My Network</Nav.Link>
-              <Nav.Link href="/NeedHelp">Request Help</Nav.Link>
+              {/* <Nav.Link href="/NeedHelp">Request Help</Nav.Link> */}
               <Nav.Link href="/" onClick={handleLogout}>Logout</Nav.Link>
             </Nav>
           </Navbar.Collapse>
