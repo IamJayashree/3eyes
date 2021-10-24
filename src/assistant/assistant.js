@@ -116,7 +116,7 @@ export default function Assistant(props) {
                         as="textarea"
                         name="info"
                         cols="30" rows="5"
-                        required />
+                    />
                     <Form.Control.Feedback type="invalid" className="invalid-feedback">
                         Please enter a valid info
                     </Form.Control.Feedback>

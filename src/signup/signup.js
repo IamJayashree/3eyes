@@ -46,14 +46,14 @@ export default function SignUp(props) {
                 />
                 <Form.Label className="px-4">Full Name</Form.Label>
               </Form.Group>
-              <Form.Group size="lg" controlId="phone" className="form-floating mb-3">
+              {/* <Form.Group size="lg" controlId="phone" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill" maxLength="10"
                   type="text"
                   name="phone"
                   required
                 />
                 <Form.Label className="px-4">Phone number</Form.Label>
-              </Form.Group>
+              </Form.Group> */}
               <Form.Group size="lg" controlId="email" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   type="email"
