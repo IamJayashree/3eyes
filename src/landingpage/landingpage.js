@@ -76,7 +76,7 @@ export default function LandingPage(props) {
             }
             <div class="my-3 p-3 bg-body rounded shadow-sm">
               <Form.Group className="form-check-inline m-0">
-                <Form.Label className="form-check-label m-0 me-2">
+                <Form.Label className="form-check-label d-block m-0 me-2">
                   Need help?
                 </Form.Label>
                 <input id="professional" name="help" type="radio" class="form-check-input me-1" onChange={() => { setProfessionalHelp(!professionalHelp); setVolunteerHelp(false) }} />
@@ -132,7 +132,7 @@ export default function LandingPage(props) {
                       Evangelist
                     </div>
                     <div className="small lh-sm">
-                      <span className="d-inline-block me-5">Followers: 10</span>
+                      <span className="d-inline-block me-4">Followers: 10</span>
                       <span className="d-inline-block">Following: 24</span>
                     </div>
                   </div>
@@ -171,6 +171,7 @@ export default function LandingPage(props) {
             </div>
           </div>
         </div>
+        <div><br /><br /><br /></div>
       </div>
       {/* <Explorations/> */}
     </>
