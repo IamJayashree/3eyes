@@ -42,7 +42,6 @@ export default function SignUp(props) {
                   autoFocus
                   type="text"
                   name="firstName"
-                  placeholder="Full Name"
                   required
                 />
                 <Form.Label className="px-4">Full Name</Form.Label>
@@ -52,7 +51,6 @@ export default function SignUp(props) {
                   autoFocus
                   type="text"
                   name="phone"
-                  placeholder="Phone number"
                   required
                 />
                 <Form.Label className="px-4">Phone number</Form.Label>
@@ -60,7 +58,6 @@ export default function SignUp(props) {
               <Form.Group size="lg" controlId="email" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   type="email"
-                  placeholder="name@example.com"
                   name="email"
                   required
                 />
@@ -69,7 +66,6 @@ export default function SignUp(props) {
               <Form.Group size="lg" controlId="password" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   type="password"
-                  placeholder="Password"
                   name="password"
                   required
                 />
@@ -78,7 +74,6 @@ export default function SignUp(props) {
               <Form.Group size="lg" controlId="confirmPassword" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   type="password"
-                  placeholder="Confirm Password"
                   name="confirmPassword"
                   required
                 />

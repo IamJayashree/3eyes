@@ -1,5 +1,5 @@
 
-export default function Registration(props) {
+export default function AssistivePage(props) {
 
     return (<>
 
