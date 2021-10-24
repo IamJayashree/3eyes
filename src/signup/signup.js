@@ -36,7 +36,7 @@ export default function SignUp(props) {
           </div>
           <div className="col-lg-6">
             <Form onSubmit={handleSubmit} className="p-md-4 p-md-5">
-              <h4 className="lh-1 mb-4 text-center">Sign up</h4>
+              {/* <h4 className="lh-1 mb-4 text-center">Sign up</h4> */}
               <Form.Group size="lg" controlId="firstName" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   autoFocus

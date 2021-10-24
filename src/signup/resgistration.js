@@ -41,7 +41,7 @@ export default function Registration(props) {
                             <div className="col-lg-8">
                                 <div className="card-body p-4 p-md-5">
                                     <h3 className="fw-bold lh-1 mb-3">Welcome {name},</h3>
-                                    <p className="mb-5">Please provide some more information about yourself to quickly get started.</p>
+                                    <p className="mb-2">Please provide some more information about yourself.</p>
                                     <div className="row g-3">
                                         <div className="col-12">
                                             <label className="form-label mr-auto" htmlFor="address">Address</label>
@@ -51,14 +51,14 @@ export default function Registration(props) {
                                         </div>
                                         <div className="col-md-5">
                                             <label htmlFor="dob" className="form-label">Date of Birth</label>
-                                            <input type="date" className="form-control" id="dob" placeholder="MM/DD/YYY" required="" />
+                                            <input type="date" className="form-control px-4 rounded-pill" id="dob" placeholder="MM/DD/YYY" required="" />
                                             <div className="invalid-feedback">
                                                 Please input a valid Date of Birth.
                                             </div>
                                         </div>
                                         <div className="col-md-7">
                                             <label htmlFor="state" className="form-label">Pronouns</label>
-                                            <select className="form-select" id="state" required="">
+                                            <select className="form-select px-4 rounded-pill" id="state" required="">
                                                 <option value="">Choose...</option>
                                                 <option>he/him/his</option>
                                                 <option>she/her/hers</option>
@@ -106,8 +106,8 @@ export default function Registration(props) {
                                                 </div>
                                             </div>
                                         }
-                                        <label className="form-label mt-4 mb-0 col-12">Emergency Contact</label>
-                                        <div className="col-md-5">
+                                        <label className="form-label mt-4 mb-0 col-12">Emergency Contact <span className="text-muted">(Optional)</span></label>
+                                        {/* <div className="col-md-5">
                                             <label htmlFor="a-name" className="form-label">Full Name <span className="text-muted">(Optional)</span></label>
                                             <input type="text" className="form-control" id="a-name" />
                                         </div>
@@ -118,7 +118,31 @@ export default function Registration(props) {
                                         <div className="col-md-3">
                                             <label htmlFor="a-phone" className="form-label">Phone <span className="text-muted">(Optional)</span></label>
                                             <input type="text" className="form-control" id="a-phone" />
-                                        </div>
+                                        </div> */}
+
+                                        <Form.Group size="lg" controlId="firstName" className="form-floating mb-3">
+                                            <Form.Control className="form-control px-4 rounded-pill"
+                                                autoFocus
+                                                type="text"
+                                                name="firstName"
+                                            />
+                                            <Form.Label className="px-4">Full Name</Form.Label>
+                                        </Form.Group>
+                                        <Form.Group size="lg" controlId="phone" className="form-floating mb-3">
+                                            <Form.Control className="form-control px-4 rounded-pill"
+                                                autoFocus
+                                                type="text"
+                                                name="phone"
+                                            />
+                                            <Form.Label className="px-4">Phone number</Form.Label>
+                                        </Form.Group>
+                                        <Form.Group size="lg" controlId="email" className="form-floating mb-3">
+                                            <Form.Control className="form-control px-4 rounded-pill"
+                                                type="email"
+                                                name="email"
+                                            />
+                                            <Form.Label className="px-4">Email address</Form.Label>
+                                        </Form.Group>
                                     </div>
                                 </div>
                             </div>
