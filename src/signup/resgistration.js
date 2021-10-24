@@ -126,7 +126,43 @@ export default function Registration(props) {
                                 </div>
                             </div>
                             <div className="col bg-light border">
-                                <div className="card-body p-4 p-md-5">
+                                <div className="card-body p-4 px-md-4 py-md-5">
+                                    < Form.Check
+                                        type="switch"
+                                        id="professionalHelp"
+                                        label="Interested in Professional Assist?"
+                                        onChange={() => { setProfessionalHelp(!professionalHelp); }}
+                                    />
+                                    {
+                                        professionalHelp &&
+                                        <>
+                                            <div className="mt-3">
+                                                <label className="form-label">Choose your profession?</label><br />
+                                                <div className="form-check mb-2">
+                                                    <input id="educationalCare" type="checkbox" className="form-check-input me-2" />
+                                                    <label className="form-check-label" htmlFor="educationalCare">Doctor</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="healthCare" type="checkbox" className="form-check-input me-2" />
+                                                    <label className="form-check-label" htmlFor="healthCare">Lawyer</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="personalCare" type="checkbox" className="form-check-input me-2" />
+                                                    <label className="form-check-label" htmlFor="personalCare">Physical Trainer</label>
+                                                </div>
+                                                <div className="form-check mb-2">
+                                                    <input id="otherCare" type="checkbox" className="form-check-input me-2" onChange={() => { setOtherProfession(!otherProfession); }} />
+                                                    <label className="form-check-label" htmlFor="otherCare">Others</label>
+                                                </div>
+                                                {otherProfession &&
+                                                    <div className="mb-2">
+                                                        <input type="text" className="form-control" placeholder="Please enter your Profession" required="" />
+                                                    </div>
+                                                }
+                                            </div>
+                                        </>
+                                    }
+                                    {/*
                                     <Form.Check
                                         type="switch"
                                         id="custom-switch"
@@ -180,46 +216,7 @@ export default function Registration(props) {
                                             </ol>
                                         </>
                                     }
-                                </div>
-                            </div>
-                            <div className="bg-light border">
-                                <div className="card-body p-4 p-md-5">
-                                    < Form.Check
-                                        type="switch"
-                                        id="professionalHelp"
-                                        label="Interested in Professional Assist?"
-                                        onChange={() => { setProfessionalHelp(!professionalHelp); }}
-                                    />
-                                    {
-                                        professionalHelp &&
-                                        <>
-                                            <div className="py-4">
-                                                <label className="form-label">Choose your profession?</label><br />
-                                                <div className="form-check mb-2">
-                                                    <input id="accessibleTechnology" type="checkbox" lassName="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="physical">Educational</label>
-                                                </div>
-                                                <div className="form-check mb-2">
-                                                    <input id="healthCare" type="checkbox" lassName="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="hearing">Helath Care</label>
-                                                </div>
-                                                <div className="form-check mb-2">
-                                                    <input id="healthCare" type="checkbox" lassName="form-check-input" />
-                                                    <label className="form-check-label" htmlFor="hearing">Personal Care</label>
-                                                </div>
-                                                <div className="form-check mb-2">
-                                                    <input id="otherProfession" type="checkbox" lassName="form-check-input" onChange={() => { setOtherProfession(!otherProfession); }} />
-                                                    <label className="form-check-label" htmlFor="others">Others</label>
-                                                </div>
-                                                {otherProfession &&
-                                                    <div className="mb-2">
-                                                        <input type="text" className="form-control" placeholder="Please enter your Profession" required="" />
-
-                                                    </div>
-                                                }
-                                            </div>
-                                        </>
-                                    }
+                                    */}
                                 </div>
                             </div>
                         </div>
@@ -230,22 +227,6 @@ export default function Registration(props) {
                         </div>
                     </div>
                 </Form>
-            </div >
-            <div className="container px-5">
-                <div id="showOnMobile" className="d-none d-lg-block">
-                    <h5>Personal Section</h5>
-                    <p className="mb-5">few line of text goes here few line of text goes here few line of text goes here few line of text goes here </p>
-                </div>
-                <button className="btn btn-primary d-lg-none">Next</button>
-                <div id="showOnMobile" className="d-none d-lg-block">
-                    <h5>Additional Contact Section</h5>
-                    <p className="mb-5">few line of text goes here few line of text goes here few line of text goes here few line of text goes here </p>
-                </div>
-                <button className="btn btn-primary d-lg-none">Next</button>
-                <div id="showOnMobile" className="d-none d-lg-block">
-                    <h5>Emergency Contact Section</h5>
-                    <p className="mb-5">few line of text goes here few line of text goes here few line of text goes here few line of text goes here </p>
-                </div>
             </div>
         </div>
 
