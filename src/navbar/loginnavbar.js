@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
 export default function LoginNavBar() {
@@ -17,11 +17,11 @@ export default function LoginNavBar() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              <Nav.Link href="/HowItWorks">How It Works?</Nav.Link>
-              <Nav.Link href="/SignIn">Login</Nav.Link>
-              <Nav.Link href="/SignUp">Register</Nav.Link>
-            </Nav>
+            <div className="d-flex flex-column flex-lg-row ms-auto">
+              <a href="/HowItWorks" className="nav-link text-black-50">How It Works?</a>
+              <a href="/SignIn" className="btn btn-outline-primary mb-2 me-md-2">Login</a>
+              <a href="/SignUp" className="btn btn-primary mb-2">Register</a>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
