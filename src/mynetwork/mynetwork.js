@@ -36,28 +36,28 @@ export default function myMetwork(props) {
   return (
     <>
       <LogoutNavBar></LogoutNavBar>
-      <div className="container px-4 py-2">
+      <div className="container px-4 py-2 mb-4">
         <div className="row g-3">
           <div className="col-md-8">
-            <div className="my-3 p-3 bg-body rounded shadow-sm">
+            <div className="mt-3 p-3 bg-body rounded shadow-sm">
               <div className="align-items-center row border-bottom pb-2 mb-4 g-0">
                 <div className="col">
                   <h6 className="mb-0">My Connections (10)</h6>
                 </div>
                 <div className="col-auto">
-                  <input placeholder="Search..." type="text" className="form-control form-control-sm" />
+                  <input style={{width:'150px'}} placeholder="Search..." type="text" className="form-control form-control-sm" />
                 </div>
               </div>
-              <div className="text-center g-4 row row row-cols-1 row-cols-lg-3 align-items-stretch">
+              <div className="text-center g-4 row row row-cols-2 row-cols-lg-3 align-items-stretch">
                 {/* repeat items */}
                 <div className="col">
                   <img class="img-thumbnail mb-3 img-fluid rounded-circle shadow-sm" src={a01[0]} width="100" height="100" alt="" />
                   <h6 className="mb-0">
                     {a01[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a01[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -67,9 +67,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a02[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a02[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -79,9 +79,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a03[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a03[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -91,9 +91,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a04[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a04[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -103,9 +103,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a05[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a05[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -115,9 +115,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a06[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a06[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -127,9 +127,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a07[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a07[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -139,9 +139,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a11[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a11[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -151,9 +151,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a12[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a12[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -163,9 +163,9 @@ export default function myMetwork(props) {
                   <h6 className="mb-0">
                     {a13[1]}
                   </h6>
-                  <small className="text-muted d-block mb-2">
+                  <span className="text-muted d-block mb-2">
                     {a13[2]}
-                  </small>
+                  </span>
                   <a className="btn btn-sm btn-outline-primary" href="/NeedHelp">Request help</a>
                 </div>
                 {/* repeat items ends */}
@@ -174,7 +174,7 @@ export default function myMetwork(props) {
           </div>
           <div className="col-md-4">
             {/* Profile Info Card */}
-            <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <div class="mt-3 p-3 bg-body rounded shadow-sm">
               <div className="row g-0">
                 <div className="col-auto">
                   <img class="img-thumbnail me-3 img-fluid rounded-circle shadow-sm" src={Avatar} width="64" height="64" alt="" />
@@ -184,11 +184,11 @@ export default function myMetwork(props) {
                     Nick Vujicic
                   </h6>
                   <div className="small mb-1 border-bottom pb-1">
-                    <small>Evangelist</small>
+                    <span>Evangelist</span>
                   </div>
                   <div className="small lh-sm">
-                    <small className="d-inline-block me-5">Followers: 10</small>
-                    <small className="d-inline-block">Following: 24</small>
+                    <span className="d-inline-block me-5">Followers: 10</span>
+                    <span className="d-inline-block">Following: 24</span>
                   </div>
                 </div>
               </div>
@@ -221,10 +221,10 @@ export default function myMetwork(props) {
                     {a08[1]}
                   </h6>
                   <div className="small text-muted">
-                    <small>{a08[2]}</small>
+                    <span>{a08[2]}</span>
                   </div>
                   <div className="small">
-                    <small>2 mutual connections</small>
+                    <span>2 mutual connections</span>
                   </div>
                 </div>
                 <div className="col-auto border-bottom">
@@ -241,10 +241,10 @@ export default function myMetwork(props) {
                     {a09[1]}
                   </h6>
                   <div className="small text-muted">
-                    <small>{a09[2]}</small>
+                    <span>{a09[2]}</span>
                   </div>
                   <div className="small">
-                    <small>5 mutual connections</small>
+                    <span>5 mutual connections</span>
                   </div>
                 </div>
                 <div className="col-auto border-bottom">
@@ -261,10 +261,10 @@ export default function myMetwork(props) {
                     {a10[1]}
                   </h6>
                   <div className="small text-muted">
-                    <small>{a10[2]}</small>
+                    <span>{a10[2]}</span>
                   </div>
                   <div className="small">
-                    <small>2 mutual connections</small>
+                    <span>2 mutual connections</span>
                   </div>
                 </div>
                 <div className="col-auto">
