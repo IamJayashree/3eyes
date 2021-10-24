@@ -31,14 +31,14 @@ export default function Login(props) {
           </div>
           <div className="col-lg-6">
             <Form onSubmit={handleSubmit} className="p-md-4 p-md-5">
-              <h4 className="lh-1 mb-4 text-center">
+              {/* <h4 className="lh-1 mb-4 text-center">
                 Sign in
-              </h4>
+              </h4> */}
               <Form.Group size="lg" controlId="email" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   autoFocus
                   type="email"
-                  placeholder="name@example.com"
+                  // placeholder="name@example.com"
                   name="email"
                   required
                 />
@@ -47,7 +47,7 @@ export default function Login(props) {
               <Form.Group size="lg" controlId="password" className="form-floating mb-3">
                 <Form.Control className="form-control px-4 rounded-pill"
                   type="password"
-                  placeholder="Password"
+                  // placeholder="Password"
                   name="password"
                   required
                 />
