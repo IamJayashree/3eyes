@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import AppSvg from './assets/images/app.svg';
+import HomeImage from './assets/images/home.png';
 import Grabber from './assets/images/grabber.jpg';
 import Physical from './assets/images/physical.jpg';
 import Innovation from './assets/images/innovation.jpg';
@@ -18,7 +18,7 @@ export default function Home(props) {
       <div className="container px-4 pt-5 pb-3 pb-md-5">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-10 col-sm-8 col-lg-6 m-auto">
-            <img src={AppSvg} className="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy" />
+            <img src={HomeImage} class="d-block mx-lg-auto img-fluid" alt="3I" width="700" height="500" loading="lazy"/>
           </div>
           <div className="col-lg-6 text-center text-lg-start">
             <h1 className="display-5 lh-1 mb-3">
