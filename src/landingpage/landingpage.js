@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import LogoutNavBar from '../navbar/logoutnavbar';
 // import Explorations from './explorations';
 import Avatar from '../assets/images/avatar/14.jpg';
+import Avatar1 from '../assets/images/avatar/02.jpg';
 
 import '../index.css';
 import './explorations.css';
@@ -81,21 +82,29 @@ export default function LandingPage(props) {
                   Help requested by you
                 </h6>
                 <div className="d-flex pt-3">
-
                   <div className="col-auto">
                     <div className="calendar me-3">
                       <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
                       <span className="calendar-day">{parseInt(date.toLocaleString("en", { day: "numeric" })) + 1}</span>
                     </div>
                   </div>
-                  <div className="col border-bottom">
+                  <div className="col">
                     <span className="d-block mb-1">{help.helpTitle}</span>
                   </div>
-                  <div className="col-auto border-bottom text-center" style={{ width: '100px' }}>
-                    {isUserLoggedIn ? <>
-                      <small> Accepted by </small><br /><a href="#" className="btn btn-sm btn-link mb-2">Sara</a>
-                    </>
-                      :
+                  <div className="col-auto">
+                    {
+                      isUserLoggedIn ?
+                      <>
+                        <div className="d-flex">
+                          <img src={Avatar1} alt="" width="32" height="32"
+                          className="me-2 rounded-circle shadow-sm" />
+                          <small className="lh-1">
+                            <small className="small text-muted d-block text-center">Accepted by</small>
+                            <a href="#" className="small">Sarah Gordy</a>
+                          </small>
+                        </div>
+                      </>
+                    :
                       <a href="#" className="btn btn-sm btn-outline-primary mb-1 w-100">Requested</a>
                     }
                     {/* <a href="#" className="btn btn-sm btn-link mb-2">More Info</a> */}
@@ -113,9 +122,9 @@ export default function LandingPage(props) {
                 <Form.Label className="form-check-label d-block m-0 me-2">
                   Need {(help && help.helpTitle) ? "more" : ""} help?
                 </Form.Label>
-                <input id="professional" name="help" type="radio" class="form-check-input me-1" onChange={() => { setProfessionalHelp(!professionalHelp); setVolunteerHelp(false) }} />
+                <input id="professional" name="help" type="radio" class="form-check-input me-2" onChange={() => { setProfessionalHelp(!professionalHelp); setVolunteerHelp(false) }} />
                 <label class="form-check-label me-3" for="professional">Professional</label>
-                <input id="volunteer" name="help" type="radio" class="form-check-input me-1" onChange={() => { setVolunteerHelp(!volunteerHelp); setProfessionalHelp(false) }} />
+                <input id="volunteer" name="help" type="radio" class="form-check-input me-2" onChange={() => { setVolunteerHelp(!volunteerHelp); setProfessionalHelp(false) }} />
                 <label class="form-check-label" for="volunteer">Volunteer</label>
               </Form.Group>
             </div>

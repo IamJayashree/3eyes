@@ -86,6 +86,9 @@ export default function SignUp(props) {
         </div>
       </div>
       <Footer />
+      <br />
+      <br />
+      <br />
     </>
   );
 }
