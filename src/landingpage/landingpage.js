@@ -71,20 +71,16 @@ export default function LandingPage(props) {
                             <span className="d-flex flex-column flex-md-row">
                               <small className="d-inline-block me-2">Food Collection</small>
                               <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
+                              <small className="d-block text-end mt-3">
+                                <a href="#">Accept</a>
+                              </small>
                             </span>
                           </h6>
-                          <small className="d-block mb-2">
-                            <a href="#">Windsor Community</a>
-                            (Community Help)
+                          <small className="d-block text-end mt-3">
+                            <a href="#">More Info</a>
                           </small>
-                          <small className="d-block text-muted mb-2">Orange County, CA 90620</small>
-                          <span className="d-block mb-2">
-                            Collect food from your local Food Bank
-                          </span>
                         </div>
-                        <div className="text-md-center">
-                          <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
-                        </div>
+
                       </div>
                     </div>
                   </div>
