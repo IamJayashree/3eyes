@@ -12,6 +12,7 @@ import Registration from './signup/resgistration';
 import HowItWorks from './howitworks/howitworks';
 import HowItWork from './howitworks/howitwork';
 import InNetwork from './social/innetwork';
+import Assistant from './assistant/assistant';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         <Route path="/Happiness" component={Happiness} />
         <Route path="/HowItWorks" component={HowItWorks} />
         <Route path="/HowItWork" component={HowItWork} />
+        <Route path="/Assistant" component={Assistant} />
       </Switch>
     </>
   );

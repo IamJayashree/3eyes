@@ -23,7 +23,7 @@ export default function InNetwork() {
                 <Offcanvas.Body>
                     <Accordion defaultActiveKey="0">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header>Advisory assistance</Accordion.Header>
+                            <Accordion.Header>Advisory Assistance</Accordion.Header>
                             <Accordion.Body>
                                 <div className="row g-0">
                                     <div className="col-auto">
@@ -36,7 +36,7 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Australian evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
@@ -50,13 +50,13 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Cricketer, Evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header>Mental Helath assistance</Accordion.Header>
+                            <Accordion.Header>Mental Helath</Accordion.Header>
                             <Accordion.Body>
                                 <div className="row g-0">
                                     <div className="col-auto">
@@ -69,7 +69,7 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Australian evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
@@ -83,7 +83,7 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Cricketer, Evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                             </Accordion.Body>
@@ -102,7 +102,7 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Australian evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
@@ -116,13 +116,13 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Cricketer, Evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
-                            <Accordion.Header>Educational assistance</Accordion.Header>
+                            <Accordion.Header>Educational</Accordion.Header>
                             <Accordion.Body>
                                 <div className="row g-0">
                                     <div className="col-auto">
@@ -135,7 +135,7 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Australian evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                                 <div className="row g-0">
@@ -149,7 +149,7 @@ export default function InNetwork() {
                                         <div className="small mb-1 pb-1">
                                             <small>Cricketer, Evangelist</small>
                                         </div>
-                                        <a href="/NeedHelp" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
+                                        <a href="/Assistant" className="btn btn-sm px-3 btn-outline-primary">Request Assistance</a>
                                     </div>
                                 </div>
                             </Accordion.Body>

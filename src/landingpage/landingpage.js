@@ -13,7 +13,7 @@ export default function LandingPage(props) {
   const isRequested = localStorage.getItem("isRequested");
   const isVolunteer = localStorage.getItem("isVolunteer");
   const help = JSON.parse(localStorage.getItem("helpObj"));
-  let date = new Date(help.date);
+  let date = (help != null && help.date) ? new Date(help.date) : new Date();
 
   return (
     <>
@@ -88,35 +88,38 @@ export default function LandingPage(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="d-flex pt-3">
-                    <div className="calendar">
-                      <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
-                      <span className="calendar-day">{date.toLocaleString("en", { day: "numeric" })}</span>
-                    </div>
-                    <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
-                      <div className="d-flex justify-content-between flex-column flex-md-row">
-                        <div className="mb-3 mb-md-0">
-                          <h6 class="mb-0">
-                            <span className="d-flex flex-column flex-md-row">
-                              <small className="d-inline-block me-2">{help.helpTitle}</small>
-                              <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
+
+                  {help &&
+                    <div className="d-flex pt-3">
+                      <div className="calendar">
+                        <span className="calendar-month">{date.toLocaleString("en", { month: "long" }).substring(0, 3)}</span>
+                        <span className="calendar-day">{date.toLocaleString("en", { day: "numeric" })}</span>
+                      </div>
+                      <div className="ms-3 pb-3 mb-0 small lh-sm border-bottom w-100">
+                        <div className="d-flex justify-content-between flex-column flex-md-row">
+                          <div className="mb-3 mb-md-0">
+                            <h6 class="mb-0">
+                              <span className="d-flex flex-column flex-md-row">
+                                <small className="d-inline-block me-2">{help.helpTitle}</small>
+                                <span className="mt-1 mb-2 m-md-0"><span className="rounded badge bg-soft-warning">Pending</span></span>
+                              </span>
+                            </h6>
+                            <small className="d-block mb-2">
+                              <a href="#">{help.name}</a> ({help.category})
+                            </small>
+                            <small className="d-block text-muted mb-1">{help.time}</small>
+                            <small className="d-block text-muted mb-2">{help.pickUp}</small>
+                            <span className="d-block mb-2">
+                              {help.notes}
                             </span>
-                          </h6>
-                          <small className="d-block mb-2">
-                            <a href="#">{help.name}</a> ({help.category})
-                          </small>
-                          <small className="d-block text-muted mb-1">{help.time}</small>
-                          <small className="d-block text-muted mb-2">{help.pickUp}</small>
-                          <span className="d-block mb-2">
-                            {help.notes}
-                          </span>
-                        </div>
-                        <div className="text-md-center">
-                          <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
+                          </div>
+                          <div className="text-md-center">
+                            <button className="btn btn-sm px-3 btn-pill btn-primary">Accept</button>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  }
                   {/* repeat item ends */}
                   <small className="d-block text-end mt-3">
                     <a href="#">View all</a>
@@ -302,7 +305,7 @@ export default function LandingPage(props) {
               </div>
               {/* Feeling Low Card Ends */}
               {/* Events Cards */}
-              {(help.helpTitle && isRequested && !isVolunteer) &&
+              {(help && help.helpTitle && isRequested && !isVolunteer) &&
                 <div class="my-3 p-3 bg-body rounded shadow-sm">
                   <h6 class="border-bottom pb-2 mb-0">
                     Open Requests
